@@ -1,0 +1,99 @@
+:root{
+/* --- Neutral ramp (cool-tinted, engineered) --- */
+--ink-000:#FFFFFF;
+--ink-025:#F7F8F9;
+--ink-050:#EFF1F3;
+--ink-100:#E2E5E9;
+--ink-200:#C9CED5;
+--ink-300:#A2A9B3;
+--ink-400:#767D88;
+--ink-500:#4E555F;
+--ink-600:#343A42;
+--ink-700:#22262C;
+--ink-800:#16191D;
+--ink-900:#0B0D10;
+--ink-950:#000000;
+
+/* --- Accent: one saturated blue, nothing else --- */
+--blue-050:#EAF1FE;
+--blue-100:#CFE0FD;
+--blue-300:#5E9BFF;
+--blue-500:#1A79FF;
+--blue-600:#0B5FD9;
+--blue-700:#0A4CAE;
+
+/* --- Status. Used sparingly; never decoratively. --- */
+--green-500:#1B8A5A;
+--amber-500:#B57A0B;
+--red-500:#C4362F;
+
+/* --- Mark-only palette. These four come off the Librera app icon and are
+       legal ONLY inside the mark itself. Never use them for UI. --- */
+--mark-ink:#1E1B18;
+--mark-cream:#F4EDE1;
+--mark-clay:#C86A2E;
+--mark-olive:#7C8B5F;
+
+/* --- Semantic: text --- */
+--text-primary:var(--ink-900);
+--text-secondary:var(--ink-500);
+--text-tertiary:var(--ink-400);
+--text-inverse:var(--ink-000);
+--text-inverse-secondary:var(--ink-300);
+--text-accent:var(--blue-600);
+--text-disabled:var(--ink-300);
+
+/* --- Semantic: surface --- */
+--surface-page:var(--ink-000);
+--surface-sunken:var(--ink-025);
+--surface-raised:var(--ink-000);
+--surface-inverse:var(--ink-950);
+--surface-inverse-raised:var(--ink-800);
+--surface-accent:var(--blue-600);
+--surface-accent-quiet:var(--blue-050);
+--surface-scrim:rgba(11,13,16,.56);
+
+/* --- Semantic: border --- */
+--border-subtle:var(--ink-100);
+--border-default:var(--ink-200);
+--border-strong:var(--ink-900);
+--border-inverse:rgba(255,255,255,.16);
+--border-accent:var(--blue-600);
+
+/* --- Semantic: interaction --- */
+--accent:var(--blue-600);
+--accent-hover:var(--blue-700);
+--accent-quiet:var(--blue-050);
+--focus-ring:var(--blue-500);
+--overlay-hover:rgba(11,13,16,.05);
+--overlay-press:rgba(11,13,16,.09);
+--overlay-hover-inverse:rgba(255,255,255,.09);
+--overlay-press-inverse:rgba(255,255,255,.15);
+}
+
+/* Dark scope. Applied to full-bleed product sections and to the whole page
+   on the store's dark surfaces. Same tokens, inverted assignments. */
+[data-theme="dark"]{
+--text-primary:var(--ink-000);
+--text-secondary:var(--ink-300);
+--text-tertiary:var(--ink-400);
+--text-inverse:var(--ink-900);
+--text-inverse-secondary:var(--ink-500);
+--text-accent:var(--blue-300);
+--text-disabled:var(--ink-500);
+--surface-page:var(--ink-950);
+--surface-sunken:var(--ink-900);
+--surface-raised:var(--ink-800);
+--surface-inverse:var(--ink-000);
+--surface-inverse-raised:var(--ink-025);
+--surface-accent-quiet:rgba(26,121,255,.14);
+--surface-scrim:rgba(0,0,0,.72);
+--border-subtle:rgba(255,255,255,.10);
+--border-default:rgba(255,255,255,.18);
+--border-strong:var(--ink-000);
+--border-inverse:rgba(11,13,16,.16);
+--accent:var(--blue-500);
+--accent-hover:var(--blue-300);
+--overlay-hover:rgba(255,255,255,.09);
+--overlay-press:rgba(255,255,255,.15);
+}

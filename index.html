@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Librera — Five apps. Nothing extra.</title>
+<meta name="description" content="Reading, screen capture and sound controls. Small tools that do one job and stay out of the way.">
+<link rel="canonical" href="https://librera.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://librera.app/">
+<meta property="og:site_name" content="Librera">
+<meta property="og:title" content="Librera — Five apps. Nothing extra.">
+<meta property="og:description" content="Reading, screen capture and sound controls. Small tools that do one job and stay out of the way.">
+<meta property="og:image" content="https://librera.app/assets/img/librera-mark.png">
+<meta name="twitter:card" content="summary">
+
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+
+<link rel="icon" href="assets/img/librera-mark.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/librera-mark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Design system tokens, verbatim from librera-design-system-c87c098d -->
+<link rel="stylesheet" href="assets/css/tokens/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens/colors.css">
+<link rel="stylesheet" href="assets/css/tokens/typography.css">
+<link rel="stylesheet" href="assets/css/tokens/spacing.css">
+<link rel="stylesheet" href="assets/css/tokens/radius.css">
+<link rel="stylesheet" href="assets/css/tokens/elevation.css">
+<link rel="stylesheet" href="assets/css/tokens/motion.css">
+<link rel="stylesheet" href="assets/css/tokens/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================================
+     NavBar — DS components/navigation/NavBar.jsx
+     ========================================================================== -->
+<div class="navbar-sticky">
+  <header class="navbar">
+    <div class="navbar__bar">
+      <nav class="navbar__inner" aria-label="Primary">
+        <a class="navbar__brand" href="#top">
+          <img src="assets/img/librera-mark.png" alt="" width="20" height="20">
+          <span>Librera</span>
+        </a>
+        <ul class="navbar__items">
+          <li><a href="#reader">Librera Reader</a></li>
+          <li><a href="#screenshot-helper">Screenshot Helper</a></li>
+          <li><a href="#sound-icon">Sound Icon</a></li>
+          <li><a href="#more-apps">More apps</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+
+<!-- ==========================================================================
+     Hero
+     ========================================================================== -->
+<section id="top" class="hero" data-theme="dark">
+  <div class="container">
+    <div class="eyebrow hero__eyebrow">librera.app</div>
+    <h1 class="hero__title">Five apps. Nothing extra.</h1>
+    <p class="hero__lede">Reading, screen capture and sound controls. Small tools that do one job and stay out of the way.</p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary btn--lg" href="#reader">Get Librera Reader</a>
+      <a class="btn btn--ghost btn--lg" href="#screenshot-helper">
+        See all apps
+        <span class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      </a>
+    </div>
+
+    <div class="hero__shot">
+      <div class="hero__frame">
+        <div class="frame__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="frame__body">
+          <div class="shot">
+            <!-- add the image: <img src="assets/img/screenshots/hero.png" alt="Librera Reader open on a book" loading="eager"> -->
+            <div class="shot__placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Librera Reader
+     ========================================================================== -->
+<section id="reader" class="app-row">
+  <div class="container">
+    <div class="app-row__copy">
+      <div class="app-icon">
+        <img src="assets/img/librera-mark.png" alt="">
+        <div class="app-icon__placeholder" aria-hidden="true"></div>
+      </div>
+      <div class="eyebrow">Reading</div>
+      <h2 class="app-row__title">Librera Reader</h2>
+      <p class="app-row__body">Twelve formats, one reader. EPUB, PDF, MOBI, AZW3, FB2, DjVu, CBZ, CBR, TXT, RTF, DOC and DOCX open in the same layout engine, so a book looks the same wherever it came from. Margins, hyphenation, justification and font are yours to set once.</p>
+      <div class="app-row__actions">
+        <a class="btn btn--neutral" href="#" data-todo="google-play-url">Google Play</a>
+        <a class="btn btn--ghost btn--outlined" href="#" data-todo="apk-url">
+          <span class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg></span>
+          Direct APK
+        </a>
+        <a class="btn btn--ghost btn--outlined" href="#" data-todo="web-app-url">Web app</a>
+      </div>
+    </div>
+    <div class="app-row__media">
+      <div class="frame">
+        <div class="frame__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="frame__body">
+          <div class="shot">
+            <!-- add the image: <img src="assets/img/screenshots/reader.png" alt="Librera Reader screenshot" loading="lazy"> -->
+            <div class="shot__placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Screenshot Helper
+     ========================================================================== -->
+<section id="screenshot-helper" class="app-row app-row--sunken app-row--reverse">
+  <div class="container">
+    <div class="app-row__copy">
+      <div class="app-icon">
+        <!-- add the image: <img src="assets/img/icons/screenshot-helper.png" alt=""> -->
+        <div class="app-icon__placeholder" aria-hidden="true"></div>
+      </div>
+      <div class="eyebrow">Utilities</div>
+      <h2 class="app-row__title">Screenshot Helper</h2>
+      <p class="app-row__body">Capture, mark up, send. Crop the frame, blur what shouldn't be in it and share without opening a gallery. The capture button sits in a floating bubble that stays out of the shot.</p>
+      <div class="app-row__actions">
+        <a class="btn btn--neutral" href="#" data-todo="google-play-url">Google Play</a>
+        <a class="btn btn--ghost btn--outlined" href="#" data-todo="apk-url">
+          <span class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg></span>
+          Direct APK
+        </a>
+      </div>
+    </div>
+    <div class="app-row__media">
+      <div class="frame">
+        <div class="frame__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="frame__body">
+          <div class="shot">
+            <!-- add the image: <img src="assets/img/screenshots/screenshot-helper.png" alt="Screenshot Helper screenshot" loading="lazy"> -->
+            <div class="shot__placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Sound Icon
+     ========================================================================== -->
+<section id="sound-icon" class="app-row">
+  <div class="container">
+    <div class="app-row__copy">
+      <div class="app-icon">
+        <!-- add the image: <img src="assets/img/icons/sound-icon.png" alt=""> -->
+        <div class="app-icon__placeholder" aria-hidden="true"></div>
+      </div>
+      <div class="eyebrow">Utilities</div>
+      <h2 class="app-row__title">Sound Icon</h2>
+      <p class="app-row__body">Volume, one tap away. Media, ring, alarm and call sliders on a single panel that opens from the status bar, with saved profiles for the places you switch between.</p>
+      <div class="app-row__actions">
+        <a class="btn btn--neutral" href="#" data-todo="google-play-url">Google Play</a>
+        <a class="btn btn--ghost btn--outlined" href="#" data-todo="apk-url">
+          <span class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg></span>
+          Direct APK
+        </a>
+      </div>
+    </div>
+    <div class="app-row__media">
+      <div class="frame">
+        <div class="frame__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="frame__body">
+          <div class="shot">
+            <!-- add the image: <img src="assets/img/screenshots/sound-icon.png" alt="Sound Icon screenshot" loading="lazy"> -->
+            <div class="shot__placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Two more apps
+     ========================================================================== -->
+<section id="more-apps" class="more-apps">
+  <div class="container">
+    <h2 class="more-apps__title">Two more apps</h2>
+    <p class="more-apps__lede">Two further tools round out the set. Details are on the way.</p>
+
+    <div class="more-apps__grid">
+      <article class="app-card">
+        <div class="app-card__shot">
+          <div class="shot">
+            <!-- add the image: <img src="assets/img/screenshots/app-four.png" alt="" loading="lazy"> -->
+            <div class="shot__placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="app-card__meta">
+          <div class="app-icon app-icon--sm">
+            <!-- add the image: <img src="assets/img/icons/app-four.png" alt=""> -->
+            <div class="app-icon__placeholder" aria-hidden="true"></div>
+          </div>
+          <div>
+            <h3 class="app-card__name">App four</h3>
+            <p class="app-card__desc">Name and one-line description to come.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="app-card">
+        <div class="app-card__shot">
+          <div class="shot">
+            <!-- add the image: <img src="assets/img/screenshots/app-five.png" alt="" loading="lazy"> -->
+            <div class="shot__placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="app-card__meta">
+          <div class="app-icon app-icon--sm">
+            <!-- add the image: <img src="assets/img/icons/app-five.png" alt=""> -->
+            <div class="app-icon__placeholder" aria-hidden="true"></div>
+          </div>
+          <div>
+            <h3 class="app-card__name">App five</h3>
+            <p class="app-card__desc">Name and one-line description to come.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Privacy
+     ========================================================================== -->
+<section id="privacy" class="privacy">
+  <div class="container container--narrow">
+    <h2 class="privacy__title">Nothing leaves your device.</h2>
+    <p class="privacy__body">Librera apps read the files already on your disk. No account is needed to open a book or take a screenshot, no library is uploaded, and nothing is scanned for advertising. Where an app asks for a permission, it asks at the moment it needs it and works without it wherever that is possible.</p>
+    <p class="privacy__note">App availability and pricing vary by region.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ==========================================================================
+     Footer — DS components/navigation/Footer.jsx
+     ========================================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__columns">
+      <div class="footer__col">
+        <div class="footer__col-title">Apps</div>
+        <ul>
+          <li><a href="#reader">Librera Reader</a></li>
+          <li><a href="#screenshot-helper">Screenshot Helper</a></li>
+          <li><a href="#sound-icon">Sound Icon</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Download</div>
+        <ul>
+          <li><a href="#" data-todo="google-play-url">Google Play</a></li>
+          <li><a href="#" data-todo="apk-url">Direct APK</a></li>
+          <li><a href="#" data-todo="web-app-url">Web app</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Support</div>
+        <ul>
+          <li><a href="#" data-todo="help-url">Help</a></li>
+          <li><a href="#" data-todo="issues-url">Report an issue</a></li>
+          <li><a href="#" data-todo="contact-url">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright 2026 Librera. All rights reserved.</span>
+      <span class="footer__spacer"></span>
+      <a href="#" data-todo="privacy-policy-url">Privacy policy</a>
+      <a href="#" data-todo="terms-url">Terms of use</a>
+      <a href="#" data-todo="licences-url">Licences</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Screenshot / icon slots.
+   Each slot holds an <img> and a labelled placeholder. Drop a real file at the
+   img's src and it takes over; while the file is missing the placeholder shows
+   instead. The mark has transparent corners, so the placeholder is removed on
+   a successful load rather than just being painted over. */
+(function () {
+  function settle(img) {
+    var slot = img.parentElement;
+    var ph = slot.querySelector('.shot__placeholder, .app-icon__placeholder');
+    if (img.naturalWidth > 0) { if (ph) ph.remove(); }
+    else { img.remove(); }
+  }
+  var imgs = document.querySelectorAll('.shot img, .app-icon img');
+  for (var i = 0; i < imgs.length; i++) {
+    (function (img) {
+      if (img.complete) { settle(img); return; }
+      img.addEventListener('load', function () { settle(img); });
+      img.addEventListener('error', function () { settle(img); });
+    })(imgs[i]);
+  }
+})();
+</script>
+
+</body>
+</html>

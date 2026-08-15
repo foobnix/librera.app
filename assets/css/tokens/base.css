@@ -1,0 +1,9 @@
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-size-adjust:100%}
+body{margin:0;font:var(--type-body);letter-spacing:var(--tracking-body);color:var(--text-primary);background:var(--surface-page)}
+h1,h2,h3,h4,p,figure{margin:0}
+a{color:var(--text-accent);text-decoration:none;transition:var(--transition-hover)}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+button,input,select,textarea{font:inherit;letter-spacing:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:var(--radius-xs)}
+::selection{background:var(--blue-100);color:var(--ink-900)}

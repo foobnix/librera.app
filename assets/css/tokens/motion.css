@@ -1,0 +1,18 @@
+:root{
+/* Motion is near-absent by design. Opacity and hairline color only —
+   no slides, no scale-ins, no bounce. */
+--duration-instant: 80ms;
+--duration-fast: 140ms;
+--duration-base: 200ms;
+--duration-slow: 320ms;
+--ease-standard:cubic-bezier(.4,0,.2,1);
+--ease-out:cubic-bezier(.16,1,.3,1);
+--ease-in:cubic-bezier(.4,0,1,1);
+--transition-hover:color var(--duration-fast) var(--ease-standard),background-color var(--duration-fast) var(--ease-standard),border-color var(--duration-fast) var(--ease-standard),opacity var(--duration-fast) var(--ease-standard);
+}
+@media (prefers-reduced-motion:reduce){:root{
+--duration-instant: 0ms;
+--duration-fast: 0ms;
+--duration-base: 0ms;
+--duration-slow: 0ms;
+}}

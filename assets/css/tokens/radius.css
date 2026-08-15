@@ -1,0 +1,12 @@
+:root{
+--radius-0:0px;
+--radius-xs:4px;
+--radius-sm:8px;
+--radius-md:12px;
+--radius-lg:18px;
+--radius-xl:28px;
+--radius-2xl:40px;
+--radius-pill:999px;
+/* Device / app-tile corners mirror the icon mask */
+--radius-tile:22.5%;
+}

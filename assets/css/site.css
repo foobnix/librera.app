@@ -1,0 +1,502 @@
+/* ==========================================================================
+   librera.app — site stylesheet
+   Design: "Librera Site" (Claude Design project f391d4d9)
+   Design system: librera-design-system-c87c098d
+
+   Everything below is either (a) a transcription of a DS component's inline
+   styles into a static class, or (b) the page composition from the design
+   file. No colour, size, radius or duration is hard-coded that has a token.
+   ========================================================================== */
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font: var(--type-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--text-accent); text-decoration: none; }
+a:hover { color: var(--blue-700); }
+h1, h2, h3, p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}
+
+/* Skip link -------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: -100px;
+  z-index: 60;
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface-page);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  font: var(--type-label);
+}
+.skip-link:focus { top: var(--space-4); }
+
+/* Layout primitives ------------------------------------------------------ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.container--narrow { max-width: var(--container-narrow); }
+
+.eyebrow {
+  font: var(--type-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* ==========================================================================
+   Button — DS components/core/Button.jsx
+   Pill button. Primary is the only blue-filled control on a page.
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 40px;                     /* size md */
+  padding: 0 20px;
+  font: var(--type-body-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-body);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-hover);
+}
+.btn:hover { text-decoration: none; }
+
+.btn--lg { height: 52px; padding: 0 28px; font: var(--type-body-lg); font-weight: var(--weight-medium); }
+.btn--sm { height: 32px; padding: 0 14px; }
+
+.btn--primary   { background: var(--accent); color: #fff; border-color: transparent; }
+.btn--primary:hover { background: var(--accent-hover); color: #fff; }
+
+.btn--secondary { background: transparent; color: var(--text-accent); border-color: var(--accent); }
+.btn--secondary:hover { background: var(--accent-quiet); color: var(--text-accent); }
+
+.btn--neutral   { background: var(--text-primary); color: var(--surface-page); border-color: transparent; }
+.btn--neutral:hover { background: var(--ink-700); color: var(--surface-page); }
+
+.btn--ghost     { background: transparent; color: var(--text-primary); border-color: transparent; }
+.btn--ghost:hover { background: var(--overlay-hover); color: var(--text-primary); }
+
+/* The design passes `style={{ border: "1px solid var(--border-subtle)" }}`
+   to the secondary/tertiary ghost buttons in the app rows. */
+.btn--outlined { border-color: var(--border-subtle); }
+
+.btn .icon { flex: 0 0 auto; }
+.btn--lg .icon { width: 20px; height: 20px; }
+
+/* ==========================================================================
+   Icon — DS components/core/Icon.jsx
+   The DS pulls Lucide glyphs from a CDN at runtime; the shipped site inlines
+   the two it uses so there is no third-party request and no flash of no-icon.
+   ========================================================================== */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+.icon svg { display: block; width: 100%; height: 100%; }
+
+/* ==========================================================================
+   NavBar — DS components/navigation/NavBar.jsx
+   48px translucent global bar. Sticky, blurred, hairline bottom.
+   ========================================================================== */
+.navbar-sticky { position: sticky; top: 0; z-index: 40; }
+
+.navbar { position: relative; z-index: 40; }
+.navbar__bar {
+  height: var(--navbar-h);
+  background: rgba(255, 255, 255, .78);
+  backdrop-filter: var(--blur-chrome);
+  -webkit-backdrop-filter: var(--blur-chrome);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.navbar__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+.navbar__brand:hover { text-decoration: none; }
+.navbar__brand img { border-radius: 5px; display: block; }
+.navbar__brand span {
+  font: var(--weight-semibold) 15px/1 var(--font-sans);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+.navbar__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-6);
+  flex: 1;
+  min-width: 0;
+}
+.navbar__items a {
+  background: none;
+  border: 0;
+  padding: 0 0 1px;
+  cursor: pointer;
+  font: var(--weight-regular) var(--size-caption)/1 var(--font-sans);
+  letter-spacing: var(--tracking-body);
+  color: var(--text-secondary);
+  opacity: .9;
+  white-space: nowrap;
+  transition: var(--transition-hover);
+}
+.navbar__items a:hover { color: var(--text-primary); opacity: 1; text-decoration: none; }
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  background: var(--ink-950);
+  color: var(--ink-000);
+  padding-top: var(--space-24);
+  overflow: hidden;
+}
+.hero .container { text-align: center; }
+.hero__eyebrow { color: var(--blue-300); }
+.hero__title {
+  font: var(--type-display-1);
+  letter-spacing: var(--tracking-display);
+  margin-top: var(--space-3);
+  max-width: 13ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+.hero__lede {
+  font: var(--type-body-lg);
+  color: var(--ink-300);
+  max-width: 46ch;
+  margin: var(--space-5) auto 0;
+  text-wrap: pretty;
+}
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-8);
+  flex-wrap: wrap;
+}
+.hero__shot {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-20);
+}
+.hero__frame {
+  width: 880px;
+  max-width: 100%;
+  margin-bottom: -72px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  overflow: hidden;
+  background: var(--ink-900);
+}
+/* The hero panel is a fixed 420px-tall slab, not a 16:10 crop — clear the
+   inherited aspect-ratio so the body fills the frame's full width. */
+.hero__frame .frame__body { height: 420px; aspect-ratio: auto; }
+
+/* ==========================================================================
+   Window chrome + screenshot frames
+   ========================================================================== */
+.frame {
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--shadow-tile);
+}
+.frame__chrome {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+.frame__chrome i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+.frame__chrome i:nth-child(1) { background: rgba(255, 255, 255, .22); }
+.frame__chrome i:nth-child(2) { background: rgba(255, 255, 255, .16); }
+.frame__chrome i:nth-child(3) { background: rgba(255, 255, 255, .12); }
+.frame__body { aspect-ratio: 16 / 10; background: #000; position: relative; }
+
+/* Screenshot slot. Drop a file at the `src` path and it replaces the
+   placeholder with no markup change; if the file is absent the <img> removes
+   itself and the labelled placeholder underneath shows through. */
+.shot { position: absolute; inset: 0; display: block; }
+.shot .shot__placeholder, .app-icon .app-icon__placeholder { z-index: 0; }
+.shot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+.shot__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-6);
+  font: var(--type-caption);
+  color: var(--ink-400);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .022) 0 12px,
+      rgba(255, 255, 255, 0) 12px 24px
+    ),
+    var(--ink-900);
+}
+
+/* App icon tile ---------------------------------------------------------- */
+.app-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-5);
+  border-radius: 13px;
+  overflow: hidden;
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  flex: 0 0 auto;
+}
+.app-icon img { width: 100%; height: 100%; object-fit: cover; display: block; position: relative; z-index: 1; }
+.app-icon__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--type-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.app-icon--sm { width: 44px; height: 44px; margin-bottom: 0; border-radius: 10px; }
+
+/* ==========================================================================
+   App feature rows
+   ========================================================================== */
+.app-row { padding: var(--space-30) 0; scroll-margin-top: var(--navbar-h); }
+.app-row--sunken {
+  background: var(--surface-sunken);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.app-row .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-16);
+}
+.app-row--reverse .container { flex-direction: row-reverse; }
+
+.app-row__copy { flex: 0 0 420px; max-width: 420px; }
+.app-row__media { flex: 1; min-width: 0; }
+
+.app-row__title {
+  font: var(--type-display-4);
+  letter-spacing: var(--tracking-display);
+  margin-top: var(--space-3);
+  text-wrap: balance;
+}
+.app-row__body {
+  font: var(--type-body-lg);
+  color: var(--text-secondary);
+  margin-top: var(--space-4);
+  max-width: 44ch;
+  text-wrap: pretty;
+}
+.app-row__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+/* ==========================================================================
+   More apps grid
+   ========================================================================== */
+.more-apps {
+  padding: var(--space-24) 0;
+  background: var(--surface-sunken);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  scroll-margin-top: var(--navbar-h);
+}
+.more-apps__title { font: var(--type-title-1); letter-spacing: var(--tracking-title); }
+.more-apps__lede {
+  font: var(--type-body);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+  max-width: 60ch;
+}
+.more-apps__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+.app-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--surface-page);
+  overflow: hidden;
+}
+.app-card__shot { aspect-ratio: 16 / 10; background: #000; position: relative; }
+.app-card__meta {
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+.app-card__name { font: var(--type-title-3); letter-spacing: var(--tracking-title); }
+.app-card__desc { font: var(--type-body-sm); color: var(--text-tertiary); margin-top: var(--space-1); }
+
+/* ==========================================================================
+   Privacy
+   ========================================================================== */
+.privacy { padding: var(--space-30) 0; scroll-margin-top: var(--navbar-h); }
+.privacy .container { text-align: center; }
+.privacy__title {
+  font: var(--type-display-4);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+.privacy__body {
+  font: var(--type-body-lg);
+  color: var(--text-secondary);
+  margin-top: var(--space-5);
+  text-wrap: pretty;
+}
+.privacy__note { font: var(--type-caption); color: var(--text-tertiary); margin-top: var(--space-6); }
+
+/* ==========================================================================
+   Footer — DS components/navigation/Footer.jsx
+   Grey sunken footer: fine print, link columns, legal row.
+   ========================================================================== */
+.footer {
+  background: var(--surface-sunken);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-12) 0 var(--space-10);
+}
+.footer__columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.footer__col-title {
+  font: var(--weight-semibold) var(--size-caption)/1.4 var(--font-sans);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+.footer__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.footer__col a { font: var(--type-caption); color: var(--text-secondary); text-decoration: none; }
+.footer__col a:hover { color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px; }
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  padding-top: var(--space-4);
+}
+.footer__legal span { font: var(--type-caption); color: var(--text-tertiary); }
+.footer__spacer { flex: 1; }
+.footer__legal a { font: var(--type-caption); color: var(--text-tertiary); text-decoration: none; }
+.footer__legal a:hover { color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ==========================================================================
+   Responsive
+   The design is authored at desktop width; these rules carry it down.
+   ========================================================================== */
+@media (max-width: 1000px) {
+  .app-row .container,
+  .app-row--reverse .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-10);
+  }
+  .app-row__copy { flex: 1 1 auto; max-width: none; }
+  .app-row__body { max-width: none; }
+  .app-row { padding: var(--space-20) 0; }
+  .privacy { padding: var(--space-20) 0; }
+
+  :root { --size-display-1: 60px; }
+  .hero__frame .frame__body { height: auto; aspect-ratio: 16 / 10; }
+}
+
+@media (max-width: 760px) {
+  :root { --size-display-1: 44px; --size-display-4: 30px; --gutter: 20px; }
+
+  .hero { padding-top: var(--space-16); }
+  .hero__shot { margin-top: var(--space-12); }
+  .hero__frame { margin-bottom: -40px; }
+  .hero__actions .btn { flex: 1 1 auto; }
+
+  .more-apps__grid { grid-template-columns: 1fr; }
+  .footer__columns { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+
+  /* The nav item list scrolls sideways rather than wrapping the 48px bar. */
+  .navbar__items {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: var(--space-5);
+  }
+  .navbar__items::-webkit-scrollbar { display: none; }
+  .navbar__inner { gap: var(--space-5); }
+}
+
+@media (max-width: 460px) {
+  :root { --size-display-1: 36px; --size-body-lg: 17px; }
+  .footer__columns { grid-template-columns: 1fr; }
+  .app-row__actions .btn { flex: 1 1 100%; }
+}

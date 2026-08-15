@@ -1,0 +1,52 @@
+:root{
+--font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+--font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+/* Weights. Body sits at 400; the brand voice lives at 600 and 700. */
+--weight-light:300;
+--weight-regular:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+
+/* Size ramp. Display sizes are set tight and heavy; text sizes are neutral. */
+--size-display-1:88px;
+--size-display-2:64px;
+--size-display-3:48px;
+--size-display-4:36px;
+--size-title-1:28px;
+--size-title-2:22px;
+--size-title-3:18px;
+--size-body-lg:19px;
+--size-body:16px;
+--size-body-sm:14px;
+--size-caption:13px;
+--size-micro:11px;
+
+--leading-display:1.04;
+--leading-title:1.18;
+--leading-body:1.55;
+--leading-tight:1.3;
+
+/* Tracking tightens as size grows — engineered, never airy. */
+--tracking-display:-0.035em;
+--tracking-title:-0.02em;
+--tracking-body:-0.005em;
+--tracking-eyebrow:0.14em;
+
+/* Composite roles */
+--type-display-1:var(--weight-bold) var(--size-display-1)/var(--leading-display) var(--font-sans);
+--type-display-2:var(--weight-bold) var(--size-display-2)/var(--leading-display) var(--font-sans);
+--type-display-3:var(--weight-semibold) var(--size-display-3)/1.08 var(--font-sans);
+--type-display-4:var(--weight-semibold) var(--size-display-4)/1.14 var(--font-sans);
+--type-title-1:var(--weight-semibold) var(--size-title-1)/var(--leading-title) var(--font-sans);
+--type-title-2:var(--weight-semibold) var(--size-title-2)/var(--leading-title) var(--font-sans);
+--type-title-3:var(--weight-semibold) var(--size-title-3)/1.35 var(--font-sans);
+--type-body-lg:var(--weight-regular) var(--size-body-lg)/var(--leading-body) var(--font-sans);
+--type-body:var(--weight-regular) var(--size-body)/var(--leading-body) var(--font-sans);
+--type-body-sm:var(--weight-regular) var(--size-body-sm)/1.5 var(--font-sans);
+--type-caption:var(--weight-regular) var(--size-caption)/1.45 var(--font-sans);
+--type-label:var(--weight-medium) var(--size-body-sm)/1.2 var(--font-sans);
+--type-eyebrow:var(--weight-semibold) var(--size-micro)/1.2 var(--font-sans);
+--type-mono:var(--weight-regular) var(--size-body-sm)/1.5 var(--font-mono);
+}

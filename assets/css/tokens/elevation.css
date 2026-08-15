@@ -1,0 +1,12 @@
+:root{
+/* Shadows are rare. Depth comes from surface contrast and hairlines.
+   These exist for overlays and lifted tiles only. */
+--shadow-none:none;
+--shadow-hairline:0 0 0 1px var(--border-subtle);
+--shadow-tile:0 1px 2px rgba(11,13,16,.04),0 8px 24px rgba(11,13,16,.06);
+--shadow-lifted:0 2px 4px rgba(11,13,16,.05),0 18px 44px rgba(11,13,16,.10);
+--shadow-overlay:0 24px 80px rgba(11,13,16,.24);
+--blur-chrome:saturate(180%) blur(20px);
+--scrim-top:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,0));
+--scrim-bottom:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,0));
+}

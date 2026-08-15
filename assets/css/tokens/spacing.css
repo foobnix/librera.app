@@ -1,0 +1,27 @@
+:root{
+/* 4px base. Section rhythm jumps in 24s above 48. */
+--space-0:0px;
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:20px;
+--space-6:24px;
+--space-8:32px;
+--space-10:40px;
+--space-12:48px;
+--space-16:64px;
+--space-20:80px;
+--space-24:96px;
+--space-30:120px;
+--space-40:160px;
+
+/* Layout */
+--container-max:1220px;
+--container-narrow:720px;
+--gutter:24px;
+--gutter-lg:40px;
+--section-y:120px;
+--section-y-sm:80px;
+--navbar-h:48px;
+}

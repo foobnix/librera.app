@@ -1,0 +1,6 @@
+.DS_Store
+
+# Editor / tooling
+.idea/
+.vscode/
+.claude/
