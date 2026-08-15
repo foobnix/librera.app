@@ -4,3 +4,8 @@
 .idea/
 .vscode/
 .claude/
+
+# Jekyll build output (only produced if a _config.yml is added)
+_site/
+.jekyll-cache/
+.jekyll-metadata

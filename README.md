@@ -20,12 +20,32 @@ assets/img/screenshots/     app screenshots — not yet supplied
 assets/img/icons/           per-app icons — not yet supplied
 ```
 
-No framework, no bundler, no dependencies. Open `index.html` or run any static
-server; GitHub Pages serves the repo root as-is.
+No framework, no bundler, no dependencies. GitHub Pages serves the repo root as-is.
+
+## Running it locally
 
 ```bash
-python3 -m http.server 4173
+./run.sh
 ```
+
+Serves the site at <http://127.0.0.1:4000>. Options:
+
+| | |
+|---|---|
+| `./run.sh 8080` | use a different port (or `PORT=8080 ./run.sh`) |
+| `./run.sh --open` | open a browser once the server is up |
+| `./run.sh --static` | force the static server, never Jekyll |
+| `./run.sh --help` | usage |
+
+Because this repo ships `.nojekyll` and has no `_config.yml`, there is no Jekyll
+build to run — the static server is exactly what GitHub Pages does with these
+files. If a `_config.yml` is ever added, `run.sh` detects it and switches to
+`bundle exec jekyll serve --livereload` (or plain `jekyll serve`) on its own, so
+the local preview keeps matching production. It falls back to the static server
+with a warning if Jekyll turns out not to be installed.
+
+The script binds to loopback only, refuses to start on a port already in use, and
+uses `python3`, then `ruby`, then `npx serve`, whichever it finds first.
 
 ## Deploying
 
