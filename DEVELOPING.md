@@ -66,37 +66,34 @@ Two things are deliberately unfinished, both because the source design leaves th
 
 ### Images
 
-The three shipped apps now have their real icon and screenshot:
-
-| Slot | Icon | Screenshot | Screenshot size |
+| Section | Icon | Screenshot | Native size |
 |---|---|---|---|
-| Librera Reader | `librera-mark.png` | `screenshots/librera1.png` | 2296×1812 |
+| Librera Reader | `icons/librera_reader.png` | `screenshots/librera_reader.png` | 1026×2066 |
+| Librera1 Reader | `librera-mark.png` | `screenshots/librera1.png` | 2296×1812 |
 | Screenshot Helper | `icons/screenshot.png` | `screenshots/screenshot.png` | 698×804 |
 | Sound Icon | `icons/soundicon.png` | `screenshots/soundicon.png` | 666×1298 |
 
-`icons/librera1.png` is the same artwork as `librera-mark.png` at 128px rather than
-512px, so the Reader keeps the mark — it stays sharp in the 56px tile on retina.
+`icons/librera1.png` is unused — it is the same artwork as `librera-mark.png` at
+128px instead of 512px, so the mark is kept for the sharper 56px tile.
 
-Any slot with no file still ships as a neutral empty panel, with the markup to
-enable it in a comment directly above:
+Screenshots are shown exactly as they are: the design's browser-window frame is
+gone, and each image keeps its own aspect ratio with nothing cropped. `.shot img`
+just caps the size — `max-width: 100%` for the column and
+`max-height: min(620px, 78vh)` so a tall phone screenshot cannot run away with the
+page. Portrait and landscape shots therefore sit side by side happily, and a new
+one needs no markup or CSS change.
+
+A slot with no image falls back to a neutral panel:
 
 ```html
 <div class="shot">
-  <!-- add the image: <img src="assets/img/screenshots/thing.png" alt="…" loading="lazy"> -->
+  <img src="assets/img/screenshots/thing.png" alt="…" loading="lazy">
   <div class="shot__placeholder" aria-hidden="true"></div>
 </div>
 ```
 
-Drop the file at that path and uncomment the line; the placeholder removes itself
-once the image loads.
-
-**Fit.** The design's frames are 16:10 landscape, but app screenshots are usually
-portrait. Cropping them to fill would have thrown away 21%, 46% and 68% of the
-three above, so the script at the foot of `index.html` compares each image's aspect
-ratio to its frame and adds `.shot--contain` when they differ by more than 12% —
-the picture is letterboxed on the dark panel instead of cropped. Shots that are
-already close to 16:10 still fill the frame edge to edge. New screenshots get the
-right treatment automatically; no markup change needed.
+The script at the foot of `index.html` removes the placeholder once the image
+loads, and removes the `<img>` instead if the file is missing.
 
 ### Links
 

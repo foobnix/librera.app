@@ -51,10 +51,10 @@
           <span>Librera</span>
         </a>
         <ul class="navbar__items">
-          <li><a href="#reader">Librera Reader</a></li>
+          <li><a href="#librera-reader">Librera Reader</a></li>
+          <li><a href="#reader">Librera1 Reader</a></li>
           <li><a href="#screenshot-helper">Screenshot Helper</a></li>
           <li><a href="#sound-icon">Sound Icon</a></li>
-          <li><a href="#more-apps">More apps</a></li>
           <li><a href="#privacy">Privacy</a></li>
         </ul>
       </nav>
@@ -80,7 +80,33 @@
 <!-- ==========================================================================
      Librera Reader
      ========================================================================== -->
-<section id="reader" class="app-row">
+<section id="librera-reader" class="app-row">
+  <div class="container">
+    <div class="app-row__copy">
+      <div class="app-icon">
+        <img src="assets/img/icons/librera_reader.png" alt="">
+        <div class="app-icon__placeholder" aria-hidden="true"></div>
+      </div>
+      <div class="eyebrow">Reading</div>
+      <h2 class="app-row__title">Librera Reader</h2>
+      <p class="app-row__body">Librera Book Reader application for Android.</p>
+      <div class="app-row__actions">
+        <a class="btn btn--neutral" href="https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader">Google Play</a>
+      </div>
+    </div>
+    <div class="app-row__media">
+      <div class="shot">
+        <img src="assets/img/screenshots/librera_reader.png" alt="Librera Reader screenshot" loading="lazy">
+        <div class="shot__placeholder" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Librera1 Reader
+     ========================================================================== -->
+<section id="reader" class="app-row app-row--sunken app-row--reverse">
   <div class="container">
     <div class="app-row__copy">
       <div class="app-icon">
@@ -100,14 +126,9 @@
       </div>
     </div>
     <div class="app-row__media">
-      <div class="frame">
-        <div class="frame__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="frame__body">
-          <div class="shot">
-            <img src="assets/img/screenshots/librera1.png" alt="Librera Reader screenshot" loading="lazy">
-            <div class="shot__placeholder" aria-hidden="true"></div>
-          </div>
-        </div>
+      <div class="shot">
+        <img src="assets/img/screenshots/librera1.png" alt="Librera Reader screenshot" loading="lazy">
+        <div class="shot__placeholder" aria-hidden="true"></div>
       </div>
     </div>
   </div>
@@ -116,7 +137,7 @@
 <!-- ==========================================================================
      Screenshot Helper
      ========================================================================== -->
-<section id="screenshot-helper" class="app-row app-row--sunken app-row--reverse">
+<section id="screenshot-helper" class="app-row">
   <div class="container">
     <div class="app-row__copy">
       <div class="app-icon">
@@ -136,14 +157,9 @@
       </div>
     </div>
     <div class="app-row__media">
-      <div class="frame">
-        <div class="frame__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="frame__body">
-          <div class="shot">
-            <img src="assets/img/screenshots/screenshot.png" alt="Screenshot Helper screenshot" loading="lazy">
-            <div class="shot__placeholder" aria-hidden="true"></div>
-          </div>
-        </div>
+      <div class="shot">
+        <img src="assets/img/screenshots/screenshot.png" alt="Screenshot Helper screenshot" loading="lazy">
+        <div class="shot__placeholder" aria-hidden="true"></div>
       </div>
     </div>
   </div>
@@ -152,7 +168,7 @@
 <!-- ==========================================================================
      Sound Icon
      ========================================================================== -->
-<section id="sound-icon" class="app-row">
+<section id="sound-icon" class="app-row app-row--sunken app-row--reverse">
   <div class="container">
     <div class="app-row__copy">
       <div class="app-icon">
@@ -171,14 +187,9 @@
       </div>
     </div>
     <div class="app-row__media">
-      <div class="frame">
-        <div class="frame__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="frame__body">
-          <div class="shot">
-            <img src="assets/img/screenshots/soundicon.png" alt="Sound Icon screenshot" loading="lazy">
-            <div class="shot__placeholder" aria-hidden="true"></div>
-          </div>
-        </div>
+      <div class="shot">
+        <img src="assets/img/screenshots/soundicon.png" alt="Sound Icon screenshot" loading="lazy">
+        <div class="shot__placeholder" aria-hidden="true"></div>
       </div>
     </div>
   </div>
@@ -208,7 +219,8 @@
       <div class="footer__col">
         <div class="footer__col-title">Apps</div>
         <ul>
-          <li><a href="#reader">Librera Reader</a></li>
+          <li><a href="#librera-reader">Librera Reader</a></li>
+          <li><a href="#reader">Librera1 Reader</a></li>
           <li><a href="#screenshot-helper">Screenshot Helper</a></li>
           <li><a href="#sound-icon">Sound Icon</a></li>
         </ul>
@@ -252,21 +264,8 @@
     var ph = slot.querySelector('.shot__placeholder, .app-icon__placeholder');
     if (!img.naturalWidth) { img.remove(); return; }
     if (ph) ph.remove();
-
-    /* Crop to fill only when the picture is already close to the frame's shape;
-       otherwise letterbox it, so a portrait phone screenshot keeps all of itself
-       instead of being cut down to a horizontal band. */
-    if (slot.classList.contains('shot')) {
-      var frame = slot.getBoundingClientRect();
-      if (frame.height > 0) {
-        var imgRatio = img.naturalWidth / img.naturalHeight;
-        var frameRatio = frame.width / frame.height;
-        if (Math.abs(imgRatio - frameRatio) / frameRatio > 0.12) {
-          slot.classList.add('shot--contain');
-        }
-      }
-    }
   }
+
   var imgs = document.querySelectorAll('.shot img, .app-icon img');
   for (var i = 0; i < imgs.length; i++) {
     (function (img) {

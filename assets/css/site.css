@@ -216,95 +216,42 @@ h1, h2, h3, p { margin: 0; }
   justify-content: center;
   margin-top: var(--space-20);
 }
-.hero__frame {
-  width: 880px;
-  max-width: 100%;
-  margin-bottom: -72px;
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-  overflow: hidden;
-  background: var(--ink-900);
-}
-/* The hero panel is a fixed 420px-tall slab, not a 16:10 crop — clear the
-   inherited aspect-ratio so the body fills the frame's full width. */
-.hero__frame .frame__body { height: 420px; aspect-ratio: auto; }
 
 /* ==========================================================================
-   Window chrome + screenshot frames
+   Screenshots
+   Shown as they are: natural aspect ratio, nothing cropped, no window frame.
+   Capped in height so a tall phone screenshot cannot run away with the page,
+   and never wider than its column.
    ========================================================================== */
-.frame {
-  border: 1px solid var(--border-subtle);
-  border-radius: 14px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: var(--shadow-tile);
-}
-.frame__chrome {
-  height: 34px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 0 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, .10);
-}
-.frame__chrome i { width: 10px; height: 10px; border-radius: 50%; display: block; }
-.frame__chrome i:nth-child(1) { background: rgba(255, 255, 255, .22); }
-.frame__chrome i:nth-child(2) { background: rgba(255, 255, 255, .16); }
-.frame__chrome i:nth-child(3) { background: rgba(255, 255, 255, .12); }
-.frame__body { aspect-ratio: 16 / 10; background: #000; position: relative; }
-
-/* Screenshot slot. Drop a file at the `src` path and it replaces the
-   placeholder with no markup change; if the file is absent the <img> removes
-   itself and the labelled placeholder underneath shows through. */
-.shot { position: absolute; inset: 0; display: block; }
-.shot .shot__placeholder, .app-icon .app-icon__placeholder { z-index: 0; }
-
-/* Fit. The frames are 16:10 landscape, but app screenshots are usually portrait
-   or near-square. Cropping those to fill would throw away most of the picture,
-   so a shot whose aspect ratio is far from its frame's is letterboxed on the
-   panel instead of cropped. The choice is made per image at load — see the
-   script at the foot of index.html. */
-.shot.shot--contain img {
-  object-fit: contain;
-  padding: var(--space-5) 0;
-}
-.shot.shot--contain {
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255, 255, 255, .022) 0 12px,
-      rgba(255, 255, 255, 0) 12px 24px
-    ),
-    var(--ink-900);
-}
-.shot img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  z-index: 1;
-}
-.shot__placeholder {
-  position: absolute;
-  inset: 0;
+.shot {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: var(--space-6);
-  font: var(--type-caption);
-  color: var(--ink-400);
+}
+.shot img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(620px, 78vh);
+  object-fit: contain;
+}
+
+/* Empty slot: a neutral panel holding the space until an image is dropped in. */
+.shot__placeholder {
+  flex: 1 1 auto;
+  align-self: stretch;
+  min-height: 260px;
+  border-radius: var(--radius-md);
   background:
     repeating-linear-gradient(
       135deg,
-      rgba(255, 255, 255, .022) 0 12px,
-      rgba(255, 255, 255, 0) 12px 24px
+      rgba(11, 13, 16, .035) 0 12px,
+      rgba(11, 13, 16, 0) 12px 24px
     ),
-    var(--ink-900);
+    var(--surface-sunken);
 }
+.shot img + .shot__placeholder { display: none; }
 
 /* App icon tile ---------------------------------------------------------- */
 .app-icon {
@@ -489,16 +436,14 @@ h1, h2, h3, p { margin: 0; }
   .privacy { padding: var(--space-20) 0; }
 
   :root { --size-display-1: 60px; }
-  .hero__frame .frame__body { height: auto; aspect-ratio: 16 / 10; }
-}
+  }
 
 @media (max-width: 760px) {
   :root { --size-display-1: 44px; --size-display-4: 30px; --gutter: 20px; }
 
   .hero { padding-top: var(--space-16); }
   .hero__shot { margin-top: var(--space-12); }
-  .hero__frame { margin-bottom: -40px; }
-  .hero__actions .btn { flex: 1 1 auto; }
+    .hero__actions .btn { flex: 1 1 auto; }
 
   .more-apps__grid { grid-template-columns: 1fr; }
   .footer__columns { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
