@@ -14,6 +14,7 @@ Highly customizable and feature-rich application for reading books in PDF, EPUB,
 - [Google Play](https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader)
 - [Direct APK](https://github.com/foobnix/LibreraReader)
 - [F-Droid](https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/)
+- [Web](https://librera.mobi/)
 
 ## Librera1 Reader
 
