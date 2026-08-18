@@ -1,7 +1,3 @@
-<!-- This file mirrors the copy on librera.app. If you change one, change the other.
-     Source of truth for app names, descriptions and links is SPEC.md.
-     Build, run and deploy notes live in DEVELOPING.md. -->
-
 # Librera — Applications
 
 **librera.app**
@@ -54,3 +50,53 @@ Capture, mark up, send. Crop the frame, blur what shouldn't be in it and share w
 **Support** — librera.reader@gmail.com
 
 Copyright 2026 Ivan Ivanenko. All rights reserved.
+
+---
+
+## Developing
+
+Static site for **librera.app**, served from GitHub Pages. Implements the
+`Librera Site.dc.html` design on the `librera-design-system-c87c098d` tokens.
+No framework, no bundler, no build step — Pages serves the repo root as-is.
+
+```
+index.html                  the whole site
+CNAME                       librera.app
+.nojekyll                   skip Jekyll processing
+assets/css/tokens/*.css     design-system tokens, copied verbatim
+assets/css/site.css         page composition + DS components as static CSS
+assets/img/                 brand mark, per-app icons, screenshots
+```
+
+Run it locally:
+
+```bash
+./run.sh
+```
+
+Serves on <http://127.0.0.1:4000>. `./run.sh 8080` for another port, `--open` to
+open a browser, `--static` to force the static server, `--help` for usage. It
+binds loopback only and refuses a port already in use.
+
+Screenshots are shown as they are — no window frame, native aspect ratio, nothing
+cropped. `.shot img` only caps the size (`max-width: 100%`,
+`max-height: min(620px, 78vh)`), so portrait phone shots and wide desktop ones
+both fit at every width. A slot with no image falls back to a neutral panel; the
+script at the foot of `index.html` removes the placeholder once an image loads,
+and removes the `<img>` instead if the file is missing.
+
+Links still to fill in are tagged in the markup:
+
+```bash
+grep -n 'data-todo' index.html
+```
+
+## Deploying
+
+1. Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
+2. Settings → Pages → Custom domain: `librera.app` (the `CNAME` file already sets this).
+3. At the DNS provider, point the apex `librera.app` at GitHub Pages —
+   `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
+   `185.199.111.153` (and/or `AAAA` to `2606:50c0:800::153` … `803::153`).
+   Add a `CNAME` for `www` → `foobnix.github.io` if the www host is wanted too.
+4. Tick **Enforce HTTPS** once the certificate is issued.
