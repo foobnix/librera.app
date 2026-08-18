@@ -1,4 +1,4 @@
-# Librera — Applications
+# Librera Applications
 
 **librera.app**
 
