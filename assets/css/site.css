@@ -259,6 +259,25 @@ h1, h2, h3, p { margin: 0; }
    itself and the labelled placeholder underneath shows through. */
 .shot { position: absolute; inset: 0; display: block; }
 .shot .shot__placeholder, .app-icon .app-icon__placeholder { z-index: 0; }
+
+/* Fit. The frames are 16:10 landscape, but app screenshots are usually portrait
+   or near-square. Cropping those to fill would throw away most of the picture,
+   so a shot whose aspect ratio is far from its frame's is letterboxed on the
+   panel instead of cropped. The choice is made per image at load — see the
+   script at the foot of index.html. */
+.shot.shot--contain img {
+  object-fit: contain;
+  padding: var(--space-5) 0;
+}
+.shot.shot--contain {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .022) 0 12px,
+      rgba(255, 255, 255, 0) 12px 24px
+    ),
+    var(--ink-900);
+}
 .shot img {
   position: absolute;
   inset: 0;

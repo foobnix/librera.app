@@ -18,8 +18,8 @@ robots.txt  sitemap.xml
 assets/css/tokens/*.css     design-system tokens, copied verbatim
 assets/css/site.css         page composition + DS components as static CSS
 assets/img/librera-mark.png the brand mark (512×512, from the design project)
-assets/img/screenshots/     app screenshots — not yet supplied
-assets/img/icons/           per-app icons — not yet supplied
+assets/img/screenshots/     app screenshots
+assets/img/icons/           per-app icons
 ```
 
 No framework, no bundler, no dependencies. GitHub Pages serves the repo root as-is.
@@ -66,29 +66,37 @@ Two things are deliberately unfinished, both because the source design leaves th
 
 ### Images
 
-Every screenshot and app-icon slot ships as a neutral empty panel. Each one has the
-markup to enable it sitting in a comment directly above:
+The three shipped apps now have their real icon and screenshot:
+
+| Slot | Icon | Screenshot | Screenshot size |
+|---|---|---|---|
+| Librera Reader | `librera-mark.png` | `screenshots/librera1.png` | 2296×1812 |
+| Screenshot Helper | `icons/screenshot.png` | `screenshots/screenshot.png` | 698×804 |
+| Sound Icon | `icons/soundicon.png` | `screenshots/soundicon.png` | 666×1298 |
+
+`icons/librera1.png` is the same artwork as `librera-mark.png` at 128px rather than
+512px, so the Reader keeps the mark — it stays sharp in the 56px tile on retina.
+
+Any slot with no file still ships as a neutral empty panel, with the markup to
+enable it in a comment directly above:
 
 ```html
 <div class="shot">
-  <!-- add the image: <img src="assets/img/screenshots/reader.png" alt="Librera Reader screenshot" loading="lazy"> -->
+  <!-- add the image: <img src="assets/img/screenshots/thing.png" alt="…" loading="lazy"> -->
   <div class="shot__placeholder" aria-hidden="true"></div>
 </div>
 ```
 
-Drop the file at that path and uncomment the line. The placeholder removes itself as
-soon as the image loads, so nothing else needs changing. Slots, with their expected paths:
+Drop the file at that path and uncomment the line; the placeholder removes itself
+once the image loads.
 
-| Slot | Path | Shape |
-|---|---|---|
-| Hero | `assets/img/screenshots/hero.png` | wide, ~880×420 |
-| Librera Reader | `assets/img/screenshots/reader.png` | 16:10 |
-| Screenshot Helper | `assets/img/screenshots/screenshot-helper.png` | 16:10 |
-| Sound Icon | `assets/img/screenshots/sound-icon.png` | 16:10 |
-| App four / five | `assets/img/screenshots/app-{four,five}.png` | 16:10 |
-| App icons | `assets/img/icons/{screenshot-helper,sound-icon,app-four,app-five}.png` | square |
-
-Librera Reader already uses `librera-mark.png` as its icon, per the design.
+**Fit.** The design's frames are 16:10 landscape, but app screenshots are usually
+portrait. Cropping them to fill would have thrown away 21%, 46% and 68% of the
+three above, so the script at the foot of `index.html` compares each image's aspect
+ratio to its frame and adds `.shot--contain` when they differ by more than 12% —
+the picture is letterboxed on the dark panel instead of cropped. Shots that are
+already close to 16:10 still fill the frame edge to edge. New screenshots get the
+right treatment automatically; no markup change needed.
 
 ### Links
 
@@ -103,8 +111,6 @@ grep -n 'data-todo' index.html
 `privacy-policy-url`, `terms-url`, `licences-url`. The Play Store and APK links repeat
 per app, so replace them section by section rather than with a blanket find-and-replace.
 
-The "Two more apps" cards are also placeholder copy — the design has no names for
-apps four and five yet.
 
 ## Notes on the implementation
 
