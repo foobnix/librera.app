@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Librera - Applications</title>
-<meta name="description" content="Reading, screen capture and sound controls. Small tools that do one job and stay out of the way.">
+<meta name="description" content="Reading, screen capture and sound controls">
 <link rel="canonical" href="https://librera.app/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://librera.app/">
 <meta property="og:site_name" content="Librera">
 <meta property="og:title" content="Librera - Applications">
-<meta property="og:description" content="Reading, screen capture and sound controls. Small tools that do one job and stay out of the way.">
+<meta property="og:description" content="Reading, screen capture and sound controls">
 <meta property="og:image" content="https://librera.app/assets/img/librera-mark.png">
 <meta name="twitter:card" content="summary">
 
@@ -53,9 +53,8 @@
         <ul class="navbar__items">
           <li><a href="#librera-reader">Librera Reader for Android</a></li>
           <li><a href="#reader">Librera1 Reader</a></li>
-          <li><a href="#screenshot-helper">Screenshot Helper</a></li>
           <li><a href="#sound-icon">Sound Icon</a></li>
-          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#screenshot-helper">Screenshot Helper</a></li>
         </ul>
       </nav>
     </div>
@@ -139,9 +138,36 @@
 </section>
 
 <!-- ==========================================================================
+     Sound Icon
+     ========================================================================== -->
+<section id="sound-icon" class="app-row">
+  <div class="container">
+    <div class="app-row__copy">
+      <div class="app-icon">
+        <img src="assets/img/icons/soundicon.png" alt="">
+        <div class="app-icon__placeholder" aria-hidden="true"></div>
+      </div>
+      <div class="eyebrow">Utilities</div>
+      <h2 class="app-row__title">Sound Icon</h2>
+      <p class="app-row__body">Volume, one tap away. Media, ring, alarm and call sliders on a single panel that opens from the status bar, with saved profiles for the places you switch between.</p>
+      <div class="app-row__actions">
+        <a class="btn btn--neutral" href="https://soundicon.app/">Web app</a>
+        <a class="btn btn--ghost btn--outlined" href="#" data-todo="macos-url">macOS</a>
+      </div>
+    </div>
+    <div class="app-row__media">
+      <div class="shot">
+        <img src="assets/img/screenshots/soundicon.png" alt="Sound Icon screenshot" loading="lazy">
+        <div class="shot__placeholder" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
      Screenshot Helper
      ========================================================================== -->
-<section id="screenshot-helper" class="app-row">
+<section id="screenshot-helper" class="app-row app-row--sunken app-row--reverse">
   <div class="container">
     <div class="app-row__copy">
       <div class="app-icon">
@@ -164,45 +190,6 @@
   </div>
 </section>
 
-<!-- ==========================================================================
-     Sound Icon
-     ========================================================================== -->
-<section id="sound-icon" class="app-row app-row--sunken app-row--reverse">
-  <div class="container">
-    <div class="app-row__copy">
-      <div class="app-icon">
-        <img src="assets/img/icons/soundicon.png" alt="">
-        <div class="app-icon__placeholder" aria-hidden="true"></div>
-      </div>
-      <div class="eyebrow">Utilities</div>
-      <h2 class="app-row__title">Sound Icon</h2>
-      <p class="app-row__body">Volume, one tap away. Media, ring, alarm and call sliders on a single panel that opens from the status bar, with saved profiles for the places you switch between.</p>
-      <div class="app-row__actions">
-        <a class="btn btn--neutral" href="#" data-todo="macos-url">macOS</a>
-      </div>
-    </div>
-    <div class="app-row__media">
-      <div class="shot">
-        <img src="assets/img/screenshots/soundicon.png" alt="Sound Icon screenshot" loading="lazy">
-        <div class="shot__placeholder" aria-hidden="true"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ==========================================================================
-     Privacy
-     ========================================================================== -->
-<section id="privacy" class="privacy">
-  <div class="container container--narrow">
-    <h2 class="privacy__title">Nothing leaves your device.</h2>
-    <p class="privacy__body">Librera apps read the files already on your disk. No account is needed to open a book or take a screenshot, no library is uploaded, and nothing is scanned for advertising. Where an app asks for a permission, it asks at the moment it needs it and works without it wherever that is possible.</p>
-    <p class="privacy__note">App availability and pricing vary by region.</p>
-  </div>
-</section>
-
 </main>
 
 <!-- ==========================================================================
@@ -216,8 +203,8 @@
         <ul>
           <li><a href="#librera-reader">Librera Reader for Android</a></li>
           <li><a href="#reader">Librera1 Reader</a></li>
-          <li><a href="#screenshot-helper">Screenshot Helper</a></li>
           <li><a href="#sound-icon">Sound Icon</a></li>
+          <li><a href="#screenshot-helper">Screenshot Helper</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -227,6 +214,7 @@
           <li><a href="https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/">F-Droid</a></li>
           <li><a href="https://github.com/foobnix/LibreraReader">Direct APK</a></li>
           <li><a href="https://librera1.com/">Librera1 on the web</a></li>
+          <li><a href="https://soundicon.app/">Sound Icon on the web</a></li>
           <li><a href="https://chromewebstore.google.com/detail/librera1-%E2%80%94-read-your-own/dplmfhcjlbkejkdalnkmklpghklcjahg">Chrome extension</a></li>
           <li><a href="https://marketplace.visualstudio.com/items?itemName=librera.librera-reader">VS Code extension</a></li>
         </ul>
@@ -234,18 +222,13 @@
       <div class="footer__col">
         <div class="footer__col-title">Support</div>
         <ul>
-          <li><a href="#" data-todo="help-url">Help</a></li>
-          <li><a href="#" data-todo="issues-url">Report an issue</a></li>
-          <li><a href="#" data-todo="contact-url">Contact</a></li>
+          <li><a href="mailto:librera.reader@gmail.com">librera.reader@gmail.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__legal">
-      <span>Copyright 2026 Librera. All rights reserved.</span>
-      <span class="footer__spacer"></span>
-      <a href="#" data-todo="privacy-policy-url">Privacy policy</a>
-      <a href="#" data-todo="terms-url">Terms of use</a>
-      <a href="#" data-todo="licences-url">Licences</a>
+      <span>Copyright 2026 Ivan Ivanenko. All rights reserved.</span>
+
     </div>
   </div>
 </footer>
