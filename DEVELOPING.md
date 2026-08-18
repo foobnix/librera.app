@@ -97,17 +97,33 @@ loads, and removes the `<img>` instead if the file is missing.
 
 ### Links
 
-Every outbound link is `href="#"` in the design, so they are `href="#"` here too, each
-tagged with a `data-todo` attribute naming what belongs there. Find them with:
+App names, descriptions and download URLs come from [SPEC.md](SPEC.md) — edit that
+first, then `index.html` and `README.md` to match. Everything in SPEC.md is now on
+the page; you can re-check that at any time with:
+
+```bash
+python3 - <<'EOF'
+import re, html
+spec = open('SPEC.md').read(); page = open('index.html').read()
+flat = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', page)))
+print('URLs missing :', [u for u in re.findall(r'https?://\S+', spec) if u not in page] or 'none')
+print('prose missing:', [p for p in spec.splitlines()
+                         if p.strip() and not p.startswith(('#', '*'))
+                         and re.sub(r'\s+', ' ', p.strip()) not in flat] or 'none')
+EOF
+```
+
+The links SPEC.md still leaves blank are marked in the markup with a `data-todo`
+attribute naming what belongs there:
 
 ```bash
 grep -n 'data-todo' index.html
 ```
 
-`google-play-url`, `apk-url`, `web-app-url`, `help-url`, `issues-url`, `contact-url`,
-`privacy-policy-url`, `terms-url`, `licences-url`. The Play Store and APK links repeat
-per app, so replace them section by section rather than with a blanket find-and-replace.
-
+Outstanding: `macos-url` (Screenshot Helper and Sound Icon), plus the footer's
+`help-url`, `issues-url`, `contact-url`, `privacy-policy-url`, `terms-url` and
+`licences-url`. SPEC.md also lists empty Apple, macOS, Windows and Linux rows for
+Librera1 Reader; those have no button on the page until a URL exists.
 
 ## Notes on the implementation
 
