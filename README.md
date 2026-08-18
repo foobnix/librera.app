@@ -45,8 +45,4 @@ Capture, mark up, send. Crop the frame, blur what shouldn't be in it and share w
 
 ---
 
-**Apps** — Librera Reader for Android · Librera1 Reader · Sound Icon · Screenshot Helper
-**Download** — Google Play · F-Droid · Direct APK · Librera1 on the web · Sound Icon on the web · Chrome extension · VS Code extension
-**Support** — librera.reader@gmail.com
-
 Copyright 2026 Ivan Ivanenko. All rights reserved.
