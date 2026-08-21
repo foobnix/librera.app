@@ -58,6 +58,45 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* ==========================================================================
+   Platform chips — DS components/core/Chip.jsx, filled variant
+
+   Sits on the eyebrow's line, inside .app-row__meta. Filled from
+   --overlay-hover rather than a surface token: app rows alternate between
+   --surface-page and --surface-sunken, and --overlay-hover is the one neutral
+   wash in the system that composites onto both, so a chip reads the same on
+   either row. Set in normal case — the eyebrow's uppercase would turn "iOS"
+   and "macOS" into "IOS" and "MACOS".
+   ========================================================================== */
+.app-row__meta {
+  /* Inline flow, not flex: with six platforms the chips are wider than the
+     420px copy column, and a flex .platforms would wrap as one block and drop
+     the whole row below the eyebrow. Inline-block chips share the eyebrow's
+     first line and only the overflow moves down. */
+  line-height: 1;
+}
+.app-row__meta .eyebrow {
+  display: inline;
+  margin-right: var(--space-2);
+}
+.platforms {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.platforms li {
+  display: inline-block;
+  margin: 0 var(--space-2) var(--space-2) 0;
+  font: var(--type-caption);
+  letter-spacing: var(--tracking-body);
+  color: var(--text-primary);
+  background: var(--overlay-hover);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
    Button — DS components/core/Button.jsx
    Pill button. Primary is the only blue-filled control on a page.
    ========================================================================== */
