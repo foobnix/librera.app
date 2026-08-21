@@ -38,7 +38,7 @@ Volume, one tap away. Media, ring, alarm and call sliders on a single panel that
 - [Web](https://soundicon.app/)
 - [Direct DMG](https://github.com/foobnix/librera.app/releases/download/Download/Sound.Icon-1.7.13.dmg)
 
-## Screenshot Helper
+## Screenshot: Take and Drag
 
 *Utilities*
 
