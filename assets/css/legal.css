@@ -1,0 +1,207 @@
+/* ==========================================================================
+   librera.app — legal document stylesheet
+   Design system: librera-design-system-c87c098d
+
+   Loaded on privacy.html and terms.html, after site.css. The navbar and
+   footer come from site.css unchanged; everything here is the document body
+   those two pages need and the marketing page does not. No colour, size,
+   radius or duration is hard-coded that has a token.
+   ========================================================================== */
+
+/* Document header -------------------------------------------------------- */
+.legal-head {
+  padding: var(--space-16) 0 var(--space-10);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.legal-head__title {
+  font: var(--type-display-4);
+  letter-spacing: var(--tracking-display);
+  margin-top: var(--space-3);
+}
+.legal-head__lede {
+  font: var(--type-body-lg);
+  color: var(--text-secondary);
+  margin-top: var(--space-4);
+  max-width: 62ch;
+}
+.legal-head__meta {
+  font: var(--type-caption);
+  color: var(--text-tertiary);
+  margin-top: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+/* Table of contents ------------------------------------------------------ */
+.toc {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.toc__title {
+  font: var(--type-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-4);
+}
+.toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: var(--space-10);
+}
+.toc li {
+  font: var(--type-body-sm);
+  margin-bottom: var(--space-2);
+  break-inside: avoid;
+}
+.toc a { color: var(--text-secondary); }
+.toc a:hover { color: var(--text-accent); }
+
+/* Document body ---------------------------------------------------------- */
+.doc { padding: var(--space-12) 0 var(--space-24); }
+
+.doc section { scroll-margin-top: calc(var(--navbar-h) + var(--space-6)); }
+.doc section + section { margin-top: var(--space-12); }
+
+.doc h2 {
+  font: var(--type-title-1);
+  letter-spacing: var(--tracking-title);
+  margin-bottom: var(--space-5);
+}
+.doc h3 {
+  font: var(--type-title-3);
+  letter-spacing: var(--tracking-title);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+}
+.doc p {
+  font: var(--type-body);
+  color: var(--text-secondary);
+  max-width: 68ch;
+}
+.doc p + p { margin-top: var(--space-4); }
+.doc strong { color: var(--text-primary); font-weight: var(--weight-semibold); }
+
+.doc ul, .doc ol {
+  color: var(--text-secondary);
+  font: var(--type-body);
+  margin: var(--space-4) 0 0;
+  padding-left: var(--space-5);
+  max-width: 68ch;
+}
+.doc li { margin-bottom: var(--space-2); }
+.doc li::marker { color: var(--text-tertiary); }
+
+.doc code {
+  font: var(--type-mono);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 1px var(--space-1);
+  color: var(--text-primary);
+}
+
+.doc address {
+  font: var(--type-body);
+  font-style: normal;
+  color: var(--text-secondary);
+  margin-top: var(--space-4);
+}
+
+/* Callout ---------------------------------------------------------------- */
+.callout {
+  background: var(--surface-accent-quiet);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  margin: var(--space-6) 0;
+}
+.callout p { color: var(--text-primary); max-width: 66ch; }
+.callout__title {
+  font: var(--type-label);
+  color: var(--text-accent);
+  margin-bottom: var(--space-2);
+}
+
+/* Tables ----------------------------------------------------------------- */
+.table-scroll {
+  overflow-x: auto;
+  margin-top: var(--space-6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+.table-scroll table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+.table-scroll th,
+.table-scroll td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--space-3) var(--space-4);
+  font: var(--type-body-sm);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.table-scroll thead th {
+  font: var(--type-label);
+  color: var(--text-primary);
+  background: var(--surface-sunken);
+  white-space: nowrap;
+}
+.table-scroll tbody tr:last-child td { border-bottom: 0; }
+.table-scroll td strong { color: var(--text-primary); }
+
+/* Per-app annex ---------------------------------------------------------- */
+.annex {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-top: var(--space-6);
+}
+.annex__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.annex__head img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+.annex__name {
+  font: var(--type-title-3);
+  letter-spacing: var(--tracking-title);
+}
+.annex__platforms {
+  font: var(--type-caption);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+.annex dl { margin: 0; }
+.annex dt {
+  font: var(--type-label);
+  color: var(--text-primary);
+  margin-top: var(--space-4);
+}
+.annex dt:first-child { margin-top: 0; }
+.annex dd {
+  font: var(--type-body-sm);
+  color: var(--text-secondary);
+  margin: var(--space-1) 0 0;
+  max-width: 68ch;
+}
+
+@media (max-width: 760px) {
+  .legal-head { padding: var(--space-12) 0 var(--space-8); }
+  .toc ol { columns: 1; }
+  .doc { padding: var(--space-10) 0 var(--space-16); }
+  .doc section + section { margin-top: var(--space-10); }
+}
