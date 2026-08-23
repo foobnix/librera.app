@@ -23,8 +23,8 @@ Highly customizable and feature-rich application for reading books in PDF, EPUB,
 A reader for the books you already have. Open an EPUB, PDF, FB2, MOBI or CBZ, and read it on whichever device is to hand — the page you stopped on, the passages you marked and the places you named follow you between them.
 
 - [Web](https://librera1.com/)
-- [Direct APK](https://github.com/foobnix/librera.app/releases/download/Download/librera1-1.0.20-android.apk)
-- [Direct DMG](https://github.com/foobnix/librera.app/releases/download/Download/librera1-1.0.19-macos-aarch64.dmg)
+- [Direct APK](https://github.com/foobnix/librera.app/releases/tag/Download)
+- [Direct DMG](https://github.com/foobnix/librera.app/releases/tag/Download)
 - [Chrome](https://chromewebstore.google.com/detail/dplmfhcjlbkejkdalnkmklpghklcjahg)
 - [VS Code](https://marketplace.visualstudio.com/items?itemName=librera.librera-reader)
 - [Google Play](https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader)
@@ -36,7 +36,7 @@ A reader for the books you already have. Open an EPUB, PDF, FB2, MOBI or CBZ, an
 Volume, one tap away. Media, ring, alarm and call sliders on a single panel that opens from the status bar, with saved profiles for the places you switch between.
 
 - [Web](https://soundicon.app/)
-- [Direct DMG](https://github.com/foobnix/librera.app/releases/download/Download/SoundIcon-macOS-1.7.15.dmg)
+- [Direct DMG](https://github.com/foobnix/librera.app/releases/tag/Download)
 
 ## Menu Reminder
 
@@ -44,7 +44,7 @@ Volume, one tap away. Media, ring, alarm and call sliders on a single panel that
 
 Your to-dos, one click away in the menu bar. Add a reminder with an optional due date and the list groups itself by day — today, tomorrow, overdue in red. When something comes due, the bell lights up and a notification arrives; check it off and it's done.
 
-- [Direct DMG](https://github.com/foobnix/librera.app/releases/download/Download/MenuReminder-macOS-1.0.1.dmg)
+- [Direct DMG](https://github.com/foobnix/librera.app/releases/tag/Download)
 
 ## Menu Screenshot
 
@@ -52,7 +52,7 @@ Your to-dos, one click away in the menu bar. Add a reminder with an optional due
 
 Capture perfectly sized screenshots and drag them anywhere. Snap the perfect size. Drag it to any app. Custom screenshots, ready to drag and drop.
 
-- [Direct DMG](https://github.com/foobnix/librera.app/releases/download/Download/MenuScreenshot-macOS-1.0.2.dmg)
+- [Direct DMG](https://github.com/foobnix/librera.app/releases/tag/Download)
 
 ---
 
