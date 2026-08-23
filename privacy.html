@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Librera Applications</title>
-<meta name="description" content="How Librera applications handle your data. One policy for Librera Reader, Librera1 Reader, Sound Icon and Screenshot: Take and Drag, with a per-app annex.">
+<meta name="description" content="How Librera applications handle your data. One policy for Librera Reader, Librera1 Reader, Sound Icon, Menu Reminder and Menu Screenshot, with a per-app annex.">
 <link rel="canonical" href="https://librera.app/privacy.html">
 
 <meta property="og:type" content="article">
@@ -51,7 +51,8 @@
           <li><a href="index.html#librera-reader">Librera Reader</a></li>
           <li><a href="index.html#reader">Librera1 Reader</a></li>
           <li><a href="index.html#sound-icon">Sound Icon</a></li>
-          <li><a href="index.html#screenshot-helper">Screenshot: Take and Drag</a></li>
+          <li><a href="index.html#menu-reminder">Menu Reminder</a></li>
+          <li><a href="index.html#menu-screenshot">Menu Screenshot</a></li>
         </ul>
       </nav>
     </div>
@@ -116,7 +117,8 @@
         <li><strong>Librera Reader</strong> — Android (Google Play, F-Droid, direct APK)</li>
         <li><strong>Librera1 Reader</strong> — Android, iOS, macOS, Windows, Linux, Chrome extension, web, VS Code extension</li>
         <li><strong>Sound Icon</strong> — macOS</li>
-        <li><strong>Screenshot: Take and Drag</strong> — macOS</li>
+        <li><strong>Menu Reminder</strong> — macOS</li>
+        <li><strong>Menu Screenshot</strong> — macOS</li>
       </ul>
       <p>The apps differ from one another, and this policy does not pretend otherwise. The general
       sections below describe each kind of data we may handle and say <em>which apps it applies
@@ -160,7 +162,14 @@
               <td>No</td>
             </tr>
             <tr>
-              <td><strong>Screenshot: Take and Drag</strong> (macOS)</td>
+              <td><strong>Menu Reminder</strong> (macOS)</td>
+              <td>No</td>
+              <td>Nothing</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><strong>Menu Screenshot</strong> (macOS)</td>
               <td>No</td>
               <td>Nothing</td>
               <td>No</td>
@@ -177,11 +186,11 @@
         <li><strong>Local first.</strong> Every app works on the device in front of you. Nothing is
         uploaded because an app wants it uploaded — only because a feature you turned on needs it.</li>
         <li><strong>We never sell your data</strong>, and we never share it with data brokers.</li>
-        <li><strong>We do not read your books, documents or screenshots.</strong> We have no
+        <li><strong>We do not read your books, documents, screenshots or reminders.</strong> We have no
         ability to open the content you keep in these apps.</li>
         <li><strong>The narrowest permission that works.</strong> Where a platform offers a scoped
         permission, we ask for the scoped one — see section 6 on Google Drive.</li>
-        <li><strong>No account unless a feature needs one.</strong> Three of the four apps have no
+        <li><strong>No account unless a feature needs one.</strong> Four of the five apps have no
         sign-in at all.</li>
       </ul>
     </section>
@@ -200,7 +209,8 @@
         <li>security-scoped bookmarks and file references, so an app can reopen the folders and
         files you previously chose;</li>
         <li>audio device preferences, starred devices and custom device icons (Sound Icon);</li>
-        <li>capture and export preferences (Screenshot: Take and Drag);</li>
+        <li>your reminders — their text, due dates, order and done state (Menu Reminder);</li>
+        <li>capture and export preferences (Menu Screenshot);</li>
         <li>a cached flag recording whether a paid entitlement is currently active, so the app
         does not misreport your purchase before the store answers.</li>
       </ul>
@@ -248,15 +258,16 @@
       revoking the app's access in your
       <a href="https://myaccount.google.com/permissions">Google account permissions</a>, ends the
       app's access immediately.</p>
-      <p>In every other case — books opened in Librera Reader, images captured by Screenshot: Take and Drag,
-      audio files played by Sound Icon's local player — the files stay on your device and are opened
-      only to be displayed, played or saved where you asked. They are never transmitted anywhere.</p>
+      <p>In every other case — books opened in Librera Reader, images captured by Menu Screenshot,
+      reminders kept by Menu Reminder, audio files played by Sound Icon's local player — the files
+      stay on your device and are opened only to be displayed, played or saved where you asked. They
+      are never transmitted anywhere.</p>
     </section>
 
     <section id="purchases">
       <h2>7. Purchases and subscriptions</h2>
       <p><em>Applies to: Librera Reader (paid version), Librera1 Reader (premium), Sound Icon (Sound
-      Icon Pro). Screenshot: Take and Drag has no purchases of any kind.</em></p>
+      Icon Pro). Menu Reminder and Menu Screenshot have no purchases of any kind.</em></p>
       <p>All payments are handled by the store you bought from — <strong>Apple</strong> on the App
       Store, <strong>Google</strong> on Google Play. <strong>We never see, receive or store your
       payment card, billing address or store account credentials.</strong></p>
@@ -298,8 +309,8 @@
       <ul>
         <li>The <strong>F-Droid build contains no analytics at all</strong>; the analytics component
         is replaced by a stub that does nothing.</li>
-        <li><strong>Librera1 Reader, Sound Icon and Screenshot: Take and Drag contain no analytics, no crash
-        reporting and no telemetry.</strong></li>
+        <li><strong>Librera1 Reader, Sound Icon, Menu Reminder and Menu Screenshot contain no
+        analytics, no crash reporting and no telemetry.</strong></li>
       </ul>
     </section>
 
@@ -334,21 +345,27 @@
             </tr>
             <tr>
               <td>Screen Recording</td>
-              <td>Screenshot: Take and Drag</td>
+              <td>Menu Screenshot</td>
               <td>Required by macOS ScreenCaptureKit for any screen capture. Captures are produced
               on demand and written where you save them. Nothing is streamed or uploaded.</td>
             </tr>
             <tr>
               <td>Photos / Pictures and Downloads folders</td>
-              <td>Screenshot: Take and Drag</td>
+              <td>Menu Screenshot</td>
               <td>To save captures to the location you pick.</td>
+            </tr>
+            <tr>
+              <td>Notifications</td>
+              <td>Menu Reminder</td>
+              <td>To alert you when a reminder is due. Notifications are generated locally on your
+              Mac and carry only the reminder text you wrote.</td>
             </tr>
             <tr>
               <td>Network access</td>
               <td>All apps</td>
               <td>Sign-in and sync (Librera1), ads and analytics (Librera Reader Play build), and
-              store communication for purchases. Sound Icon and Screenshot: Take and Drag make no network
-              requests of their own.</td>
+              store communication for purchases. Sound Icon, Menu Reminder and Menu Screenshot make
+              no network requests of their own.</td>
             </tr>
           </tbody>
         </table>
@@ -398,7 +415,7 @@
             <tr>
               <td>Apple</td>
               <td>App Store distribution and payment</td>
-              <td>Sound Icon, Screenshot: Take and Drag, Librera1 Reader</td>
+              <td>Sound Icon, Menu Screenshot, Librera1 Reader</td>
               <td><a href="https://www.apple.com/legal/privacy/">Apple privacy</a></td>
             </tr>
             <tr>
@@ -481,7 +498,7 @@
       by the account that owns them, enforced by server-side security rules. Desktop and mobile apps
       run inside the sandbox their platform provides, with the minimum permissions listed in section
       10, and store builds are signed and — on macOS — notarized.</p>
-      <p>No system is perfect. The strongest protection here is structural: for three of the four
+      <p>No system is perfect. The strongest protection here is structural: for four of the five
       apps there is no server holding your data to be breached in the first place.</p>
     </section>
 
@@ -588,9 +605,32 @@
 
       <div class="annex">
         <div class="annex__head">
+          <img src="assets/img/icons/menureminder.png" alt="">
+          <div>
+            <div class="annex__name">Menu Reminder</div>
+            <div class="annex__platforms">macOS — direct download</div>
+          </div>
+        </div>
+        <dl>
+          <dt>Account</dt>
+          <dd>None.</dd>
+          <dt>What leaves your device</dt>
+          <dd><strong>Nothing.</strong> No analytics, no advertising, no network features.</dd>
+          <dt>Your reminders</dt>
+          <dd>Stored locally in the app's private storage
+          (<code>~/Library/Application Support/</code>). Never uploaded, and we never see them.</dd>
+          <dt>Permissions</dt>
+          <dd>Notifications, to alert you when a reminder is due. Generated locally on your Mac.</dd>
+          <dt>Purchases</dt>
+          <dd>None. The app has no in-app purchase and no paid tier.</dd>
+        </dl>
+      </div>
+
+      <div class="annex">
+        <div class="annex__head">
           <img src="assets/img/icons/screenshot.png" alt="">
           <div>
-            <div class="annex__name">Screenshot: Take and Drag</div>
+            <div class="annex__name">Menu Screenshot</div>
             <div class="annex__platforms">macOS — direct download</div>
           </div>
         </div>
@@ -645,7 +685,8 @@
           <li><a href="index.html#librera-reader">Librera Reader for Android</a></li>
           <li><a href="index.html#reader">Librera1 Reader</a></li>
           <li><a href="index.html#sound-icon">Sound Icon</a></li>
-          <li><a href="index.html#screenshot-helper">Screenshot: Take and Drag</a></li>
+          <li><a href="index.html#menu-reminder">Menu Reminder</a></li>
+          <li><a href="index.html#menu-screenshot">Menu Screenshot</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -656,8 +697,9 @@
           <li><a href="https://github.com/foobnix/LibreraReader">Direct APK</a></li>
           <li><a href="https://librera1.com/">Librera1 on the web</a></li>
           <li><a href="https://soundicon.app/">Sound Icon on the web</a></li>
-          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/Sound.Icon-1.7.13.dmg">Sound Icon for macOS</a></li>
-          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/Screenshot.Helper.1.0.1.dmg">Screenshot: Take and Drag for macOS</a></li>
+          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/SoundIcon-macOS-1.7.15.dmg">Sound Icon for macOS</a></li>
+          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/MenuReminder-macOS-1.0.1.dmg">Menu Reminder for macOS</a></li>
+          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/MenuScreenshot-macOS-1.0.2.dmg">Menu Screenshot for macOS</a></li>
           <li><a href="https://chromewebstore.google.com/detail/dplmfhcjlbkejkdalnkmklpghklcjahg">Chrome extension</a></li>
           <li><a href="https://marketplace.visualstudio.com/items?itemName=librera.librera-reader">VS Code extension</a></li>
         </ul>
