@@ -187,7 +187,7 @@ h1, h2, h3, p { margin: 0; }
   flex: 0 0 auto;
 }
 .navbar__brand:hover { text-decoration: none; }
-.navbar__brand img { border-radius: 5px; display: block; }
+.navbar__brand img { display: block; }
 .navbar__brand span {
   font: var(--weight-semibold) 15px/1 var(--font-sans);
   letter-spacing: -0.02em;
