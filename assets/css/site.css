@@ -222,7 +222,8 @@ h1, h2, h3, p { margin: 0; }
 .hero {
   background: var(--ink-950);
   color: var(--ink-000);
-  padding-top: var(--space-24);
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
   overflow: hidden;
 }
 .hero .container { text-align: center; }
