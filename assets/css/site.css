@@ -277,6 +277,11 @@ h1, h2, h3, p { margin: 0; }
   object-fit: contain;
 }
 
+/* Two shots side by side — e.g. a macOS panel next to its iPhone counterpart.
+   Bottom-aligned so panels of different heights share a baseline. */
+.shot--pair { gap: var(--space-6); align-items: flex-end; }
+.shot--pair img { max-height: min(560px, 70vh); }
+
 /* Empty slot: a neutral panel holding the space until an image is dropped in. */
 .shot__placeholder {
   flex: 1 1 auto;
