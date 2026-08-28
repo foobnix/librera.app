@@ -280,7 +280,16 @@ h1, h2, h3, p { margin: 0; }
 /* Two shots side by side — e.g. a macOS panel next to its iPhone counterpart.
    Bottom-aligned so panels of different heights share a baseline. */
 .shot--pair { gap: var(--space-6); align-items: flex-end; }
-.shot--pair img { max-height: min(560px, 70vh); }
+/* min-width:0 overrides the flex `min-width:auto` floor, which otherwise pins
+   each image at its intrinsic width and overflows the column when the two
+   shots differ in orientation. */
+.shot--pair img { max-height: min(560px, 70vh); min-width: 0; }
+
+/* Mixed orientations (portrait panel + landscape window). Sharing a height
+   would shrink both to fit the column and leave the panel unreadable, so
+   split the width instead and let each keep its own height. */
+.shot--mixed img:first-of-type { flex: 0 1 36%; }
+.shot--mixed img:nth-of-type(2) { flex: 0 1 64%; }
 
 /* Empty slot: a neutral panel holding the space until an image is dropped in. */
 .shot__placeholder {
