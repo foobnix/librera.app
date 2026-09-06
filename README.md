@@ -4,6 +4,14 @@
 
 ---
 
+## LibreraX
+
+*Reading*
+
+It opens EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown — reflowable books laid out by foliate-js, PDF pages by PDFium — and keeps a library of the folders you point it at, with covers, shelves, tags and search. Reading themes are your own list: added, recoloured, reordered and edited over a live page, with the contrast of ink against paper shown while you work. Highlights and bookmarks stay with the book; edited titles, authors and covers are written into the file itself. It reads aloud through a media session the lock screen and headset drive, puts the book you are on into a home-screen widget, and carries the same controls to a paired Wear OS watch.
+
+- [Google Play](https://play.google.com/store/apps/details?id=com.librerax)
+
 ## Librera Reader for Android
 
 *Reading*
