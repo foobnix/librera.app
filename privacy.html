@@ -67,8 +67,8 @@
     <p class="legal-head__lede">This policy covers every Librera application and this website. It
     describes what each app stores, what leaves your device, and who else is involved.</p>
     <div class="legal-head__meta">
-      <span>Effective 6 September 2026</span>
-      <span>Version 1.1</span>
+      <span>Effective 3 October 2026</span>
+      <span>Version 1.2</span>
       <span>Developer: Ivan Ivanenko (individual)</span>
     </div>
   </div>
@@ -113,7 +113,7 @@
       <p>This policy applies to the website <a href="https://librera.app">librera.app</a> and to the
       following applications, on every platform each is distributed for:</p>
       <ul>
-        <li><strong>LibreraX</strong> — Android, with a Wear OS companion and Android Auto</li>
+        <li><strong>LibreraX</strong> — Android, iPhone and iPad, with Wear&nbsp;OS and Apple Watch companions, Android Auto and home-screen widgets</li>
         <li><strong>Librera Reader</strong> — Android, with Android Auto (Google Play, F-Droid, direct APK)</li>
         <li><strong>Librera1 Reader</strong> — Android, iOS, macOS, Windows, Linux, Chrome extension, web, VS Code extension</li>
         <li><strong>Sound Icon</strong> — macOS</li>
@@ -141,9 +141,9 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>LibreraX</strong> (Android)</td>
-              <td>Only to use Google&nbsp;Drive backup and sync</td>
-              <td>Ad and analytics requests; the backup and sync you ask for, to your own Drive</td>
+              <td><strong>LibreraX</strong> (Android, iOS)</td>
+              <td>Optional — to sync between devices and connect Google&nbsp;Drive</td>
+              <td>Ad and analytics requests; if you sign in, your synced reading records, and the books you upload to your own Drive</td>
               <td>Yes, free edition</td>
               <td>Yes</td>
             </tr>
@@ -193,13 +193,15 @@
         <li><strong>Local first.</strong> Every app works on the device in front of you. Nothing is
         uploaded because an app wants it uploaded — only because a feature you turned on needs it.</li>
         <li><strong>We never sell your data</strong>, and we never share it with data brokers.</li>
-        <li><strong>We do not read your books, documents, screenshots or reminders.</strong> We have no
-        ability to open the content you keep in these apps.</li>
+        <li><strong>We do not read your books, documents, screenshots or reminders.</strong> Book files
+        never reach us. Where a reader syncs your marks and notes through our database, they are kept
+        there for your own devices, and we do not look at them.</li>
         <li><strong>The narrowest permission that works.</strong> Where a platform offers a scoped
         permission, we ask for the scoped one — see section 6 on Google Drive.</li>
         <li><strong>No account unless a feature needs one.</strong> Three of the six apps have no
-        sign-in at all, and in the three readers that offer one, signing in is optional and is
-        what connects your own Google&nbsp;Drive — nothing else depends on it.</li>
+        sign-in at all. In the three readers that offer one, signing in is optional: it is what
+        syncs your reading between devices and connects your own Google&nbsp;Drive. Nothing else
+        depends on it.</li>
       </ul>
     </section>
 
@@ -207,7 +209,8 @@
       <h2>4. Data kept on your device</h2>
       <p><em>Applies to: all apps.</em></p>
       <p>Every Librera app stores its own settings locally, in the private storage the operating
-      system gives it. This data is not transmitted to us, and other apps cannot read it. Depending
+      system gives it. Other apps cannot read it, and it is not transmitted to us, except for what a
+      reader syncs when you sign in (section 5). Depending
       on the app it includes:</p>
       <ul>
         <li>your library: the books you have opened, your position in each, bookmarks, highlights,
@@ -216,6 +219,9 @@
         <li>appearance and reading settings — theme, fonts, margins, scrolling mode;</li>
         <li>security-scoped bookmarks and file references, so an app can reopen the folders and
         files you previously chose;</li>
+        <li>on iPhone and iPad, the books you import into LibreraX, which are copied into its own
+        storage, and a small copy of your current shelves for its widgets and Apple Watch app;</li>
+        <li>the addresses and logins of book catalogues (OPDS) you add to LibreraX;</li>
         <li>audio device preferences, starred devices and custom device icons (Sound Icon);</li>
         <li>your reminders — their text, due dates, order and done state (Menu Reminder);</li>
         <li>capture and export preferences (Menu Screenshot);</li>
@@ -230,16 +236,45 @@
       <h2>5. Account data</h2>
       <p><em>Applies to: the three readers, and in each of them only if you choose to sign in. Sound
       Icon, Menu Reminder and Menu Screenshot have no accounts and no sign-in.</em></p>
-      <p>In <strong>LibreraX</strong> and <strong>Librera Reader</strong>, signing in with Google
-      does one thing: it connects your own Google&nbsp;Drive, so the app can keep a backup there and
-      hold your reading in step between devices.
-      The sign-in is handled by Google Play services; the app receives an access token for the
-      narrow Drive scope described in section 6, and your account's email address and display name
-      so it can show you which account is connected. <strong>None of it is sent to us</strong> — we
-      operate no account system for either app, and there is no server of ours holding anything for
-      you. Sign out, or revoke the app in your
+      <p>In <strong>Librera Reader</strong>, signing in with Google does one thing: it connects your
+      own Google&nbsp;Drive, so the app can hold your reading in step between devices. The sign-in
+      is handled by Google Play services. The app receives an access token for the narrow Drive
+      scope described in section 6, and your account's email address and display name so it can
+      show you which account is connected. <strong>None of it is sent to us</strong>. We operate no
+      account system for Librera Reader, and no server of ours holds anything for you. Sign out, or
+      revoke the app in your
       <a href="https://myaccount.google.com/permissions">Google account permissions</a>, and the
-      connection ends; the app goes on working on local books alone.</p>
+      connection ends. The app goes on working on local books alone.</p>
+      <p><strong>LibreraX</strong> can be used entirely without an account. If you choose to sign
+      in, you sign in with Google, or on iPhone and iPad also with Apple, through
+      <strong>Firebase Authentication</strong>. The account syncs your reading between your devices
+      and lets a subscription bought on one device work on the others. In that case we receive and
+      store:</p>
+      <ul>
+        <li>your account's <strong>email address</strong> and, where Google or Apple provides it,
+        your <strong>name</strong>. With Sign in with Apple you may share only a relay address that
+        hides your real one, and no name;</li>
+        <li>a <strong>user identifier</strong> (the Firebase UID) that ties your synced data to
+        you;</li>
+        <li>timestamps for account creation and last sign-in.</li>
+      </ul>
+      <p>With an account active, LibreraX stores in <strong>Google Cloud Firestore</strong>, under a
+      path private to your user identifier (<code>users/{uid}/…</code>):</p>
+      <ul>
+        <li><strong>a record for each book in your library</strong>: its file name and size, title
+        and author, how far through it you are and where you stopped, the favourite, recent and
+        read marks, your tags, and the Drive IDs of the book and its cover if you uploaded them;</li>
+        <li><strong>your bookmarks, highlights and notes</strong>: where each is, its colour, and
+        the highlighted passage and note text;</li>
+        <li><strong>your subscription status</strong>, one record per device: the store, whether the
+        subscription is active and until when, and a random identifier for that installation.</li>
+      </ul>
+      <p>These documents can be read only by devices signed in to your account, which is enforced
+      by server-side security rules. A Google sign-in also gives the app an access token for the
+      narrow Drive scope described in section 6. That token stays on your device and is not sent to
+      us. Sign out, and the app keeps working on local books alone. Delete the account in the app's
+      <strong>Cloud</strong> tab, and the records above and the sign-in account are deleted. See
+      <a href="delete-data.html#account">Delete your data</a>.</p>
       <p>Librera1 Reader can be used entirely without an account. If you choose to sign in — which
       is what enables syncing your library between devices — you sign in with Google, through
       <strong>Firebase Authentication</strong>. In that case we receive and store:</p>
@@ -266,10 +301,12 @@
       <p>Three of the apps can put something in <strong>your own Google Drive</strong>, in your own
       account, and only after you connect it:</p>
       <ul>
-        <li><strong>LibreraX</strong> — the backup of your library, and the sync that keeps it in
-        step between devices: your shelves and tags, your reading positions, your bookmarks and
-        highlights, and the app's settings, written as one JSON document. You choose when it is made
-        and when it is restored.</li>
+        <li><strong>LibreraX</strong> — the book files you choose to upload to its
+        <strong>Cloud</strong>, with their covers, in the <code>LibreraX/Books</code> and
+        <code>LibreraX/Covers</code> folders, so they can be opened on your other devices. Your
+        reading positions, marks and notes sync through your LibreraX account (section 5), not
+        through Drive. A library backup is a file you export and save where you choose; it is not
+        uploaded anywhere.</li>
         <li><strong>Librera Reader</strong> (Google&nbsp;Play build) — your reading progress,
         bookmarks and settings, and the book files you choose to synchronise, so a book you are
         halfway through on one device opens in the same place on another. The F-Droid build has no
@@ -303,11 +340,13 @@
       Store, <strong>Google</strong> on Google Play. <strong>We never see, receive or store your
       payment card, billing address or store account credentials.</strong></p>
       <p>What reaches an app is a signed receipt or entitlement telling it whether a purchase is
-      active. <strong>LibreraX</strong> asks Google Play Billing directly, with no intermediary: it
-      receives the state of the subscription and caches one flag on the device saying whether it is
-      currently active, so the app does not misreport your purchase before Play answers. No
-      identifier of yours is sent anywhere else for this, and there is no account of ours attached
-      to it. In Librera1 Reader, subscription entitlements are managed through
+      active. <strong>LibreraX</strong> asks the store directly, with no intermediary: Google Play
+      Billing on Android, and Apple's StoreKit on iPhone and iPad. It receives the state of the
+      subscription and caches one flag on the device saying whether it is currently active, so the
+      app does not misreport your purchase before the store answers. If you are signed in to
+      LibreraX, it also saves that status to your account (section 5), so a subscription bought on
+      one device, Android or iOS, works on your others. Nothing else about your purchase is sent
+      anywhere. In Librera1 Reader, subscription entitlements are managed through
       <strong>RevenueCat</strong>, which acts as our processor: it receives a purchase identifier
       from the store together with an app user identifier — your Firebase UID when you are signed in,
       or an anonymous identifier when you are not — so that a subscription bought on one device
@@ -319,36 +358,41 @@
 
     <section id="ads">
       <h2>8. Advertising</h2>
-      <p><em>Applies to: the free edition of LibreraX, and the free version of Librera Reader for
-      Android. Neither the F-Droid build of Librera Reader nor any other Librera app contains
+      <p><em>Applies to: the free edition of LibreraX on Android and iOS, and the free version of
+      Librera Reader for Android. Neither the F-Droid build of Librera Reader nor any other Librera app contains
       advertising of any kind.</em></p>
       <p>Both display advertising supplied by <strong>Google AdMob</strong>. In LibreraX that means
-      a banner, an occasional full-screen advertisement between screens, and — where a feature
-      offers it — a rewarded advertisement you may choose to watch to open that feature for a while;
-      nothing is asked of AdMob at all in the first hour after installing, or once you have
-      subscribed or bought the app. To serve and measure ads, AdMob may process your device's
+      advertisements within the app's screens, an occasional full-screen advertisement between
+      screens or when the app is opened, and a rewarded advertisement you may choose to watch to
+      try the subscription for three hours or to use a feature once. LibreraX asks nothing of AdMob
+      in the first three hours after installing, or once you have subscribed. To serve and measure ads, AdMob may process your device's
       advertising identifier, IP address, coarse location derived from it, and ad interaction events.
       This processing is Google's, under
       <a href="https://policies.google.com/technologies/partner-sites">Google's policy for partner
       sites and apps</a>; we do not receive the underlying data and use it for nothing.</p>
-      <p>You can limit it: on Android, use <em>Settings → Privacy → Ads</em> to delete or opt out of
-      the advertising ID. In regions where consent is required, a consent prompt is shown before
-      personalised ads are served, and you can change your answer later. <strong>Subscribing in
+      <p>You can limit it. On Android, use <em>Settings → Privacy → Ads</em> to delete or opt out of
+      the advertising ID. On iPhone and iPad, LibreraX asks your permission through App Tracking
+      Transparency before the advertising identifier is used. If you decline, or turn it off later
+      in <em>Settings → Privacy &amp; Security → Tracking</em>, it is never available to the app.
+      In regions where consent is required, a consent prompt is shown before personalised ads are
+      served. You can change your answer later with <em>Privacy options</em> in LibreraX's
+      settings. <strong>Subscribing in
       LibreraX, or buying the paid version of Librera Reader, removes advertising
       entirely.</strong></p>
     </section>
 
     <section id="analytics">
       <h2>9. Analytics and diagnostics</h2>
-      <p><em>Applies to: LibreraX, and the Google Play build of Librera Reader.</em></p>
+      <p><em>Applies to: LibreraX on Android and iOS, and the Google Play build of Librera Reader.</em></p>
       <p>Both include <strong>Google Firebase Analytics</strong>, which reports aggregate, app-level
       events — that the app was opened, that a screen was shown, crash-adjacent diagnostics —
       together with the device model, OS version and a generated app instance identifier. We use it
       only to know which features are used and where the app fails.</p>
-      <p>In LibreraX the events are the screens you arrive at, and the points on the paid path: that
-      the subscription was offered, that its button was tapped, that a rewarded advertisement was
-      watched. Which edition you are running is recorded as a property of the app instance. That is
-      the whole of it.</p>
+      <p>In LibreraX the events are Firebase's standard ones (first open, sessions, the screens you
+      arrive at) and the points on the paid path: that the subscription or the three-hour trial was
+      offered, that its button was tapped, that a rewarded advertisement was watched, and for which
+      feature. On Android, which edition you are running is also recorded as a property of the app
+      instance. That is the whole of it.</p>
       <p><strong>Neither app reports what you read.</strong> No title, no author, no file name, no
       path and no page ever leaves the device through analytics, and nothing carries the contents of
       a book.</p>
@@ -384,8 +428,15 @@
             <tr>
               <td>Nearby devices / paired watch</td>
               <td>LibreraX</td>
-              <td>To mirror what is being read to a paired Wear&nbsp;OS watch and take its
-              play, pause and skip commands. The messages travel between your own two devices.</td>
+              <td>To mirror what is being read to a paired Wear&nbsp;OS watch or Apple Watch and take
+              its play, pause and skip commands. The messages travel between your own two
+              devices.</td>
+            </tr>
+            <tr>
+              <td>Tracking (App Tracking Transparency)</td>
+              <td>LibreraX on iPhone and iPad</td>
+              <td>Asked only in the free edition, before AdMob may use the advertising identifier for
+              personalised ads. Saying no costs you nothing but ad relevance.</td>
             </tr>
             <tr>
               <td>Microphone / audio input</td>
@@ -422,8 +473,8 @@
               <td>Network access</td>
               <td>All apps</td>
               <td>Advertising and analytics (LibreraX, Librera Reader Play build), Google&nbsp;Drive
-              backup or sync where you have connected it, sign-in and sync (Librera1), and store
-              communication for purchases. Sound Icon, Menu Reminder and Menu Screenshot make no
+              where you have connected it, sign-in and sync (LibreraX, Librera1), the book catalogues
+              you choose to browse (LibreraX), and store communication for purchases. Sound Icon, Menu Reminder and Menu Screenshot make no
               network requests of their own.</td>
             </tr>
           </tbody>
@@ -444,7 +495,7 @@
             <tr>
               <td>Google (Firebase Authentication, Cloud Firestore)</td>
               <td>Sign-in and sync storage</td>
-              <td>Librera1 Reader</td>
+              <td>LibreraX, Librera1 Reader</td>
               <td><a href="https://firebase.google.com/support/privacy">Firebase privacy</a></td>
             </tr>
             <tr>
@@ -454,7 +505,7 @@
               <td><a href="https://policies.google.com/privacy">Google privacy</a></td>
             </tr>
             <tr>
-              <td>Google AdMob</td>
+              <td>Google AdMob, and its consent tool</td>
               <td>Advertising in the free editions</td>
               <td>LibreraX, Librera Reader</td>
               <td><a href="https://policies.google.com/technologies/partner-sites">Google partner policy</a></td>
@@ -473,8 +524,8 @@
             </tr>
             <tr>
               <td>Apple</td>
-              <td>App Store distribution and payment</td>
-              <td>Sound Icon, Menu Screenshot, Librera1 Reader</td>
+              <td>App Store and TestFlight distribution, payment, and Sign in with Apple</td>
+              <td>LibreraX (iOS), Sound Icon, Menu Screenshot, Librera1 Reader</td>
               <td><a href="https://www.apple.com/legal/privacy/">Apple privacy</a></td>
             </tr>
             <tr>
@@ -495,8 +546,8 @@
       <ul>
         <li><strong>Performance of a contract</strong> — account creation, sync, and delivering a
         purchase or subscription you bought.</li>
-        <li><strong>Consent</strong> — personalised advertising where consent is required, and
-        connecting Google Drive. You may withdraw consent at any time, without affecting processing
+        <li><strong>Consent</strong> — personalised advertising where consent is required, tracking
+        permission on iPhone and iPad, and connecting Google Drive. You may withdraw consent at any time, without affecting processing
         already carried out.</li>
         <li><strong>Legitimate interests</strong> — aggregate analytics in LibreraX and in the
         Google Play build of Librera Reader, to keep the apps working and to decide what to build;
@@ -509,24 +560,30 @@
 
     <section id="retention">
       <h2>13. Retention and deletion</h2>
-      <p>For <strong>LibreraX</strong> and <strong>Librera Reader</strong> there is no account of
-      ours to delete, and the step-by-step instructions have a page of their own:
-      <a href="delete-data.html">Delete your data</a>.</p>
+      <p>A <strong>LibreraX</strong> account is deleted from inside the app. <strong>Librera
+      Reader</strong> has no account of ours to delete. The step-by-step instructions for both have
+      a page of their own: <a href="delete-data.html">Delete your data</a>.</p>
       <p>We keep account and sync data for as long as your account exists. Delete the account and the
       associated documents are deleted; we retain nothing afterwards except what a store keeps for
       its own legal purposes.</p>
       <ul>
+        <li><strong>LibreraX account and synced data</strong> — open the <strong>Cloud</strong> tab
+        in the app and choose <strong>Delete account</strong>, or email us and we will delete it
+        within 30 days. This does not remove books you uploaded to your own Drive.</li>
         <li><strong>Librera1 Reader account and synced data</strong> — use the account screen in the
         app to sign out and delete your account, or email us and we will delete it within 30 days.
         Revoke Drive access at
         <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
-        <li><strong>A Google&nbsp;Drive backup or sync (LibreraX, Librera Reader)</strong> — the
+        <li><strong>Files in your Google&nbsp;Drive (LibreraX, Librera Reader)</strong> — the
         files are in your own Drive and stay until you delete them there. Revoke the app's access at
         <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. We
         hold no copy and cannot delete anything on your behalf.</li>
-        <li><strong>Local data, any app</strong> — uninstalling removes it. On macOS you can also
-        delete the app's container in <code>~/Library/Containers/</code>.</li>
-        <li><strong>Advertising identifier</strong> — reset or delete it in Android settings.</li>
+        <li><strong>Local data, any app</strong> — uninstalling removes it. On iPhone and iPad, delete
+        the app rather than offload it. On macOS you can also delete the app's container in
+        <code>~/Library/Containers/</code>.</li>
+        <li><strong>Advertising identifier</strong> — reset or delete it in Android settings. On
+        iPhone and iPad, turn off tracking in <em>Settings → Privacy &amp; Security →
+        Tracking</em>.</li>
         <li><strong>Purchases</strong> — subscriptions are cancelled in the store, not in the app,
         and deleting an app does not cancel one. See the
         <a href="terms.html#subscriptions">Terms of Use</a>.</li>
@@ -565,9 +622,10 @@
       by the account that owns them, enforced by server-side security rules. Desktop and mobile apps
       run inside the sandbox their platform provides, with the minimum permissions listed in section
       10, and store builds are signed and — on macOS — notarized.</p>
-      <p>No system is perfect. The strongest protection here is structural: for five of the six
+      <p>No system is perfect. The strongest protection here is structural: for four of the six
       apps we run no server that holds your data, so there is nothing of ours to be breached in the
-      first place. Where a reader connects Google&nbsp;Drive, the files sit in that reader's own
+      first place. The two readers that sync, LibreraX and Librera1 Reader, keep only what is
+      listed in section 5, readable only by the account that owns it. Where a reader connects Google&nbsp;Drive, the files sit in that reader's own
       Google account, under that account's own protections, not in storage of ours.</p>
     </section>
 
@@ -599,35 +657,40 @@
           <img src="assets/img/icons/librerax.png" alt="">
           <div>
             <div class="annex__name">LibreraX</div>
-            <div class="annex__platforms">Android — Google Play; with a Wear&nbsp;OS companion and Android Auto</div>
+            <div class="annex__platforms">Android — Google Play; iPhone and iPad — TestFlight; with Wear&nbsp;OS and Apple Watch companions, Android Auto and home-screen widgets</div>
           </div>
         </div>
         <dl>
           <dt>Account</dt>
-          <dd>Optional, and only for Google&nbsp;Drive backup and sync. Signing in connects your
-          own Drive and nothing else; we run no account system for this app.</dd>
+          <dd>Optional. Sign in with Google, or on iPhone and iPad also with Apple, to sync your
+          reading between devices, carry a subscription across them, and connect your own
+          Google&nbsp;Drive. The account and its synced records are held in our Firebase project.
+          You can delete them in the app's <strong>Cloud</strong> tab.</dd>
           <dt>What stays on your device</dt>
-          <dd>Your library, reading positions, bookmarks, highlights, notes, tags, reading themes
-          and all settings — and a cached flag saying whether the subscription is active.</dd>
+          <dd>Your library, reading positions, bookmarks, highlights, notes, tags, reading themes,
+          catalogue logins and all settings, and a cached flag saying whether the subscription is
+          active. On iPhone and iPad, the books you import are kept here too.</dd>
           <dt>What leaves your device</dt>
           <dd>Advertising requests to AdMob (free edition only), aggregate analytics events to
-          Firebase Analytics, Google Play Billing traffic for the subscription, and — only if you
-          connect Drive — the backup document it keeps there and syncs between your devices. Nothing
-          else.</dd>
+          Firebase Analytics, and store traffic for the subscription (Google Play or the App Store).
+          Only if you sign in: your sign-in and the synced records listed in section 5, to Firestore.
+          Only if you upload them: book files and covers, to your own Drive. Requests to the book
+          catalogues you choose to browse. Nothing else.</dd>
           <dt>Analytics, in full</dt>
-          <dd>Which screen you arrived at, that the subscription was offered or its button tapped,
-          that a rewarded advertisement was watched, and which edition you are running. No title, no
-          author, no file name, no page.</dd>
+          <dd>Firebase's standard events, which screen you arrived at, that the subscription or trial
+          was offered or its button tapped, that a rewarded advertisement was watched and for which
+          feature, and on Android which edition you are running. No title, no author, no file name,
+          no page.</dd>
           <dt>Purchases</dt>
           <dd>A monthly auto-renewing subscription through Google Play, listed at
-          $0.99&nbsp;USD/month, which removes the advertising. Play handles the payment; we never
-          see it.</dd>
+          $0.99&nbsp;USD/month, or through the App Store at the price shown there. It removes the
+          advertising. The store handles the payment; we never see it.</dd>
           <dt>Your books</dt>
-          <dd>Read from your device. Nothing is uploaded except the backup you ask for, to your own
-          Drive.</dd>
+          <dd>Read from your device. Nothing is uploaded except the books you choose to put in the
+          Cloud, and those go to your own Drive.</dd>
           <dt>The watch</dt>
-          <dd>What is being read is mirrored to a paired Wear&nbsp;OS watch so it can show it and
-          drive playback. The messages pass between your own two devices and reach no server.</dd>
+          <dd>What is being read is mirrored to a paired Wear&nbsp;OS watch or Apple Watch, so it can
+          show it and drive playback. The messages pass between your own two devices and reach no server.</dd>
         </dl>
       </div>
 

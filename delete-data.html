@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Delete Your Data — Librera Applications</title>
-<meta name="description" content="How to delete your data from Librera Reader and LibreraX. There is no account on our servers to delete; sign-in exists only to reach your own Google Drive, and this page shows how to revoke it and remove everything.">
+<meta name="description" content="How to delete your LibreraX account and data on Android and iOS, and your data from Librera Reader: the account in the app, your own Google Drive, and the data on your device.">
 <link rel="canonical" href="https://librera.app/delete-data.html">
 
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://librera.app/delete-data.html">
 <meta property="og:site_name" content="Librera">
 <meta property="og:title" content="Delete Your Data — Librera Applications">
-<meta property="og:description" content="How to delete your data from Librera Reader and LibreraX.">
+<meta property="og:description" content="How to delete your LibreraX account and your data from LibreraX and Librera Reader.">
 <meta property="og:image" content="https://librera.app/assets/img/librera-mark.png">
 <meta name="twitter:card" content="summary">
 
@@ -64,13 +64,14 @@
   <div class="container container--narrow">
     <div class="eyebrow">Legal</div>
     <h1 class="legal-head__title">Delete your data</h1>
-    <p class="legal-head__lede">For <strong>Librera Reader</strong> and <strong>LibreraX</strong>. Neither
-    app keeps an account for you on any server of ours, so there is no account to close — what there
-    is to delete is on your own device and in your own Google Drive, and this page shows how to
-    remove all of it.</p>
+    <p class="legal-head__lede">For <strong>LibreraX</strong> on Android and iOS, and for
+    <strong>Librera Reader</strong>. A LibreraX account is optional, and if you made one you can
+    delete it from inside the app in a single step. Librera Reader keeps no account at all. This
+    page shows how to remove everything: the account, what is in your own Google&nbsp;Drive, and
+    what is on your device.</p>
     <div class="legal-head__meta">
-      <span>Effective 6 September 2026</span>
-      <span>Version 1.0</span>
+      <span>Effective 3 October 2026</span>
+      <span>Version 1.1</span>
       <span>Developer: Ivan Ivanenko (individual)</span>
     </div>
   </div>
@@ -81,9 +82,9 @@
     <div class="toc__title">Contents</div>
     <ol>
       <li><a href="#apps">1. Which apps this covers</a></li>
-      <li><a href="#noaccount">2. There is no account to delete</a></li>
+      <li><a href="#account">2. Delete your LibreraX account in the app</a></li>
       <li><a href="#where">3. Where your data actually is</a></li>
-      <li><a href="#revoke">4. Revoke the app's access to your Google Drive</a></li>
+      <li><a href="#revoke">4. Revoke the app's access to your Google or Apple account</a></li>
       <li><a href="#drive">5. Delete what the app put in your Drive</a></li>
       <li><a href="#device">6. Delete the data on your device</a></li>
       <li><a href="#analytics">7. Analytics and advertising</a></li>
@@ -98,18 +99,18 @@
 
     <section id="apps">
       <h2>1. Which apps this covers</h2>
-      <p>These instructions are for the two Android reading apps published by
+      <p>These instructions are for the two reading apps published by
       <strong>Ivan Ivanenko</strong>, an individual developer:</p>
       <div class="table-scroll">
         <table>
           <thead>
-            <tr><th>App</th><th>Package</th><th>Where it comes from</th></tr>
+            <tr><th>App</th><th>Package / bundle ID</th><th>Where it comes from</th></tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>LibreraX</strong></td>
               <td><code>com.librerax</code></td>
-              <td>Google Play</td>
+              <td>Google Play (Android); TestFlight (iPhone and iPad)</td>
             </tr>
             <tr>
               <td><strong>Librera Reader</strong></td>
@@ -120,33 +121,48 @@
         </table>
       </div>
       <p>Our other applications — Librera1 Reader, Sound Icon, Menu Reminder and Menu Screenshot —
-      are covered by section 13 of the <a href="privacy.html#retention">Privacy Policy</a>. Librera1
-      Reader is the only one of them with an account on our side, and it is deleted from the account
-      screen inside that app.</p>
+      are covered by section 13 of the <a href="privacy.html#retention">Privacy Policy</a>. Of them,
+      only Librera1 Reader has an account, and you delete it from the account screen inside that
+      app.</p>
     </section>
 
-    <section id="noaccount">
-      <h2>2. There is no account to delete</h2>
-      <p><strong>Librera Reader and LibreraX do not create or store user accounts on any server of
-      ours.</strong> There is no username, no password, no profile and no server-side copy of your
-      library. We run no such server, so there is nothing for us to hold and nothing for you to close.</p>
-      <p>Where an app asks you to sign in with Google, that sign-in does exactly one thing:
-      <strong>it authorises the app to reach your own Google Drive</strong>, so it can keep a backup
-      there and hold your reading in step between your devices. The account is yours, the storage is
-      yours, and the files are in your Drive rather than in ours.</p>
+    <section id="account">
+      <h2>2. Delete your LibreraX account in the app</h2>
+      <p>Signing in to LibreraX is optional. You sign in with Google, or on iPhone and iPad also with
+      Apple, and the account exists for two things: keeping your reading the same on every device,
+      and connecting your own Google&nbsp;Drive for your books. If you never signed in, LibreraX
+      has no account of yours and you can skip to section 6.</p>
+      <p>To delete the account, on any device signed in to it:</p>
+      <ol>
+        <li>Open LibreraX and go to the <strong>Cloud</strong> tab.</li>
+        <li>Tap <strong>Delete account</strong>, and confirm.</li>
+        <li>If asked, sign in once more to prove it is you. Google and Apple require this when the
+        last sign-in was some time ago.</li>
+      </ol>
+      <p>This permanently deletes, from our cloud, everything LibreraX keeps for that account: your
+      reading positions, bookmarks, highlights and notes, favourites, tags and read marks, and the
+      record of which books you have. It then deletes the sign-in account itself. If you signed in
+      with Apple, it also revokes the app's Sign in with Apple authorisation. It cannot be
+      undone.</p>
       <div class="callout">
-        <div class="callout__title">The app only ever sees the corner of Drive it made</div>
-        <p>Both apps request the narrow <code>drive.file</code> scope — access limited to files the
-        app itself creates or that you explicitly open with it. Neither can list, read or delete the
-        rest of your Drive, so revoking access takes away everything it ever had.</p>
+        <div class="callout__title">What deleting the account does not touch</div>
+        <p>The <strong>books in your Google&nbsp;Drive</strong>: they are in your own storage, and
+        section 5 shows how to remove them. The <strong>library on your device</strong>: it stays
+        as it is and simply stops syncing, and section 6 shows how to remove it. A
+        <strong>subscription</strong>: you cancel it in Google Play or the App Store, not in the
+        app.</p>
       </div>
-      <p>Signing in is optional in both apps. If you never connect Drive, nothing at all leaves your
-      device except the anonymous advertising and analytics traffic described in section 7.</p>
+      <p>Lost the device, or can't open the app? Write to us (section 9) and we will delete the
+      account for you.</p>
+      <p><strong>Librera Reader has no account to delete.</strong> We run no server for it. Its
+      Google sign-in only lets the app reach your own Google&nbsp;Drive, so sections 4 to 6 cover
+      everything there is.</p>
     </section>
 
     <section id="where">
       <h2>3. Where your data actually is</h2>
-      <p>Three places, and you control all three. The rest of this page takes them one at a time.</p>
+      <p>Your data is in up to six places, and you control all of them. The rest of this page takes
+      them one at a time.</p>
       <div class="table-scroll">
         <table>
           <thead>
@@ -157,40 +173,54 @@
               <td>Your library, reading positions, bookmarks, highlights, notes, tags, reading themes
               and settings</td>
               <td>Your device, in the app's private storage</td>
-              <td>Uninstall the app, or clear its storage — section 6</td>
+              <td>Uninstall the app, or on Android clear its storage — section 6</td>
+            </tr>
+            <tr>
+              <td>LibreraX only, if you signed in: the synced copy of your reading records, and
+              whether you have an active subscription</td>
+              <td>Our Google Cloud Firestore database, under your account. Only your own signed-in
+              devices can read it</td>
+              <td>Delete your account in the app — section 2</td>
             </tr>
             <tr>
               <td>Your books themselves</td>
-              <td>Your device, in the folders you chose. The apps only read them</td>
-              <td>Delete them as you would any other file. Uninstalling does not touch them</td>
+              <td>On Android, the folders you chose; the apps only read them. On iPhone and iPad,
+              books you import are copied into the app's own storage, and folders you link are read
+              where they are</td>
+              <td>Delete them as you would any other file. On iOS, deleting the app also removes the
+              books it imported</td>
             </tr>
             <tr>
-              <td>The backup, and the books and reading position you chose to sync</td>
+              <td>Books and covers you uploaded to the cloud (LibreraX), or books and reading
+              position you synced (Librera Reader)</td>
               <td><em>Your own</em> Google Drive, in your own account</td>
               <td>Revoke access, then delete the files — sections 4 and 5</td>
             </tr>
             <tr>
               <td>Anonymous analytics and advertising events</td>
               <td>Google's systems, tied to a resettable identifier and never to your name</td>
-              <td>Reset or delete the advertising ID, and uninstall — section 7</td>
+              <td>Reset the advertising ID or turn off tracking, and uninstall — section 7</td>
             </tr>
             <tr>
               <td>Your purchase or subscription</td>
-              <td>Google Play, under your Google account</td>
-              <td>Managed in Play, not in the app — see the
+              <td>Google Play under your Google account, or the App Store under your Apple
+              Account</td>
+              <td>Managed in the store, not in the app — see the
               <a href="terms.html#subscriptions">Terms of Use</a></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p><strong>No row of this table is on a server of ours</strong>, because there is no server of
-      ours.</p>
+      <p><strong>Only the second row is held by us</strong>, and it exists only if you signed in to
+      LibreraX. Deleting the account removes it.</p>
     </section>
 
     <section id="revoke">
-      <h2>4. Revoke the app's access to your Google Drive</h2>
-      <p>This ends the connection between the app and your Google account. Do it from your Google
-      account, where it takes effect whether or not the app is still installed:</p>
+      <h2>4. Revoke the app's access to your Google or Apple account</h2>
+      <p>Deleting a LibreraX account in the app already ends its sign-in. Revoking here is for
+      Librera Reader, which has no account, and for any case where the app is gone or the phone is
+      lost. It takes effect whether or not the app is still installed.</p>
+      <p><strong>Google</strong> (both apps):</p>
       <ol>
         <li>Open <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
         — or go to your <strong>Google Account → Security → Your connections to third-party apps
@@ -200,99 +230,121 @@
         <li>Choose it, then <strong>Delete all connections</strong> (older wording:
         <strong>Remove access</strong>).</li>
       </ol>
-      <p>From that moment the app can no longer read or write anything in your Drive. The token it
+      <p><strong>Apple</strong> (LibreraX on iPhone and iPad, if you used Sign in with Apple): open
+      <em>Settings → your name → Sign-In &amp; Security → Sign in with Apple</em>, choose
+      <strong>LibreraX</strong>, and tap <strong>Stop Using Apple ID</strong>. You can also do this
+      at <a href="https://account.apple.com">account.apple.com</a>.</p>
+      <p>From that moment the app can no longer sign in as you or reach your Drive. The token it
       held is void, and it has no other way in.</p>
-      <p>You can also disconnect from inside the app — sign out on its settings screen — but revoking
-      in your Google account is the thorough version, and the one to use if the phone is gone.</p>
+      <p>Revoking ends the app's access, but it does not delete a LibreraX account or the records
+      synced to it. To delete those, use section 2 or write to us.</p>
     </section>
 
     <section id="drive">
       <h2>5. Delete what the app put in your Drive</h2>
-      <p>Revoking access stops the app reaching those files; it does not remove them, because they
+      <p>Neither deleting a LibreraX account nor revoking access removes these files, because they
       are yours and they are in your storage. To delete them:</p>
       <ol>
         <li>Open <a href="https://drive.google.com">drive.google.com</a> in the same Google account.</li>
-        <li>Search for the app's folder or for its backup file — LibreraX writes a single JSON
-        document named <code>librera.app-backup-<em>YYYY-MM-DD</em>.json</code>; Librera Reader keeps
-        its synchronised books and progress in its own folder.</li>
-        <li>Delete what you find, then empty <strong>Trash</strong> in Drive — until you do, Google
+        <li>Find the app's folder. LibreraX keeps the books you uploaded in
+        <code>LibreraX/Books</code> and their covers in <code>LibreraX/Covers</code>. Librera Reader
+        keeps its synchronised books and progress in its own folder.</li>
+        <li>Delete what you find, then empty <strong>Trash</strong> in Drive. Until you do, Google
         keeps deleted files for 30 days and they still count against your storage.</li>
       </ol>
-      <p>Nothing in that folder is copied anywhere else. Once it is gone from your Drive and your
-      Trash, it is gone.</p>
+      <p>Nothing in those folders is copied anywhere else. Once the files are gone from your Drive and
+      your Trash, they are gone.</p>
     </section>
 
     <section id="device">
       <h2>6. Delete the data on your device</h2>
-      <p>Everything the app knows about your library — what you have read, where you stopped, what
-      you marked, what you tagged, and every setting — is stored only in the app's private storage on
-      that device. Two ways to remove it:</p>
+      <p>The app keeps your library in its private storage on each device: what you have read,
+      where you stopped, what you marked and tagged, and every setting. LibreraX keeps the logins
+      of any book catalogues you added there too. On iPhone and iPad, its home-screen widgets and
+      the Apple Watch app keep a small copy of your current shelves. All of this goes with the
+      app.</p>
       <ul>
-        <li><strong>Uninstall the app.</strong> Android deletes its private storage with it. Subject
-        to how your device handles app backups, this removes the lot.</li>
-        <li><strong>Or clear it and keep the app.</strong> <em>Settings → Apps → LibreraX</em> (or
-        <em>Librera</em>) <em>→ Storage → Clear storage</em>. The app restarts as if newly
+        <li><strong>Android: uninstall the app.</strong> Android deletes its private storage with
+        it. Depending on how your device handles app backups, this removes everything.</li>
+        <li><strong>Android: or clear it and keep the app.</strong> <em>Settings → Apps → LibreraX</em>
+        (or <em>Librera</em>) <em>→ Storage → Clear storage</em>. The app restarts as if newly
         installed.</li>
+        <li><strong>iPhone and iPad: delete the app.</strong> Touch and hold its icon, then
+        <em>Remove App → Delete App</em>. Or go to <em>Settings → General → iPhone Storage →
+        LibreraX → Delete App</em>. This removes its storage, the books it imported, and its
+        widgets' data. <em>Offload App</em> is not the same: it keeps your data for a
+        reinstall.</li>
       </ul>
-      <p><strong>Your books are not touched by either.</strong> They sit in the folders you chose,
-      the apps only ever read them, and they stay exactly where they are — delete them yourself if
-      you want them gone.</p>
+      <p>A library backup you exported from LibreraX is a file saved where you chose to save it.
+      Delete it there.</p>
+      <p><strong>Books in folders you chose yourself are not touched</strong> by any of this. The
+      apps only read them, and they stay exactly where they are. Delete them yourself if you want
+      them gone.</p>
     </section>
 
     <section id="analytics">
       <h2>7. Analytics and advertising</h2>
-      <p>Both apps report anonymous, aggregate usage through <strong>Google Firebase Analytics</strong>,
-      and their free editions show advertising through <strong>Google AdMob</strong>. Neither carries
-      your name, your email address or anything about what you read — no title, no author, no file
-      name, no page. What they use is a resettable identifier for the app instance and for
-      advertising. The detail is in sections 8 and 9 of the
+      <p>Both apps report anonymous, aggregate usage through <strong>Google Firebase Analytics</strong>.
+      Their free editions show advertising through <strong>Google AdMob</strong>. Neither report
+      carries your name, your email address or anything about what you read: no title, no author,
+      no file name, no page. Instead they use a resettable identifier for the app instance and for
+      advertising. The details are in sections 8 and 9 of the
       <a href="privacy.html#ads">Privacy Policy</a>.</p>
       <ul>
-        <li><strong>Reset or delete the advertising ID</strong> — <em>Settings → Privacy → Ads</em> on
-        Android. Deleting it stops the identifier being available to any app.</li>
-        <li><strong>Uninstalling</strong> ends the reporting: the app instance identifier goes with
-        the app, and a later install is a new one with no link to the old.</li>
+        <li><strong>Android: reset or delete the advertising ID</strong> in <em>Settings → Privacy →
+        Ads</em>. Deleting it stops the identifier being available to any app.</li>
+        <li><strong>iPhone and iPad: turn off tracking</strong> in <em>Settings → Privacy &amp;
+        Security → Tracking</em>, for LibreraX or for all apps. LibreraX asks before it is allowed
+        to track, and if you say no, the advertising identifier is never available to it.</li>
+        <li><strong>Change your ad consent</strong> at any time with <em>Privacy options</em> in
+        LibreraX's settings, in regions where consent is asked for.</li>
+        <li><strong>Uninstalling</strong> ends the reporting. The app instance identifier goes with
+        the app, and a later install gets a new one with no link to the old.</li>
         <li><strong>Subscribing in LibreraX, or buying the paid version of Librera Reader</strong>,
         removes the advertising entirely.</li>
         <li><strong>The F-Droid build of Librera Reader</strong> has no analytics, no advertising and
-        no Google Drive feature at all — there is nothing there to delete.</li>
+        no Google Drive feature at all, so there is nothing there to delete.</li>
       </ul>
-      <p>This data is held by Google under
+      <p>Google holds this data under
       <a href="https://firebase.google.com/support/privacy">Firebase's</a> and
       <a href="https://policies.google.com/technologies/partner-sites">Google's</a> own policies and
-      retention periods. We see only aggregate reports and can neither identify you in them nor pick
-      a single person's events out of them.</p>
+      retention periods. We see only aggregate reports. We can't identify you in them, or pick out
+      one person's events.</p>
     </section>
 
     <section id="retention">
       <h2>8. What is kept, and for how long</h2>
       <ul>
-        <li><strong>By us: nothing.</strong> We operate no server, no database and no account system
-        for these two apps, so we retain no personal data about you — not for a period, and not
-        indefinitely.</li>
+        <li><strong>By us, for LibreraX:</strong> the account and the records synced to it are kept
+        for as long as the account exists. We delete them when you delete the account in the app,
+        or within 30 days of your request. We keep no copy afterwards.</li>
+        <li><strong>By us, for Librera Reader: nothing.</strong> We run no server, no database and
+        no account system for it, so we keep no personal data about you, for any period.</li>
         <li><strong>In your Drive:</strong> for as long as you leave the files there. Deleting them
-        and emptying Drive's Trash removes them; Google holds trashed files for 30 days first.</li>
+        and emptying Drive's Trash removes them. Google keeps trashed files for 30 days first.</li>
         <li><strong>On your device:</strong> until you uninstall the app or clear its storage.</li>
         <li><strong>Analytics and advertising events:</strong> for Google's own retention period,
         under Google's policies, in anonymous and aggregate form.</li>
-        <li><strong>Purchase records:</strong> kept by Google Play as the seller, for as long as tax
-        and consumer law requires of it. We hold no payment data of yours at any point.</li>
+        <li><strong>Purchase records:</strong> kept by Google Play or Apple as the seller, for as
+        long as tax and consumer law requires. We never hold your payment data.</li>
       </ul>
     </section>
 
     <section id="request">
       <h2>9. Ask us instead</h2>
       <p>If you would rather we did it, or you are not sure what an app left behind, write to us and
-      say which app you mean:</p>
+      say which app you mean. For a LibreraX account, include the email address you signed in
+      with:</p>
       <address>
         Ivan Ivanenko — individual developer<br>
         Email: <a href="mailto:librera.raeder@gmail.com">librera.raeder@gmail.com</a><br>
         Web: <a href="https://librera.app">librera.app</a>
       </address>
-      <p>We answer within 30 days. Be aware of what we can honestly promise: for these two apps we
-      hold nothing of yours, so a deletion request is us telling you exactly which of the steps above
-      applies to your case — we have no copy to destroy on your behalf, and no way to reach into your
-      Google account to do it for you.</p>
+      <p>We answer within 30 days. For a LibreraX account, we delete the account and everything
+      synced to it, and confirm when it is done. For Librera Reader we hold nothing of yours. In
+      that case we will tell you exactly which of the steps above apply to you, because we have no
+      copy to destroy and no way into your Google account to do it for you. In either case,
+      the files in your Drive and the data on your device are yours to delete.</p>
       <p>See also the full <a href="privacy.html">Privacy Policy</a> and the
       <a href="terms.html">Terms of Use</a>.</p>
     </section>
@@ -320,6 +372,7 @@
         <div class="footer__col-title">Download</div>
         <ul>
           <li><a href="https://play.google.com/store/apps/details?id=com.librerax">LibreraX on Google Play</a></li>
+          <li><a href="https://testflight.apple.com/join/XVU24NY9">LibreraX on iOS (TestFlight)</a></li>
           <li><a href="https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader">Google Play</a></li>
           <li><a href="https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/">F-Droid</a></li>
           <li><a href="https://github.com/foobnix/LibreraReader">Direct APK</a></li>
