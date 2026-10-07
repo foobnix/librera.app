@@ -1,7 +1,9 @@
 {%- if include.app.install -%}
 <div class="install">
   {%- for step in include.app.install %}
+  {%- if step.label %}
   <div class="install__label">{{ step.label }}</div>
+  {%- endif %}
   <pre class="install__code"><code>{{ step.code }}</code></pre>
   {%- endfor %}
 </div>

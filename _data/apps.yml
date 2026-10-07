@@ -10,7 +10,8 @@
 #   shots      the home page screenshots; class is a .shot modifier
 #   links      store / download buttons; the first is the filled one.
 #              download: true adds the download glyph.
-#   install    optional shell commands shown under the summary
+#   install    optional shell commands shown under the summary ({code, label?});
+#              the first also sits beside the buttons on the app's page
 #   sections   optional tabs under the app header (multi-page apps)
 
 - id: librerax
@@ -201,8 +202,7 @@
     built-in terminal with four shells, and an info panel for drives, memory and battery, Quick Look
     and text previews, an editor, file and folder comparison and a media player.
   install:
-    - label: Install with Homebrew
-      code: brew install foobnix/tap/libreracommander
+    - code: brew install foobnix/tap/libreracommander
     - label: Update
       code: brew upgrade libreracommander
   shots:

@@ -23,7 +23,18 @@ layout: default
     {%- if page.lede %}
     <p class="app-hero__lede">{{ page.lede }}</p>
     {%- endif %}
+    <div class="app-hero__actions">
     {% include app-actions.html app=app %}
+    {%- if app.install %}
+    {%- assign install = app.install | first %}
+    <div class="hero-install">
+      <code class="hero-install__code is-copyable" title="Click to copy">{{ install.code }}</code>
+      <button class="copy-btn" type="button" data-copy="{{ install.code | escape }}" aria-label="Copy">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+      </button>
+    </div>
+    {%- endif %}
+    </div>
     {%- if page.hero_shots %}
     <div class="app-hero__media">{% include shots.html shots=page.hero_shots %}</div>
     {%- endif %}

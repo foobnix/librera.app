@@ -587,6 +587,63 @@ h1, h2, h3, p { margin: 0; }
 }
 .app-hero__media { margin-top: var(--space-10); }
 
+/* Header buttons and the install command share one line, wrapping when narrow. */
+.app-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  margin-top: var(--space-6);
+}
+.app-hero__actions .app-row__actions,
+.app-hero__actions .hero-install { margin-top: 0; }
+
+/* Install command beside the header buttons (e.g. Homebrew), with a copy button. */
+.hero-install {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  min-height: 40px;
+  padding: 3px 3px 3px var(--space-4);
+  max-width: 100%;
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+}
+.hero-install__code { font: var(--type-mono); color: var(--text-primary); overflow-wrap: anywhere; }
+/* Copy icon: in the corner of every code block, and after the header's install line. */
+.copy-wrap { position: relative; }
+.copy-wrap > pre { padding-right: 48px; }
+.copy-wrap > .copy-btn {
+  position: absolute;
+  top: 50%;
+  right: var(--space-2);
+  transform: translateY(-50%);
+}
+.prose .copy-wrap > pre { margin-top: 0; }
+.prose .copy-wrap { margin-top: var(--space-4); }
+.copy-wrap + .install__label { margin-top: var(--space-4); }
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-hover);
+}
+.copy-btn:hover { background: var(--overlay-hover); color: var(--text-primary); }
+.copy-btn.is-copied { color: var(--green-500); }
+.is-copyable { cursor: copy; }
+
 /* "< All apps" above the app icon. */
 .back-home {
   display: inline-flex;

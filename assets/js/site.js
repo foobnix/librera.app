@@ -73,3 +73,84 @@
     })(shots[i]);
   }
 })();
+
+/* Copy commands.
+   Every command / code block gets a copy icon: the home page install box
+   (.install__code), code blocks in page text (.prose pre) and the app header's
+   install line, whose button is already in the markup. Clicking the icon, or
+   the command itself, copies it; a tick shows for a moment. A click that ends
+   a text selection is left alone, so the command can still be selected by
+   hand. */
+(function () {
+  var ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>';
+  var TICK = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+
+  /* Where the async clipboard is missing or refused (older browsers,
+     embedded views), copy through a hidden textarea instead. */
+  function fallback(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    ta.remove();
+    return ok;
+  }
+
+  function copy(text, done) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, function () { if (fallback(text)) done(); });
+    } else if (fallback(text)) {
+      done();
+    }
+  }
+
+  function flash(btn) {
+    btn.innerHTML = TICK;
+    btn.classList.add('is-copied');
+    btn.setAttribute('aria-label', 'Copied');
+    clearTimeout(btn._copyTimer);
+    btn._copyTimer = setTimeout(function () {
+      btn.innerHTML = ICON;
+      btn.classList.remove('is-copied');
+      btn.setAttribute('aria-label', 'Copy');
+    }, 1500);
+  }
+
+  /* Wrap each code block so the icon sits in its corner without scrolling
+     away with a long line. */
+  var blocks = document.querySelectorAll('.install__code, .prose pre');
+  for (var i = 0; i < blocks.length; i++) {
+    var pre = blocks[i];
+    var wrap = document.createElement('div');
+    wrap.className = 'copy-wrap';
+    pre.parentNode.insertBefore(wrap, pre);
+    wrap.appendChild(pre);
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-btn';
+    btn.setAttribute('aria-label', 'Copy');
+    btn.setAttribute('data-copy', pre.textContent.replace(/\s+$/, ''));
+    btn.innerHTML = ICON;
+    wrap.appendChild(btn);
+    pre.classList.add('is-copyable');
+    pre.title = 'Click to copy';
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy-btn');
+    if (!btn) {
+      var code = e.target.closest('.is-copyable');
+      if (!code) return;
+      var sel = window.getSelection && window.getSelection().toString();
+      if (sel) return;
+      btn = code.parentNode.querySelector('.copy-btn');
+      if (!btn) return;
+    }
+    copy(btn.getAttribute('data-copy'), function () { flash(btn); });
+  });
+})();
