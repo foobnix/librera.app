@@ -291,6 +291,11 @@ h1, h2, h3, p { margin: 0; }
 .shot--mixed img:first-of-type { flex: 0 1 36%; }
 .shot--mixed img:nth-of-type(2) { flex: 0 1 64%; }
 
+/* Two landscape windows, one above the other. Side by side they would each
+   get half the column and the window contents would be unreadable. */
+.shot--stack { flex-direction: column; gap: var(--space-6); }
+.shot--stack img { max-height: min(460px, 60vh); }
+
 /* Empty slot: a neutral panel holding the space until an image is dropped in. */
 .shot__placeholder {
   flex: 1 1 auto;
@@ -372,6 +377,25 @@ h1, h2, h3, p { margin: 0; }
   gap: var(--space-3);
   margin-top: var(--space-6);
 }
+
+/* Install command (Homebrew) under an app's description. */
+.install { margin-top: var(--space-6); }
+.install__label {
+  font: var(--type-caption);
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-2);
+}
+.install__code {
+  font: var(--type-mono);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-primary);
+  overflow-x: auto;
+  white-space: pre;
+}
+.install__code + .install__label { margin-top: var(--space-4); }
 
 /* ==========================================================================
    More apps grid

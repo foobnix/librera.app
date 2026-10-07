@@ -63,6 +63,26 @@ Capture perfectly sized screenshots and drag them anywhere. Snap the perfect siz
 
 - [Direct DMG](https://github.com/foobnix/librera.app/releases/tag/Download)
 
+## LibreraCommander
+
+*Utilities*
+
+A dual-pane file manager for the Mac. Two Finder-style panels with your Finder favourites, a built-in terminal with four shells, and an info panel for drives, memory and battery, Quick Look and text previews, an editor, file and folder comparison and a media player.
+
+Install with Homebrew:
+
+```sh
+brew install foobnix/tap/libreracommander
+```
+
+Update:
+
+```sh
+brew upgrade libreracommander
+```
+
+- [Direct DMG](https://github.com/foobnix/LibreraCommander-releases/releases/)
+
 ---
 
 Copyright 2026 Ivan Ivanenko. All rights reserved.
