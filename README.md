@@ -13,7 +13,7 @@ It opens EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown — reflowable books 
 - [Google Play](https://play.google.com/store/apps/details?id=com.librerax)
 - [iOS (TestFlight)](https://testflight.apple.com/join/XVU24NY9)
 
-## Librera Reader for Android
+## Librera Reader
 
 *Reading*
 
@@ -82,6 +82,35 @@ brew upgrade libreracommander
 ```
 
 - [Direct DMG](https://github.com/foobnix/LibreraCommander-releases/releases/)
+
+
+---
+
+## How the site is built
+
+GitHub Pages builds the site with Jekyll. Every page shares one header and footer.
+
+| Where | What |
+| --- | --- |
+| `_data/apps.yml` | The app list. It drives the home page rows, the navbar, the footer and each app page's header (icon, platforms, summary, buttons, screenshots). |
+| `_layouts/default.html` | Every page: `<head>`, navbar, footer, `assets/js/site.js`. |
+| `_layouts/app.html` | An app's own page (`/librerax/`, `/sound-icon/`, …): the app header, then the page's Markdown. |
+| `_layouts/doc.html` | Documentation pages under an app (Librera Reader FAQ, release notes, privacy policies). |
+| `_includes/` | The shared pieces: `head`, `navbar`, `footer`, `app-row` (a home page row), `gallery` (a screenshot gallery). |
+| `<app>/index.md` | Each app's full description and screenshot galleries. Images are in `assets/img/apps/<app>/`. |
+| `librera-reader/` | Librera Reader's pages. `faq/`, `what-is-new/`, `privacy-policy/` and `contributors/` are imported from the LibreraReader repository. |
+
+To add an app, add an entry to `_data/apps.yml` and create `<id>/index.md` with `layout: app` and `app: <id>`.
+
+**Re-importing the Librera Reader docs** after they change in `LibreraReader/docs`:
+
+```sh
+scripts/import-librera-reader-docs.py ../LibreraReader/docs
+```
+
+It rewrites links to their new place and converts images to WebP (needs `cwebp`: `brew install webp`). Edit the docs in LibreraReader, not the copies here. The FAQ index (`librera-reader/faq/index.html`) is written by hand and lists the imported topics automatically.
+
+**Preview locally:** `./run.sh` (needs `gem install jekyll`), then open http://127.0.0.1:4000/.
 
 ---
 

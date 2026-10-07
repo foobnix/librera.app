@@ -1,0 +1,26 @@
+{%- comment -%}
+  Section bar for an app with several pages (app.sections): the app's name and
+  one tab per page, sticky under the navbar. The active tab is the longest
+  section URL the current page sits under, so /faq/<topic>/ lights "FAQ".
+{%- endcomment -%}
+{%- assign app = include.app -%}
+{%- if app.sections -%}
+{%- assign app_url = '/' | append: app.id | append: '/' -%}
+{%- assign active = app_url -%}
+{%- for s in app.sections -%}
+  {%- if s.url != app_url and page.url contains s.url -%}{%- assign active = s.url -%}{%- endif -%}
+{%- endfor -%}
+<div class="app-bar">
+  <div class="container app-bar__inner">
+    <a class="app-bar__brand" href="{{ app_url | relative_url }}">
+      <img src="{{ app.icon | relative_url }}" alt="" width="24" height="24">
+      <span>{{ app.nav }}</span>
+    </a>
+    <nav class="app-bar__tabs" aria-label="{{ app.nav }} sections">
+      {%- for s in app.sections %}
+      <a href="{{ s.url | relative_url }}"{% if s.url == active %} aria-current="page"{% endif %}>{{ s.title }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</div>
+{%- endif -%}

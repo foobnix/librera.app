@@ -1,0 +1,52 @@
+<!-- ==========================================================================
+     Footer — DS components/navigation/Footer.jsx
+     ========================================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__columns">
+      <div class="footer__col">
+        <div class="footer__col-title">Apps</div>
+        <ul>
+          {%- for app in site.data.apps %}
+          {%- assign app_url = '/' | append: app.id | append: '/' %}
+          <li><a href="{{ app_url | relative_url }}">{{ app.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Download</div>
+        <ul>
+          <li><a href="https://play.google.com/store/apps/details?id=com.librerax">LibreraX on Google Play</a></li>
+          <li><a href="https://testflight.apple.com/join/XVU24NY9">LibreraX on iOS (TestFlight)</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader">Google Play</a></li>
+          <li><a href="https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/">F-Droid</a></li>
+          <li><a href="https://github.com/foobnix/LibreraReader">Direct APK</a></li>
+          <li><a href="https://librera1.com/">Librera1 on the web</a></li>
+          <li><a href="https://soundicon.app/">Sound Icon on the web</a></li>
+          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/SoundIcon-macOS-1.7.15.dmg">Sound Icon for macOS</a></li>
+          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/MenuReminder-macOS-1.0.1.dmg">Menu Reminder for macOS</a></li>
+          <li><a href="https://github.com/foobnix/librera.app/releases/download/Download/MenuScreenshot-macOS-1.0.2.dmg">Menu Screenshot for macOS</a></li>
+          <li><a href="https://chromewebstore.google.com/detail/dplmfhcjlbkejkdalnkmklpghklcjahg">Chrome extension</a></li>
+          <li><a href="https://marketplace.visualstudio.com/items?itemName=librera.librera-reader">VS Code extension</a></li>
+          <li><a href="https://github.com/foobnix/LibreraCommander-releases/releases/">LibreraCommander for macOS</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Support</div>
+        <ul>
+          <li><a href="mailto:librera.raeder@gmail.com">librera.raeder@gmail.com</a></li>
+          <li><a href="{{ '/privacy.html' | relative_url }}">Privacy Policy</a></li>
+          <li><a href="{{ '/terms.html' | relative_url }}">Terms of Use</a></li>
+          <li><a href="{{ '/delete-data.html' | relative_url }}">Delete your data</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright {{ site.time | date: '%Y' }} Ivan Ivanenko. All rights reserved.</span>
+      <span class="footer__spacer"></span>
+      <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
+      <a href="{{ '/terms.html' | relative_url }}">Terms</a>
+      <a href="{{ '/delete-data.html' | relative_url }}">Delete data</a>
+    </div>
+  </div>
+</footer>

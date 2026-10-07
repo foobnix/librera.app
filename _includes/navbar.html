@@ -1,0 +1,21 @@
+<!-- ==========================================================================
+     NavBar — DS components/navigation/NavBar.jsx
+     ========================================================================== -->
+<div class="navbar-sticky">
+  <header class="navbar">
+    <div class="navbar__bar">
+      <nav class="navbar__inner" aria-label="Primary">
+        <a class="navbar__brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/img/librera-mark.svg' | relative_url }}" alt="" width="20" height="20">
+          <span>Librera</span>
+        </a>
+        <ul class="navbar__items">
+          {%- for app in site.data.apps %}
+          {%- assign app_url = '/' | append: app.id | append: '/' %}
+          <li><a href="{{ app_url | relative_url }}"{% if page.app == app.id %} aria-current="page"{% endif %}>{{ app.nav }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>

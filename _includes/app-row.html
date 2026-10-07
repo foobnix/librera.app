@@ -1,0 +1,21 @@
+{%- assign app = include.app -%}
+{%- assign app_url = '/' | append: app.id | append: '/' | relative_url -%}
+<!-- ==========================================================================
+     {{ app.name }}
+     ========================================================================== -->
+<section id="{{ app.anchor }}" class="app-row{% if include.alt %} app-row--sunken app-row--reverse{% endif %}">
+  <div class="container">
+    <div class="app-row__copy">
+      {% include app-icon.html app=app %}
+      {% include app-meta.html app=app %}
+      <h2 class="app-row__title"><a href="{{ app_url }}">{{ app.name }}<span class="app-row__arrow" aria-hidden="true">→</span></a></h2>
+      <p class="app-row__body">{{ app.summary }}</p>
+      {% include app-install.html app=app %}
+      {% include app-actions.html app=app %}
+      <a class="app-row__more" href="{{ app_url }}">More about {{ app.nav }}</a>
+    </div>
+    <div class="app-row__media">
+      {% include shots.html shots=app.shots %}
+    </div>
+  </div>
+</section>

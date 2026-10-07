@@ -1,0 +1,45 @@
+{%- if page.title and page.url != "/" -%}
+  {%- assign full_title = page.title | append: " — " | append: site.title -%}
+{%- else -%}
+  {%- assign full_title = site.title -%}
+{%- endif -%}
+{%- assign description = page.description | default: site.description | strip_html | normalize_whitespace -%}
+{%- if page.og_image -%}
+  {%- assign og_image = page.og_image | absolute_url -%}
+{%- else -%}
+  {%- assign og_image = "/assets/img/librera-mark.png" | absolute_url -%}
+{%- endif -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="Librera">
+<meta property="og:title" content="{{ full_title | escape }}">
+<meta property="og:description" content="{{ description | escape }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta name="twitter:card" content="summary">
+
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/assets/img/librera-mark.png' | relative_url }}" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+
+<!-- Design system tokens, verbatim from librera-design-system-c87c098d -->
+<link rel="stylesheet" href="{{ '/assets/css/tokens/fonts.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tokens/colors.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tokens/typography.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tokens/spacing.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tokens/radius.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tokens/elevation.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tokens/motion.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tokens/base.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+{%- for css in page.extra_css %}
+<link rel="stylesheet" href="{{ css | relative_url }}">
+{%- endfor %}

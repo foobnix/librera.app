@@ -1,0 +1,8 @@
+{%- comment -%}
+  "< All apps": back to the home page, scrolled to this app's row.
+{%- endcomment -%}
+{%- assign home_url = '/' | relative_url | append: '#' | append: include.app.anchor -%}
+<a class="back-home" href="{{ home_url }}">
+  <span class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></span>
+  All apps
+</a>

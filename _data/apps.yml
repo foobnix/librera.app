@@ -1,0 +1,215 @@
+# The Librera apps, in the order the home page shows them.
+#
+# One entry feeds: the home page row (_includes/app-row.html), the navbar and
+# footer links, and the header of the app's own page (_layouts/app.html).
+#
+#   id         the app page lives at /<id>/ and its images in assets/img/apps/<id>/
+#   anchor     the home page row's id (kept stable: old links point at it)
+#   nav        short name for the navbar
+#   summary    the home page paragraph (HTML allowed)
+#   shots      the home page screenshots; class is a .shot modifier
+#   links      store / download buttons; the first is the filled one.
+#              download: true adds the download glyph.
+#   install    optional shell commands shown under the summary
+#   sections   optional tabs under the app header (multi-page apps)
+
+- id: librerax
+  anchor: librerax
+  name: LibreraX
+  nav: LibreraX
+  icon: /assets/img/icons/librerax.png
+  category: Reading
+  platforms: [Android, iOS, Wear OS, Android Auto]
+  summary: >-
+    It opens EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown. Keeps a library of the folders you
+    point it at, with covers, shelves, tags and search. Reading themes are your own list: added,
+    recoloured, reordered and edited over a live page, with the contrast of ink against paper shown
+    while you work. Highlights and bookmarks stay with the book; edited titles, authors and covers are
+    written into the file itself. It reads aloud through a media session the lock screen and headset
+    drive, puts the book you are on into a home-screen widget, and carries the same controls to a
+    paired Wear&nbsp;OS watch.
+  shots:
+    class: shot--pair
+    items:
+      - src: /assets/img/screenshots/librerax_1.png
+        alt: LibreraX library
+      - src: /assets/img/screenshots/librerax_2.png
+        alt: LibreraX reading a book
+  links:
+    - label: Google Play
+      href: https://play.google.com/store/apps/details?id=com.librerax
+    - label: iOS (TestFlight)
+      href: https://testflight.apple.com/join/XVU24NY9
+
+- id: librera-reader
+  anchor: librera-reader
+  name: Librera Reader
+  nav: Librera Reader
+  icon: /assets/img/icons/librera_reader.png
+  category: Reading
+  platforms: [Android, Android Auto]
+  summary: >-
+    Highly customizable and feature-rich application for reading books in PDF, EPUB, MOBI, DjVu, FB2,
+    TXT, RTF, AZW, AZW3, HTML, CBZ, CBR formats on Android devices. With its intuitive, yet powerful,
+    interface, Librera makes ebook reading a veritable pleasure. It even features a unique
+    auto-scrolling, hands-free Musician’s mode. As of today, it can boast more than 10 million
+    downloads to devices running all flavors of Android OS.
+  shots:
+    class: shot--pair
+    items:
+      - src: /assets/img/screenshots/librera_reader_1.png
+        alt: Librera Reader library
+      - src: /assets/img/screenshots/librera_reader_2.png
+        alt: Librera Reader page navigation
+  links:
+    - label: Google Play (Pro)
+      href: https://play.google.com/store/apps/details?id=com.foobnix.pro.pdf.reader
+    - label: Google Play
+      href: https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader
+    - label: Direct APK
+      href: https://github.com/foobnix/LibreraReader
+      download: true
+    - label: F-Droid
+      href: https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/
+    - label: Web
+      href: https://librera.mobi
+  sections:
+    - title: Overview
+      url: /librera-reader/
+    - title: FAQ
+      url: /librera-reader/faq/
+    - title: What's new
+      url: /librera-reader/what-is-new/
+    - title: Download
+      url: /librera-reader/download/
+    - title: Privacy
+      url: /librera-reader/privacy-policy/
+
+- id: librera1
+  anchor: reader
+  name: Librera1 Reader
+  nav: Librera1 Reader
+  icon: /assets/img/icons/librera1-reader.png
+  category: Reading
+  platforms: [Android, iOS, macOS, Windows, Linux, Chrome, Web, VS Code]
+  summary: >-
+    A modern reader for the books you already own. Open EPUB, PDF, FB2, MOBI, CBZ on any device. Your
+    highlights, bookmarks, reading progress, and custom shelves sync in real time across your phone,
+    desktop, and browser the moment you sign in-powered seamlessly by Google Drive.
+  shots:
+    class: ""
+    items:
+      - src: /assets/img/screenshots/librera1.png
+        alt: Librera1 Reader screenshot
+  links:
+    - label: Web
+      href: https://librera1.com/
+    - label: Google Play
+      href: https://play.google.com/store/apps/details?id=com.librera1
+    - label: Direct APK
+      href: https://github.com/foobnix/librera.app/releases/tag/Download
+      download: true
+    - label: iOS (TestFlight)
+      href: https://testflight.apple.com/join/mXSRPshr
+    - label: Direct DMG
+      href: https://github.com/foobnix/librera.app/releases/tag/Download
+      download: true
+    - label: Windows
+      href: https://github.com/foobnix/librera.app/releases/tag/Download
+      download: true
+    - label: Linux
+      href: https://github.com/foobnix/librera.app/releases/tag/Download
+      download: true
+    - label: Chrome
+      href: https://chromewebstore.google.com/detail/dplmfhcjlbkejkdalnkmklpghklcjahg
+    - label: VS Code
+      href: https://marketplace.visualstudio.com/items?itemName=librera.librera-reader
+
+- id: sound-icon
+  anchor: sound-icon
+  name: Sound Icon
+  nav: Sound Icon
+  icon: /assets/img/icons/soundicon.png
+  category: Utilities
+  platforms: [macOS]
+  summary: >-
+    Easily switch audio outputs, customize device icons, and star your favorites to switch between
+    them in a single click, control volume. Built-in local <b>Music Player</b> and <b>Video Player</b>
+  shots:
+    class: shot--pair shot--mixed
+    items:
+      - src: /assets/img/screenshots/SoundIcon.png
+        alt: Sound Icon output and volume panel
+      - src: /assets/img/screenshots/SoundIconVideo.png
+        alt: Sound Icon floating video player
+  links:
+    - label: Mac App Store
+      href: https://apps.apple.com/ua/app/sound-icon/id6777951012?mt=12
+    - label: Web
+      href: https://soundicon.app/
+
+- id: menu-reminder
+  anchor: menu-reminder
+  name: Menu Reminder
+  nav: Menu Reminder
+  icon: /assets/img/icons/menureminder.png
+  category: Utilities
+  platforms: [iOS, iPadOS, macOS]
+  summary: >-
+    Your to-dos, one click away in the menu bar. Add a reminder with an optional due date and the list
+    groups itself by day — today, tomorrow, overdue in red. When something comes due, the bell lights
+    up and a notification arrives; check it off and it's done.
+  shots:
+    class: shot--pair
+    items:
+      - src: /assets/img/screenshots/MenuReminder.png
+        alt: Menu Reminder on macOS
+      - src: /assets/img/screenshots/MenuReminderIphone.png
+        alt: Menu Reminder on iPhone
+  links:
+    - label: Mac App Store
+      href: https://apps.apple.com/ua/app/menu-reminder/id6804490236?mt=12
+
+- id: menu-screenshot
+  anchor: menu-screenshot
+  name: Menu Screenshot
+  nav: Menu Screenshot
+  icon: /assets/img/icons/screenshot.png
+  category: Utilities
+  platforms: [macOS]
+  summary: >-
+    Capture perfectly sized screenshots and drag them anywhere. Snap the perfect size. Drag it to any
+    app. Custom screenshots, ready to drag and drop.
+  shots:
+    class: ""
+    items:
+      - src: /assets/img/screenshots/MenuScreenshot.png
+        alt: Menu Screenshot app screenshot
+  links:
+    - label: Mac App Store
+      href: https://apps.apple.com/ua/app/menu-screenshot/id6802039422?mt=12
+
+- id: librera-commander
+  anchor: librera-commander
+  name: LibreraCommander
+  nav: LibreraCommander
+  icon: /assets/img/icons/libreracommander.png
+  category: Utilities
+  platforms: [macOS]
+  summary: >-
+    A dual-pane file manager for the Mac. Two Finder-style panels with your Finder favourites, a
+    built-in terminal with four shells, and an info panel for drives, memory and battery, Quick Look
+    and text previews, an editor, file and folder comparison and a media player.
+  install:
+    - label: Install with Homebrew
+      code: brew install foobnix/tap/libreracommander
+    - label: Update
+      code: brew upgrade libreracommander
+  shots:
+    class: ""
+    items:
+      - src: /assets/img/screenshots/libreracommander_2.webp
+        alt: LibreraCommander with two project folders side by side, a terminal and the system info panel
+  links:
+    - label: Direct DMG
+      href: https://github.com/foobnix/LibreraCommander-releases/releases/

@@ -1,0 +1,61 @@
+# librera.app — Jekyll configuration
+#
+# Built by GitHub Pages (Jekyll 3.10 through the github-pages gem) and locally by
+# ./run.sh (any Jekyll 3.10+ / 4.x). Everything here works on both: no custom
+# plugins, no Jekyll-4-only Liquid.
+#
+# Shared page chrome lives in _includes/ (head, navbar, footer, scripts) and the
+# app list in _data/apps.yml — the home page rows, the navbar, the footer and
+# each app page's header are all generated from that one file.
+
+title: Librera Applications
+description: Book reading apps, and MacOS utilities software
+url: https://librera.app
+baseurl: ""
+lang: en
+author: Ivan Ivanenko
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+
+# Pages keep the URL their path gives them: privacy.html stays privacy.html,
+# librera-reader/faq/main-app/index.md is served at /librera-reader/faq/main-app/.
+
+exclude:
+  - README.md
+  - run.sh
+  - scripts
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - assets/img/screenshots/README.md
+  - .idea
+  - .claude
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "librera-reader/faq"
+    values:
+      layout: doc
+      app: librera-reader
+      section: faq
+  - scope:
+      path: "librera-reader/what-is-new"
+    values:
+      layout: doc
+      app: librera-reader
+      section: what-is-new
+  - scope:
+      path: "librera-reader/privacy-policy"
+    values:
+      layout: doc
+      app: librera-reader
+      section: privacy-policy

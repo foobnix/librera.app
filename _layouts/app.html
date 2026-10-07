@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- comment -%}
+  An app's own page. A compact header — back to all apps, icon, platforms,
+  name and the download buttons from _data/apps.yml — then the page's
+  Markdown. The home page row's summary and screenshots are deliberately not
+  repeated here; the body carries the app's full description. page.lede and
+  page.hero_shots add an intro line or screenshots to the header if a page
+  wants them.
+{%- endcomment -%}
+{%- assign app = site.data.apps | where: "id", page.app | first -%}
+<section class="app-hero">
+  <div class="container">
+    {% include back-home.html app=app %}
+    <div class="app-hero__head">
+      {% include app-icon.html app=app %}
+      <div class="app-hero__name">
+        {% include app-meta.html app=app %}
+        <h1 class="app-hero__title">{{ app.name }}</h1>
+      </div>
+    </div>
+    {%- if page.lede %}
+    <p class="app-hero__lede">{{ page.lede }}</p>
+    {%- endif %}
+    {% include app-actions.html app=app %}
+    {%- if page.hero_shots %}
+    <div class="app-hero__media">{% include shots.html shots=page.hero_shots %}</div>
+    {%- endif %}
+  </div>
+</section>
+
+{% include app-tabs.html app=app %}
+
+<div class="app-page">
+  <div class="container">
+    <div class="prose">
+{{ content }}
+    </div>
+  </div>
+</div>

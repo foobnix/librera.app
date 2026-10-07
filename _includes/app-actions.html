@@ -1,0 +1,6 @@
+<div class="app-row__actions">
+  {%- for link in include.app.links %}
+  <a class="btn {% if forloop.first %}btn--neutral{% else %}btn--ghost btn--outlined{% endif %}" href="{{ link.href }}">
+    {%- if link.download %}{% include icon-download.html %}{% endif %}{{ link.label }}</a>
+  {%- endfor %}
+</div>

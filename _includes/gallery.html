@@ -1,0 +1,15 @@
+{%- comment -%}
+  A row of screenshots that wraps. include.items: list of {src, alt, caption?}.
+  include.kind: phone (portrait, default) | wide (landscape windows, two a row)
+  | square (three a row) | full (one a row, the whole width).
+  include.dir is prepended to each src when given.
+{%- endcomment -%}
+<div class="gallery gallery--{{ include.kind | default: 'phone' }}">
+  {%- for s in include.items %}
+  {%- assign src = s.src | prepend: include.dir | relative_url %}
+  <figure class="gallery__item">
+    <img src="{{ src }}" alt="{{ s.alt | escape }}" loading="lazy">
+    {%- if s.caption %}<figcaption>{{ s.caption }}</figcaption>{% endif %}
+  </figure>
+  {%- endfor %}
+</div>

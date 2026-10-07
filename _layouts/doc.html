@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{%- comment -%}
+  A documentation page belonging to an app (FAQ topic, release notes, policy).
+  Under the app's section bar: a breadcrumb back to the app and the section,
+  then the page's Markdown.
+{%- endcomment -%}
+{%- assign app = site.data.apps | where: "id", page.app | first -%}
+{%- assign app_url = '/' | append: app.id | append: '/' -%}
+{%- assign section = nil -%}
+{%- for s in app.sections -%}
+  {%- if s.url != app_url and page.url contains s.url -%}{%- assign section = s -%}{%- endif -%}
+{%- endfor -%}
+{% include app-tabs.html app=app %}
+
+<article class="doc-page">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url | append: '#' | append: app.anchor }}">All apps</a>
+      <a href="{{ app_url | relative_url }}">{{ app.nav }}</a>
+      {%- if section %}
+      {%- if section.url == page.url %}
+      <span aria-current="page">{{ section.title }}</span>
+      {%- else %}
+      <a href="{{ section.url | relative_url }}">{{ section.title }}</a>
+      {%- if page.parent_url %}
+      <a href="{{ page.parent_url | relative_url }}">{{ page.parent_title }}</a>
+      {%- endif %}
+      <span aria-current="page">{{ page.title }}</span>
+      {%- endif %}
+      {%- else %}
+      <span aria-current="page">{{ page.title }}</span>
+      {%- endif %}
+    </nav>
+    <div class="prose">
+{{ content }}
+    </div>
+    {%- if section and section.url != page.url %}
+    <p class="doc-page__back"><a href="{{ page.parent_url | default: section.url | relative_url }}">← {{ page.parent_title | default: section.title }}</a></p>
+    {%- endif %}
+  </div>
+</article>

@@ -1,23 +1,26 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign pages = site.pages | where_exp: "p", "p.url != '/sitemap.xml'" | sort: "url" %}
+{%- for p in pages %}
+{%- assign last_char = p.url | slice: -1, 1 %}
+{%- assign ext = p.url | split: "." | last %}
+{%- if last_char != "/" and ext != "html" %}{% continue %}{% endif %}
+{%- if p.url == "/404.html" %}{% continue %}{% endif %}
   <url>
-    <loc>https://librera.app/</loc>
+    <loc>{{ p.url | absolute_url }}</loc>
+    {%- if p.url == "/" %}
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://librera.app/privacy.html</loc>
+    {%- elsif p.app %}
+    <changefreq>monthly</changefreq>
+    <priority>{% if p.layout == "app" %}0.8{% else %}0.5{% endif %}</priority>
+    {%- else %}
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    {%- endif %}
   </url>
-  <url>
-    <loc>https://librera.app/terms.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://librera.app/delete-data.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+{%- endfor %}
 </urlset>

@@ -2,11 +2,12 @@
 #
 # run.sh — serve librera.app locally.
 #
-# The site is plain static HTML and ships a .nojekyll file, so GitHub Pages
-# serves it as-is with no Jekyll build. This script mirrors that: it serves the
-# repo root over HTTP. If a Jekyll site is ever added here (a _config.yml plus
-# jekyll on PATH or in the bundle), it switches to `jekyll serve` automatically
-# so the local preview keeps matching what Pages would do.
+# The site is built by Jekyll (GitHub Pages builds it on push). With a
+# _config.yml present and jekyll on PATH or in the bundle, this runs
+# `jekyll serve`, so the local preview matches what Pages publishes. Without
+# Jekyll it falls back to serving the repo root as-is — the shared header,
+# footer and app pages then show as raw templates, so install Jekyll
+# (gem install jekyll) to preview properly.
 #
 #   ./run.sh                 serve on http://127.0.0.1:4000
 #   ./run.sh 8080            serve on a different port

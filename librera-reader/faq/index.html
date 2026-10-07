@@ -1,0 +1,20 @@
+---
+title: Frequently Asked Questions
+description: Illustrated guides to Librera Reader — the library, reading modes, text-to-speech, dictionaries, sync, themes, PDF annotation and more.
+---
+{%- comment -%}
+  Hand-written; the topics beside it are imported from the LibreraReader docs
+  by scripts/import-librera-reader-docs.py. Every page marked `topic: true`
+  is listed, alphabetically.
+{%- endcomment -%}
+{%- assign topics = site.pages | where: "topic", true | sort: "title" -%}
+<h1>Frequently Asked Questions</h1>
+<p class="lede">{{ topics | size }} illustrated guides to Librera Reader. Pick a topic, or search this page with your browser.</p>
+
+<ul class="topic-list">
+{%- for t in topics %}
+  <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a></li>
+{%- endfor %}
+</ul>
+
+<p class="note">Want to add a topic? See <a href="{{ '/librera-reader/faq/how-to-add-new-faq-section/' | relative_url }}">How to Add a New FAQ Topic</a>.</p>

@@ -1,0 +1,8 @@
+<div class="app-row__meta">
+  <div class="eyebrow">{{ include.app.category }}</div>
+  <ul class="platforms" aria-label="Platforms">
+    {%- for p in include.app.platforms %}
+    <li>{{ p }}</li>
+    {%- endfor %}
+  </ul>
+</div>

@@ -1,0 +1,6 @@
+<div class="shot{% if include.shots.class != '' %} {{ include.shots.class }}{% endif %}">
+  {%- for s in include.shots.items %}
+  <img src="{{ s.src | relative_url }}" alt="{{ s.alt | escape }}" loading="lazy">
+  {%- endfor %}
+  <div class="shot__placeholder" aria-hidden="true"></div>
+</div>
