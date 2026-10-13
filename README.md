@@ -91,6 +91,7 @@ It rewrites links to their new place and converts images to WebP (needs `cwebp`:
 
 **Preview locally:** `./run.sh` (needs `gem install jekyll`), then open http://127.0.0.1:4000/.
 
+
 ---
 
 Copyright 2026 Ivan Ivanenko. All rights reserved.
