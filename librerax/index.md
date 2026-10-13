@@ -27,7 +27,9 @@ screens:
 
 ## The future of Librera
 
-LibreraX is the future of the Librera Reader app — for Android and iOS, macOS. One library of the books you keep, one set of reading themes you shape yourself, and a voice that reads to you from the lock screen, the headset or a watch.
+LibreraX is the future of the Librera Reader app — for Android and iOS, macOS.
+
+<p class="lede">Reads EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown, and renders every one cleanly — books through the WebView, PDFs through PDFium. Highlight and underline in any format, and your marks follow you to every device. Rather listen? LibreraX reads aloud, with controls on the lock screen, your headset and a Wear OS watch. And your library holds only the folders you choose — nothing else on your device is touched.</p>
 
 {% include gallery.html items=page.screens dir="/assets/img/apps/librerax/" %}
 

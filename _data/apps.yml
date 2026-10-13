@@ -22,13 +22,11 @@
   category: Reading
   platforms: [Android, iOS, Wear OS, Android Auto]
   summary: >-
-    It opens EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown. Keeps a library of the folders you
-    point it at, with covers, shelves, tags and search. Reading themes are your own list: added,
-    recoloured, reordered and edited over a live page, with the contrast of ink against paper shown
-    while you work. Highlights and bookmarks stay with the book; edited titles, authors and covers are
-    written into the file itself. It reads aloud through a media session the lock screen and headset
-    drive, puts the book you are on into a home-screen widget, and carries the same controls to a
-    paired Wear&nbsp;OS watch.
+    Reads EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown, and renders every one cleanly — books
+    through the WebView, PDFs through PDFium. Highlight and underline in any format, and your marks
+    follow you to every device. Rather listen? LibreraX reads aloud, with controls on the lock screen,
+    your headset and a Wear&nbsp;OS watch. And your library holds only the folders you choose —
+    nothing else on your device is touched.
   shots:
     class: shot--pair
     items:
@@ -86,45 +84,29 @@
     - title: Privacy
       url: /librera-reader/privacy-policy/
 
-- id: librera1
-  anchor: reader
-  name: Librera1 Reader
-  nav: Librera1 Reader
-  icon: /assets/img/icons/librera1-reader.png
-  category: Reading
-  platforms: [Android, iOS, macOS, Windows, Linux, Chrome, Web, VS Code]
+- id: librera-commander
+  anchor: librera-commander
+  name: LibreraCommander
+  nav: LibreraCommander
+  icon: /assets/img/icons/libreracommander.png
+  category: Utilities
+  platforms: [macOS]
   summary: >-
-    A modern reader for the books you already own. Open EPUB, PDF, FB2, MOBI, CBZ on any device. Your
-    highlights, bookmarks, reading progress, and custom shelves sync in real time across your phone,
-    desktop, and browser the moment you sign in-powered seamlessly by Google Drive.
+    A dual-pane file manager for the Mac. Two Finder-style panels with your Finder favourites, a
+    built-in terminal with four shells, and an info panel for drives, memory and battery, Quick Look
+    and text previews, an editor, file and folder comparison and a media player.
+  install:
+    - code: brew install foobnix/tap/libreracommander
+    - label: Update
+      code: brew upgrade libreracommander
   shots:
     class: ""
     items:
-      - src: /assets/img/screenshots/librera1.png
-        alt: Librera1 Reader screenshot
+      - src: /assets/img/screenshots/libreracommander_2.webp
+        alt: LibreraCommander with two project folders side by side, a terminal and the system info panel
   links:
-    - label: Web
-      href: https://librera1.com/
-    - label: Google Play
-      href: https://play.google.com/store/apps/details?id=com.librera1
-    - label: Direct APK
-      href: https://github.com/foobnix/librera.app/releases/tag/Download
-      download: true
-    - label: iOS (TestFlight)
-      href: https://testflight.apple.com/join/mXSRPshr
     - label: Direct DMG
-      href: https://github.com/foobnix/librera.app/releases/tag/Download
-      download: true
-    - label: Windows
-      href: https://github.com/foobnix/librera.app/releases/tag/Download
-      download: true
-    - label: Linux
-      href: https://github.com/foobnix/librera.app/releases/tag/Download
-      download: true
-    - label: Chrome
-      href: https://chromewebstore.google.com/detail/dplmfhcjlbkejkdalnkmklpghklcjahg
-    - label: VS Code
-      href: https://marketplace.visualstudio.com/items?itemName=librera.librera-reader
+      href: https://github.com/foobnix/LibreraCommander-releases/releases/
 
 - id: sound-icon
   anchor: sound-icon
@@ -170,46 +152,3 @@
   links:
     - label: Mac App Store
       href: https://apps.apple.com/ua/app/menu-reminder/id6804490236?mt=12
-
-- id: menu-screenshot
-  anchor: menu-screenshot
-  name: Menu Screenshot
-  nav: Menu Screenshot
-  icon: /assets/img/icons/screenshot.png
-  category: Utilities
-  platforms: [macOS]
-  summary: >-
-    Capture perfectly sized screenshots and drag them anywhere. Snap the perfect size. Drag it to any
-    app. Custom screenshots, ready to drag and drop.
-  shots:
-    class: ""
-    items:
-      - src: /assets/img/screenshots/MenuScreenshot.png
-        alt: Menu Screenshot app screenshot
-  links:
-    - label: Mac App Store
-      href: https://apps.apple.com/ua/app/menu-screenshot/id6802039422?mt=12
-
-- id: librera-commander
-  anchor: librera-commander
-  name: LibreraCommander
-  nav: LibreraCommander
-  icon: /assets/img/icons/libreracommander.png
-  category: Utilities
-  platforms: [macOS]
-  summary: >-
-    A dual-pane file manager for the Mac. Two Finder-style panels with your Finder favourites, a
-    built-in terminal with four shells, and an info panel for drives, memory and battery, Quick Look
-    and text previews, an editor, file and folder comparison and a media player.
-  install:
-    - code: brew install foobnix/tap/libreracommander
-    - label: Update
-      code: brew upgrade libreracommander
-  shots:
-    class: ""
-    items:
-      - src: /assets/img/screenshots/libreracommander_2.webp
-        alt: LibreraCommander with two project folders side by side, a terminal and the system info panel
-  links:
-    - label: Direct DMG
-      href: https://github.com/foobnix/LibreraCommander-releases/releases/
