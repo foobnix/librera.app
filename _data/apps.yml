@@ -6,6 +6,7 @@
 #   id         the app page lives at /<id>/ and its images in assets/img/apps/<id>/
 #   anchor     the home page row's id (kept stable: old links point at it)
 #   nav        short name for the navbar
+#   extra_icons  optional further icon tiles shown beside the main icon
 #   summary    the home page paragraph (HTML allowed)
 #   shots      the home page screenshots; class is a .shot modifier
 #   links      store / download buttons, all white outlined pills.
@@ -46,6 +47,8 @@
   name: Librera Reader
   nav: Librera Reader
   icon: /assets/img/icons/librera_reader.png
+  extra_icons:
+    - /assets/img/icons/icon_pdf_pro.png
   category: Reading
   platforms: [Android, Android Auto]
   summary: >-

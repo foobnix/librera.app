@@ -1,4 +1,16 @@
-<div class="app-icon{% if include.size %} app-icon--{{ include.size }}{% endif %}">
-  <img src="{{ include.app.icon | relative_url }}" alt="">
-  <div class="app-icon__placeholder" aria-hidden="true"></div>
+{%- comment -%}
+  The app's icon tile, plus one tile per entry in app.extra_icons (e.g.
+  Librera Reader's free and PRO icons side by side).
+{%- endcomment -%}
+<div class="app-icons">
+  <div class="app-icon">
+    <img src="{{ include.app.icon | relative_url }}" alt="">
+    <div class="app-icon__placeholder" aria-hidden="true"></div>
+  </div>
+  {%- for icon in include.app.extra_icons %}
+  <div class="app-icon">
+    <img src="{{ icon | relative_url }}" alt="">
+    <div class="app-icon__placeholder" aria-hidden="true"></div>
+  </div>
+  {%- endfor %}
 </div>

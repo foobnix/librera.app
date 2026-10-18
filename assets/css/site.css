@@ -380,6 +380,10 @@ h1, h2, h3, p { margin: 0; }
   color: var(--text-tertiary);
 }
 .app-icon--sm { width: 44px; height: 44px; margin-bottom: 0; border-radius: 10px; }
+/* One or more icon tiles in a row (an app with free and PRO editions shows both). */
+.app-icons { display: flex; gap: var(--space-3); margin-bottom: var(--space-5); }
+.app-icons .app-icon { margin-bottom: 0; }
+.app-hero__head .app-icons { margin-bottom: 0; flex: 0 0 auto; }
 
 /* ==========================================================================
    App feature rows

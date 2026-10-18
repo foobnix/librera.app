@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="{{ '/assets/css/tokens/elevation.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/tokens/motion.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/tokens/base.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {%- for css in page.extra_css %}
-<link rel="stylesheet" href="{{ css | relative_url }}">
+<link rel="stylesheet" href="{{ css | relative_url }}?v={{ site.time | date: '%s' }}">
 {%- endfor %}
