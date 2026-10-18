@@ -11,7 +11,7 @@
 Reads EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown, and renders every one cleanly — books through the WebView, PDFs through PDFium. Highlight and underline in any format, and your marks follow you to every device. Rather listen? LibreraX reads aloud, with controls on the lock screen, your headset and a Wear OS watch. And your library holds only the folders you choose — nothing else on your device is touched.
 
 - [Google Play](https://play.google.com/store/apps/details?id=com.librerax)
-- [iOS (TestFlight)](https://testflight.apple.com/join/XVU24NY9)
+- [App Store](https://apps.apple.com/us/app/librerax/id6815773197)
 
 ## Librera Reader
 

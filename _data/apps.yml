@@ -8,7 +8,7 @@
 #   nav        short name for the navbar
 #   summary    the home page paragraph (HTML allowed)
 #   shots      the home page screenshots; class is a .shot modifier
-#   links      store / download buttons; the first is the filled one.
+#   links      store / download buttons, all white outlined pills.
 #              download: true adds the download glyph.
 #   install    optional shell commands shown under the summary ({code, label?});
 #              the first also sits beside the buttons on the app's page
@@ -37,8 +37,8 @@
   links:
     - label: Google Play
       href: https://play.google.com/store/apps/details?id=com.librerax
-    - label: iOS (TestFlight)
-      href: https://testflight.apple.com/join/XVU24NY9
+    - label: App Store
+      href: https://apps.apple.com/us/app/librerax/id6815773197
 
 - id: librera-reader
   anchor: librera-reader

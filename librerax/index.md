@@ -103,7 +103,7 @@ LibreraX is the future of the Librera Reader app — for Android and iOS, macOS.
 <ul class="link-cards">
   <li><a class="link-card" href="https://play.google.com/store/apps/details?id=com.librerax"><span class="link-card__title">Google Play</span><span class="link-card__desc">LibreraX for Android.</span></a></li>
   <li><a class="link-card" href="https://github.com/foobnix/LibreraReader/releases/"><span class="link-card__title">LibreraX PRO testing for Android</span><span class="link-card__desc">Test builds on GitHub.</span></a></li>
-  <li><a class="link-card" href="https://testflight.apple.com/join/XVU24NY9"><span class="link-card__title">LibreraX FREE testing for iOS, macOS</span><span class="link-card__desc">Join the TestFlight beta.</span></a></li>
+  <li><a class="link-card" href="https://apps.apple.com/us/app/librerax/id6815773197"><span class="link-card__title">App Store</span><span class="link-card__desc">LibreraX for iPhone, iPad and Mac.</span></a></li>
   <li><a class="link-card" href="https://t.me/librera_reader_chat"><span class="link-card__title">LibreraX Community in Telegram</span><span class="link-card__desc">News, questions and feedback.</span></a></li>
 </ul>
 
