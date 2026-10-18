@@ -9,7 +9,8 @@
 #   summary    the home page paragraph (HTML allowed)
 #   shots      the home page screenshots; class is a .shot modifier
 #   links      store / download buttons, all white outlined pills.
-#              download: true adds the download glyph.
+#              download: true adds the download glyph; home: false shows the
+#              button on the app's own page only, not in the home page row.
 #   install    optional shell commands shown under the summary ({code, label?});
 #              the first also sits beside the buttons on the app's page
 #   sections   optional tabs under the app header (multi-page apps)
@@ -130,6 +131,10 @@
       href: https://apps.apple.com/ua/app/sound-icon/id6777951012?mt=12
     - label: Web
       href: https://soundicon.app/
+    - label: Direct DMG
+      href: https://github.com/foobnix/librera.app/releases/download/Download/SoundIcon-macOS-1.7.15.dmg
+      download: true
+      home: false
 
 - id: menu-reminder
   anchor: menu-reminder
@@ -152,3 +157,7 @@
   links:
     - label: Mac App Store
       href: https://apps.apple.com/ua/app/menu-reminder/id6804490236?mt=12
+    - label: Direct DMG
+      href: https://github.com/foobnix/librera.app/releases/download/Download/MenuReminder-macOS-1.0.1.dmg
+      download: true
+      home: false

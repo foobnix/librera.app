@@ -587,6 +587,15 @@ h1, h2, h3, p { margin: 0; }
 }
 .app-hero__media { margin-top: var(--space-10); }
 
+/* Download row repeated at the end of an app page. */
+.app-download {
+  margin-top: var(--space-16);
+  padding-top: var(--space-10);
+  border-top: 1px solid var(--border-subtle);
+}
+.app-download__title { font: var(--type-title-1); letter-spacing: var(--tracking-title); }
+.app-download .app-hero__actions { margin-top: var(--space-5); }
+
 /* Header buttons and the install command share one line, wrapping when narrow. */
 .app-hero__actions {
   display: flex;

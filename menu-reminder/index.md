@@ -90,8 +90,3 @@ Anything due today reminds you once. Anything with a time can reach you 15, 30, 
 No accounts, no advertising, no analytics, no tracking. Your reminders live on your devices and in your own iCloud. Export them to a JSON file whenever you like and import them back — nothing is locked in.
 
 **Free. No in-app purchases.**
-
-## Download
-
-* [Menu Reminder on the App Store](https://apps.apple.com/ua/app/menu-reminder/id6804490236?mt=12) — Mac, iPhone and iPad
-* [Direct DMG for macOS](https://github.com/foobnix/librera.app/releases/download/Download/MenuReminder-macOS-1.0.1.dmg)

@@ -1,5 +1,6 @@
 <div class="app-row__actions">
   {%- for link in include.app.links %}
+  {%- if link.home == false and include.page != true %}{% continue %}{% endif %}
   <a class="btn btn--ghost btn--outlined" href="{{ link.href }}">
     {%- if link.download %}{% include icon-download.html %}{% endif %}{{ link.label }}</a>
   {%- endfor %}

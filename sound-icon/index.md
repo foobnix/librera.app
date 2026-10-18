@@ -95,9 +95,3 @@ Everything you need to control your audio devices is free. Sound Icon Pro is opt
 </div>
 
 <p class="note">Sound Icon Pro is an auto-renewable subscription available on the Mac App Store, offered monthly ($0.99 USD) or yearly ($9.99 USD); prices are shown in your local currency and confirmed in the app before purchase. A 7-day free trial is available once per Apple Account. Payment is charged to your Apple Account at confirmation of purchase. The subscription renews automatically unless it is cancelled at least 24 hours before the end of the current period, and your account is charged for renewal within 24 hours before the period ends. Manage or cancel your subscription at any time in your App Store account settings. Any unused portion of a free trial is forfeited when you purchase a subscription. See the <a href="https://soundicon.app/terms.html">Terms of Use (EULA)</a> and <a href="https://soundicon.app/privacy.html">Privacy Policy</a> for full details.</p>
-
-## Download
-
-* [Sound Icon on the Mac App Store](https://apps.apple.com/ua/app/sound-icon/id6777951012?mt=12)
-* [Direct DMG](https://github.com/foobnix/librera.app/releases/download/Download/SoundIcon-macOS-1.7.15.dmg)
-* [soundicon.app](https://soundicon.app/)
