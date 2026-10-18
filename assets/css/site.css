@@ -139,6 +139,7 @@ h1, h2, h3, p { margin: 0; }
 .btn--outlined { border-color: var(--border-subtle); }
 
 .btn .icon { flex: 0 0 auto; }
+.btn__app-icon { width: 20px; height: 20px; border-radius: 5px; flex: 0 0 auto; display: block; }
 .btn--lg .icon { width: 20px; height: 20px; }
 
 /* ==========================================================================

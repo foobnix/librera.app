@@ -10,7 +10,8 @@
 #   summary    the home page paragraph (HTML allowed)
 #   shots      the home page screenshots; class is a .shot modifier
 #   links      store / download buttons, all white outlined pills.
-#              download: true adds the download glyph; home: false shows the
+#              download: true adds the download glyph; icon: a small image
+#              (e.g. the edition's app icon) before the label; home: false shows the
 #              button on the app's own page only, not in the home page row.
 #   install    optional shell commands shown under the summary ({code, label?});
 #              the first also sits beside the buttons on the app's page
@@ -67,8 +68,10 @@
   links:
     - label: Google Play (Pro)
       href: https://play.google.com/store/apps/details?id=com.foobnix.pro.pdf.reader
+      icon: /assets/img/icons/icon_pdf_pro.png
     - label: Google Play
       href: https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader
+      icon: /assets/img/icons/librera_reader.png
     - label: Direct APK
       href: https://github.com/foobnix/LibreraReader
       download: true
