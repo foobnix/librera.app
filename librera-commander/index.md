@@ -2,7 +2,7 @@
 layout: app
 app: librera-commander
 title: LibreraCommander
-description: LibreraCommander — a native dual-pane file manager for macOS with Finder-style panels, an info panel, a built-in terminal with four shells, Quick Actions, file and folder comparison, a media player and Android / iOS simulator device panels.
+description: LibreraCommander — a native dual-pane file manager for macOS with Finder-style panels, an info panel, a built-in terminal with four shells, Quick Actions, file and folder comparison, a media player and a Mobile panel for Android devices and iOS simulators.
 og_image: /assets/img/icons/libreracommander.png
 overview:
   - src: panels-terminal.webp
@@ -15,9 +15,13 @@ info:
   - src: info-panel-preview.webp
     alt: The info panel previewing logo.jpg selected in the left file panel, with its size and dimensions
     caption: Preview the file under the cursor, with its size and type
+mobile:
+  - src: mobile-panel.webp
+    alt: "The Mobile panel with two Android phones grouped side by side: their live screens and their Download folders, a Gradle build in the terminal, and the repository's GitHub issues in the info panel"
+    caption: Two phones grouped in the Mobile panel — live screens and device files side by side — with a Gradle build in the terminal
 ---
 
-<p class="lede">Native macOS dual-pane file manager: Finder-style list and grid panels with previews, an info panel (system info, text / Markdown / HTML viewer, audio and video player with metadata, archive and folder info), a built-in terminal, Finder-style Quick Actions, and Android / iOS simulator device panels.</p>
+<p class="lede">Native macOS dual-pane file manager: Finder-style list and grid panels with previews, an info panel (system info, text / Markdown / HTML viewer, audio and video player with metadata, archive and folder info), a built-in terminal, Finder-style Quick Actions, and a Mobile panel for Android devices and iOS simulators.</p>
 
 Requires macOS 14 Sonoma or later (Apple silicon or Intel).
 
@@ -45,11 +49,11 @@ For access to every folder (and to read Finder's sidebar favorites) grant it **F
 
 ## Layout
 
-The layout button at the right of the toolbar opens the layout editor: pick a grid — **1×1**, **1×2** (side by side), **2×1** (stacked) or **2×2** — then click each cell to choose what it shows: a **File Panel** (up to two: left and right), the **Info Panel**, the **Terminal** or the **Android** panel. Choosing a panel already shown in another cell swaps the two. Changes apply immediately and are remembered.
+The layout button at the right of the toolbar opens the layout editor: pick a grid, named panels on the left × panels on the right — **1×1** (one on each side), **1×2** (two on the right), **2×1** (two on the left), **2×2** or **2×2 Mobile** (the Mobile panel at the top right) — then click each cell to choose what it shows: a **File Panel** (up to two: left and right), the **Info Panel**, the **Terminal** or the **Mobile** panel. Choosing a panel already shown in another cell swaps the two. Changes apply immediately and are remembered.
 
-Shortcuts that show or hide panels (<kbd>⌘J</kbd> terminal, <kbd>⌥⌘I</kbd> info panel, <kbd>F1</kbd> / <kbd>F3</kbd>, <kbd>⌥⌘A</kbd> Android, Two Panels) still work: a hidden panel's cell collapses and the other panel in its column takes the full height; a panel shown without a cell of its own goes to the nearest free place.
+Shortcuts that show or hide panels (<kbd>⌘J</kbd> terminal, <kbd>⌥⌘I</kbd> info panel, <kbd>F1</kbd> / <kbd>F3</kbd>, <kbd>⌥⌘A</kbd> Mobile, Two Panels) still work: a hidden panel's cell collapses and the other panel in its column takes the full height; a panel shown without a cell of its own goes to the nearest free place.
 
-Every panel's header has an expand button (or press <kbd>&#96;</kbd> in the focused panel): the panel takes its whole column, and gets the focus; expand one panel on each side to show just those two. If the panel already has its column to itself, it fills the window. Press again (or the button) to restore.
+Every panel's header has an expand button (or press <kbd>F10</kbd> in the focused panel): the panel takes its whole column, and gets the focus; expand one panel on each side to show just those two. If the panel already has its column to itself, it fills the window. Press again (or the button) to restore.
 
 <ul class="features">
   <li class="feature"><h3>Info panel</h3><p>Drives, memory and swap, battery, sound volume and screen brightness sliders — or a Quick Look / text preview of the file under the cursor.</p></li>
@@ -62,9 +66,9 @@ Every panel's header has an expand button (or press <kbd>&#96;</kbd> in the focu
 
 {% include gallery.html items=page.info dir="/assets/img/apps/librera-commander/" kind="full" %}
 
-## Android panel
+## Mobile panel
 
-Choose **Android** for a layout cell (or press <kbd>⌥⌘A</kbd>) to show an Android panel instead of the right file panel. It uses the Android SDK from `~/Library/Android/sdk` (or `ANDROID_HOME`, or `/Volumes/*/Android/sdk`). The icons at its top right switch:
+Choose **Mobile** for a layout cell (or press <kbd>⌥⌘A</kbd>) to show the Mobile panel — Android devices and iOS simulators — instead of the right file panel. It uses the Android SDK from `~/Library/Android/sdk` (or `ANDROID_HOME`, or `/Volumes/*/Android/sdk`). The icons at its top right switch:
 
 - **Devices & Emulators** — connected phones and running emulators; every AVD with ▶︎ (start inside the panel) or a window icon (start in the emulator's own window), ■ to stop; **Restart ADB** if adb gets stuck.
 - **Screen** — the device's live screen (H.264 stream; screenshots where streaming isn't available). Click = tap, drag = swipe, scroll = swipe, typing goes to the device (ASCII), Esc = Back; Back/Home/Recents/Volume/Power/Rotate and a screenshot (saved to the left panel's folder).
@@ -72,7 +76,9 @@ Choose **Android** for a layout cell (or press <kbd>⌥⌘A</kbd>) to show an An
 
 **Several devices at once:** <kbd>⌘</kbd>-click device tabs to group them. Screen and Files then show the group side by side; <kbd>F5</kbd> / upload copy to every grouped device, and ▶︎ Run builds once and installs + launches on each. A plain click on a tab goes back to one device.
 
-**iOS simulators** are listed under the Android devices, in their own **iOS Simulators** section (running ones first, then the newest iOS version; older versions are folded). ▶︎ starts one inside the panel, the window icon starts it in its own window, ■ shuts it down. A simulator that's already running (e.g. started by Xcode) gets an **attach** button. A started or attached simulator becomes a tab next to the Android devices (marked with the Apple logo); right-click the tab to detach it, open its window or shut it down. Its screen is the simulator's live framebuffer: press and drag = touch, scroll = swipe, typing goes to the device; the toolbar has Home, volume, the side button, rotate and a screenshot. <kbd>⌘</kbd>-click tabs to group Android and iOS screens side by side. Device Files is Android-only.
+{% include gallery.html items=page.mobile dir="/assets/img/apps/librera-commander/" kind="full" %}
+
+**iOS simulators** are listed under the Android devices, in their own **iOS Simulators** section (running ones first, then the newest iOS version; older versions are folded). ▶︎ starts one inside the panel, the window icon starts it in its own window (Simulator, or Device Hub from Xcode 27 on), ■ shuts it down. A simulator that's already running (e.g. started by Xcode) gets an **attach** button. A started or attached simulator becomes a tab next to the Android devices (marked with the Apple logo); right-click the tab to detach it, open its window or shut it down. Its screen is the simulator's live framebuffer: press and drag = touch, scroll = swipe, typing goes to the device; the toolbar has Home, volume, the side button, rotate and a screenshot. <kbd>⌘</kbd>-click tabs to group Android and iOS screens side by side. Device Files is Android-only.
 
 **<kbd>⌘C</kbd> / <kbd>⌘X</kbd> / <kbd>⌘V</kbd>** work across file panels, Finder and the device file tree: copy (or cut, to move) files in one, paste in another. Pasting into the device tree uses the folder shown there; device files pasted into a file panel are downloaded. Cut files are moved: removed from the device, or moved to the Trash on the Mac.
 
@@ -81,8 +87,8 @@ Choose **Android** for a layout cell (or press <kbd>⌥⌘A</kbd>) to show an An
 Shell scripts (`.sh`, `.bash`, `.zsh`, `.command`) have a green ▶︎ at the end of their name: click it (or <kbd>⌘↩</kbd>, or **Run in Terminal** in the context menu) to run the script in the terminal from its own folder.
 
 - A folder with an **Xcode macOS app** project gets **▶︎ Run** in the panel header: it builds the Debug configuration in the terminal (errors and warnings shown) and launches the app, restarting a previous run of that build — like <kbd>⌘R</kbd> in Xcode. Several app schemes: a menu; a click runs the last one used.
-- An **Android Gradle project** (a `gradlew` and an application module) gets **▶︎ Run**: it builds the debug variant in the terminal, installs it only on the device selected in the Android panel, and launches it. Projects with several modules or flavors get a menu.
-- An **Xcode iOS app** project gets **▶︎ Run** too: it builds for the iOS Simulator once, then installs and launches the app on every iOS simulator in the Android panel's group (or the one running).
+- An **Android Gradle project** (a `gradlew` and an application module) gets **▶︎ Run**: it builds the debug variant in the terminal, installs it only on the device selected in the Mobile panel, and launches it. Projects with several modules or flavors get a menu.
+- An **Xcode iOS app** project gets **▶︎ Run** too: it builds for the iOS Simulator once, then installs and launches the app on every iOS simulator in the Mobile panel's group (or the one running).
 - A **Kotlin Multiplatform** root (an Android app plus an `iosApp`-style subfolder with the Xcode project) gets two buttons, **▶︎ Android** and **▶︎ iOS**.
 
 ## Terminal

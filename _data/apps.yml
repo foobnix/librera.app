@@ -33,10 +33,10 @@
   shots:
     class: shot--pair
     items:
-      - src: /assets/img/screenshots/librerax_1.png
-        alt: LibreraX library
-      - src: /assets/img/screenshots/librerax_2.png
-        alt: LibreraX reading a book
+      - src: /assets/img/apps/librerax/pixel10a_11.webp
+        alt: LibreraX browsing the Project Gutenberg OPDS catalogue
+      - src: /assets/img/apps/librerax/pixel10a_10.webp
+        alt: LibreraX reading a book, with the toolbar and the Recent strip
   links:
     - label: Google Play
       href: https://play.google.com/store/apps/details?id=com.librerax

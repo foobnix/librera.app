@@ -5,24 +5,36 @@ title: LibreraX
 description: LibreraX — the future of the Librera Reader app for Android, iOS and macOS. EPUB, MOBI, AZW3, FB2, PDF, CBZ, TXT and Markdown, with your own reading themes, read-aloud, widgets and a Wear OS companion.
 og_image: /assets/img/icons/librerax.png
 screens:
-  - src: Screenshot_20260906_130854.webp
-    alt: The library as a list with covers, authors and formats
+  - src: pixel10a_11.webp
+    alt: "The All Books list of the Project Gutenberg OPDS catalogue, as a grid of covers"
+    caption: Online catalogues
+  - src: pixel10a_10.webp
+    alt: "A book open with the toolbar, the Recent strip and the page slider"
+    caption: Toolbar and Recent
+  - src: pixel10a_01.webp
+    alt: "The library as a grid of book covers, with Library, Reading Now, Recent and Favorites tabs"
     caption: Library
-  - src: Screenshot_20260906_130833.webp
-    alt: A book open with the reading toolbar and the page slider
+  - src: pixel10a_08.webp
+    alt: "A chapter opening on a light page, with a drop cap and page progress"
     caption: Reading
-  - src: Screenshot_20260906_130844.webp
-    alt: "The file info sheet for an EPUB: title, author, language, pages, size and progress"
+  - src: pixel10a_09.webp
+    alt: "The same chapter in a dark theme"
+    caption: Dark theme
+  - src: pixel10a_07.webp
+    alt: "Passages marked on the page with underline and a yellow highlight"
+    caption: Underline and highlight
+  - src: pixel10a_04.webp
+    alt: "The text-to-speech panel: engine, voice, speed, sleep timer and highlight colour"
+    caption: Read aloud
+  - src: pixel10a_03.webp
+    alt: "A book's notes: highlights, underlines and strikethroughs in colour"
+    caption: Notes
+  - src: pixel10a_02.webp
+    alt: "Authors list with the sort menu open: date, title, author, series and more"
+    caption: Sort and group
+  - src: pixel10a_05.webp
+    alt: "The File info sheet: title, author, genre, language, publisher, pages, size and progress"
     caption: Book info
-  - src: Screenshot_20260906_130859.webp
-    alt: Browsing the library by author
-    caption: Grouped by author
-  - src: Screenshot_20260906_130909.webp
-    alt: A book's notes and highlights, colour-coded
-    caption: Notes and highlights
-  - src: Screenshot_20260906_130916.webp
-    alt: "Settings: library folders, formats, theme and cover size"
-    caption: Settings
 ---
 
 ## The future of Librera

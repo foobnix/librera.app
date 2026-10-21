@@ -28,6 +28,7 @@ exclude:
   - README.md
   - run.sh
   - scripts
+  - store-assets
   - Gemfile
   - Gemfile.lock
   - vendor

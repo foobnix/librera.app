@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: 'Archivo'; font-weight: 300 800; src: url(archivo-normal-latin.woff2) format('woff2'); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1024px; height: 500px; overflow: hidden; }
+body {
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(520px 360px at 16% 34%, rgba(20, 120, 140, .30), rgba(20, 120, 140, 0) 70%),
+    radial-gradient(560px 420px at 84% 40%, rgba(40, 90, 200, .30), rgba(40, 90, 200, 0) 70%),
+    radial-gradient(460px 300px at 40% 110%, rgba(30, 110, 120, .25), rgba(30, 110, 120, 0) 70%),
+    linear-gradient(135deg, #0b1424 0%, #0f1a2c 50%, #0a1220 100%);
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+.copy { position: absolute; left: 44px; top: 0; bottom: 0; width: 620px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+
+.creators {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 10px 22px 10px 10px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.22);
+}
+.creators .icons { display: flex; gap: 8px; }
+.creators img { width: 52px; height: 52px; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,.35); }
+.creators .t1 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+.creators .t2 { font-size: 15px; color: #a9b6c9; margin-top: 4px; }
+.creators .t2 i { font-style: normal; margin: 0 7px; opacity: .7; }
+
+h1 { margin-top: 14px; font-size: 92px; font-weight: 800; letter-spacing: -0.04em; line-height: .98; }
+h1 span { background: linear-gradient(180deg, #4fb8ff 0%, #1a79ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tag { margin-top: 8px; font-size: 34px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; }
+
+ul.points { list-style: none; margin-top: 16px; }
+ul.points li { font-size: 21px; line-height: 1.25; color: #dce4ef; padding-left: 28px; position: relative; margin-top: 8px; }
+ul.points li::before { content: "✦"; position: absolute; left: 0; top: 1px; color: #5ab4ff; font-size: 17px; }
+
+.chips { display: flex; gap: 8px; margin-top: 20px; }
+.chips span {
+  font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  padding: 8px 12px 8px 10px; border-radius: 9px;
+  border: 1px solid rgba(120, 170, 255, .35); background: rgba(80, 140, 255, .08);
+  color: #e8eef7; white-space: nowrap;
+}
+.chips span::before { content: "✦"; color: #5ab4ff; margin-right: 8px; }
+
+.phone {
+  position: absolute;
+  left: 690px; top: 22px;
+  width: 300px;
+  padding: 9px;
+  border-radius: 42px;
+  background: #0a0d14;
+  box-shadow: 0 0 0 1.5px #3b4658, 0 30px 70px rgba(0,0,0,.6);
+}
+.phone img { display: block; width: 100%; border-radius: 33px; }
+.phone::after { /* camera punch-hole */
+  content: ""; position: absolute; top: 18px; left: 50%; width: 11px; height: 11px; margin-left: -5.5px;
+  border-radius: 50%; background: #0a0d14;
+}
+
+html, body { width: 960px; height: 640px; overflow: hidden; }
+.copy { left: 108px !important; top: 122px !important; bottom: 40px !important; width: 470px !important; justify-content: center !important; }
+.creators { padding: 8px 16px 8px 8px !important; }
+.creators img { width: 42px !important; height: 42px !important; border-radius: 10px !important; }
+.creators .t1 { font-size: 17px !important; }
+.creators .t2 { font-size: 12.5px !important; margin-top: 3px !important; }
+h1 { font-size: 76px !important; margin-top: 12px !important; }
+.tag { font-size: 28px !important; margin-top: 6px !important; }
+ul.points { margin-top: 12px !important; }
+ul.points li { font-size: 17.5px !important; margin-top: 6px !important; padding-left: 24px !important; white-space: nowrap; }
+ul.points li::before { font-size: 14px !important; }
+.chips { gap: 6px !important; margin-top: 16px !important; }
+.chips span { font-size: 11px !important; padding: 7px 9px 7px 8px !important; letter-spacing: .03em !important; }
+.chips span::before { margin-right: 5px !important; }
+.phone { left: 610px !important; top: 128px !important; width: 252px !important; padding: 8px !important; border-radius: 36px !important; }
+.phone img { border-radius: 28px !important; }
+
+/* debug: safe area */
+body.debug .safe{position:absolute;outline:2px dashed #f0f;pointer-events:none}
+body.debug .btn{position:absolute;border-radius:50%;background:rgba(255,0,255,.35)}
+
+/* "From the creators" sits top centre, level with the App Store back / share buttons. */
+.creators--top { position: absolute; left: 480px; top: 24px; transform: translateX(-50%); }
+.copy h1 { margin-top: 0 !important; }
+
+/* Bigger text block now that the card sits at the top (3840 x 2560). Bullets may wrap. */
+.copy { top: 118px !important; bottom: 24px !important; width: 486px !important; }
+.copy h1 { font-size: 96px !important; }
+.tag { font-size: 34px !important; margin-top: 8px !important; }
+ul.points { margin-top: 22px !important; max-width: 486px !important; }
+ul.points li { font-size: 21px !important; line-height: 1.32 !important; margin-top: 12px !important; padding-left: 30px !important; white-space: normal !important; text-wrap: balance; }
+ul.points li::before { font-size: 17px !important; top: 2px !important; }
+.chips { flex-wrap: wrap !important; gap: 9px 8px !important; margin-top: 26px !important; max-width: 486px; }
+.chips span { font-size: 13px !important; padding: 9px 11px 9px 10px !important; }
+/* Chips in one row within the text column. */
+.chips { flex-wrap: nowrap !important; gap: 7px !important; max-width: none !important; }
+.chips span { font-size: 12.2px !important; padding: 9px 10px 9px 9px !important; letter-spacing: .03em !important; }
+.chips span::before { margin-right: 6px !important; }
+/* Bullets on one line each: phone slightly narrower and further right, text column wider. */
+.phone { left: 634px !important; width: 238px !important; }
+.copy { width: 520px !important; }
+ul.points { max-width: none !important; }
+ul.points li { white-space: nowrap !important; font-size: 18.2px !important; margin-top: 13px !important; padding-left: 28px !important; }
+ul.points li::before { font-size: 15px !important; top: 2px !important; }
+</style>
+</head>
+<body>
+<div class="safe" style="left:80px;top:0;width:800px;height:640px"></div><div class="btn" style="left:110px;top:2px;width:100px;height:100px"></div><div class="btn" style="left:750px;top:2px;width:100px;height:100px"></div>
+  <div class="creators creators--top">
+      <div class="icons"><img src="librera-pro.png" alt=""><img src="librera.png" alt=""></div>
+      <div>
+        <div class="t1">From the creators of Librera Reader</div>
+        <div class="t2">10M+ Readers Worldwide</div>
+      </div>
+    </div>
+  <div class="copy">
+
+    <h1>Librera<span>X</span></h1>
+    <p class="tag">is a modern app by Librera</p>
+    <ul class="points">
+      <li>Modern, intuitive library and smooth HTML5 reading engine</li>
+      <li>Supports EPUB, PDF, FB2, CBZ, and all popular formats</li>
+      <li>Discover and download free books from the catalog</li>
+    </ul>
+    <div class="chips"><span>Modern architecture</span><span>Lightning fast</span><span>Cloud sync</span></div>
+  </div>
+  <div class="phone"><img src="shot.png" alt=""></div>
+</body>
+</html>

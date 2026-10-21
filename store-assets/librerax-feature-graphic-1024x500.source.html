@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: 'Archivo'; font-weight: 300 800; src: url(archivo-normal-latin.woff2) format('woff2'); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1024px; height: 500px; overflow: hidden; }
+body {
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(520px 360px at 16% 34%, rgba(20, 120, 140, .30), rgba(20, 120, 140, 0) 70%),
+    radial-gradient(560px 420px at 84% 40%, rgba(40, 90, 200, .30), rgba(40, 90, 200, 0) 70%),
+    radial-gradient(460px 300px at 40% 110%, rgba(30, 110, 120, .25), rgba(30, 110, 120, 0) 70%),
+    linear-gradient(135deg, #0b1424 0%, #0f1a2c 50%, #0a1220 100%);
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+.copy { position: absolute; left: 44px; top: 0; bottom: 0; width: 620px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+
+.creators {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 10px 22px 10px 10px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.22);
+}
+.creators .icons { display: flex; gap: 8px; }
+.creators img { width: 52px; height: 52px; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,.35); }
+.creators .t1 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+.creators .t2 { font-size: 15px; color: #a9b6c9; margin-top: 4px; }
+.creators .t2 i { font-style: normal; margin: 0 7px; opacity: .7; }
+
+h1 { margin-top: 14px; font-size: 92px; font-weight: 800; letter-spacing: -0.04em; line-height: .98; }
+h1 span { background: linear-gradient(180deg, #4fb8ff 0%, #1a79ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tag { margin-top: 8px; font-size: 34px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; }
+
+ul.points { list-style: none; margin-top: 16px; }
+ul.points li { font-size: 21px; line-height: 1.25; color: #dce4ef; padding-left: 28px; position: relative; margin-top: 8px; }
+ul.points li::before { content: "✦"; position: absolute; left: 0; top: 1px; color: #5ab4ff; font-size: 17px; }
+
+.chips { display: flex; gap: 8px; margin-top: 20px; }
+.chips span {
+  font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  padding: 8px 12px 8px 10px; border-radius: 9px;
+  border: 1px solid rgba(120, 170, 255, .35); background: rgba(80, 140, 255, .08);
+  color: #e8eef7; white-space: nowrap;
+}
+.chips span::before { content: "✦"; color: #5ab4ff; margin-right: 8px; }
+
+.phone {
+  position: absolute;
+  left: 690px; top: 22px;
+  width: 300px;
+  padding: 9px;
+  border-radius: 42px;
+  background: #0a0d14;
+  box-shadow: 0 0 0 1.5px #3b4658, 0 30px 70px rgba(0,0,0,.6);
+}
+.phone img { display: block; width: 100%; border-radius: 33px; }
+.phone::after { /* camera punch-hole */
+  content: ""; position: absolute; top: 18px; left: 50%; width: 11px; height: 11px; margin-left: -5.5px;
+  border-radius: 50%; background: #0a0d14;
+}
+
+html, body { width: 1024px; height: 500px; overflow: hidden; }
+.board { position: relative; width: 1024px; height: 500px; overflow: hidden; }
+.copy { left: 140px !important; top: 132px !important; bottom: 14px !important; width: 540px !important; justify-content: center !important; }
+.creators { padding: 8px 18px 8px 8px !important; }
+.creators img { width: 44px !important; height: 44px !important; border-radius: 10px !important; }
+.creators .t1 { font-size: 18px !important; }
+.creators .t2 { font-size: 13px !important; margin-top: 3px !important; }
+h1 { font-size: 78px !important; margin-top: 12px !important; }
+.tag { font-size: 30px !important; margin-top: 6px !important; }
+ul.points { margin-top: 12px !important; }
+ul.points li { font-size: 19px !important; margin-top: 6px !important; padding-left: 26px !important; white-space: nowrap; }
+ul.points li::before { font-size: 15px !important; }
+.chips { gap: 7px !important; margin-top: 16px !important; }
+.chips span { font-size: 12px !important; padding: 7px 10px 7px 9px !important; }
+.phone { left: 712px !important; top: 140px !important; width: 296px !important; }
+
+/* debug: safe area */
+body.debug .safe{position:absolute;outline:2px dashed #f0f;pointer-events:none}
+body.debug .btn{position:absolute;border-radius:50%;background:rgba(255,0,255,.35)}
+
+/* "From the creators" sits top centre, level with the App Store back / share buttons. */
+.creators--top { position: absolute; left: 583.25px; top: 31px; transform: translateX(-50%); }
+.copy h1 { margin-top: 0 !important; }
+
+/* Bigger text block now that the card sits at the top (3840 x 1646). */
+.copy { top: 128px !important; bottom: 10px !important; width: 560px !important; }
+.copy h1 { font-size: 90px !important; }
+.tag { font-size: 35px !important; margin-top: 8px !important; }
+ul.points { margin-top: 20px !important; }
+ul.points li { font-size: 21.5px !important; line-height: 1.3 !important; margin-top: 11px !important; padding-left: 30px !important; }
+ul.points li::before { font-size: 17px !important; top: 2px !important; }
+.chips { gap: 9px !important; margin-top: 24px !important; }
+.chips span { font-size: 13.5px !important; padding: 9px 12px 9px 11px !important; }
+.phone { left: 760px !important; }
+ul.points li { font-size: 21px !important; }
+/* 1024 x 500 Google Play feature graphic: no store buttons over the image, normal margins. */
+.creators--top { left: 512px !important; top: 22px !important; }
+.copy { left: 60px !important; top: 104px !important; bottom: 12px !important; width: 600px !important; }
+.copy h1 { font-size: 84px !important; }
+.tag { font-size: 32px !important; }
+ul.points { margin-top: 16px !important; }
+ul.points li { font-size: 20px !important; margin-top: 9px !important; white-space: nowrap !important; }
+.chips { margin-top: 20px !important; }
+.chips span { font-size: 13px !important; }
+.phone { left: 694px !important; top: 104px !important; width: 284px !important; }
+/* Google Play crops the feature graphic to 16:9 (x 68..956). Keep everything inside x 100..926. */
+.copy { left: 100px !important; width: 560px !important; }
+.copy h1 { font-size: 82px !important; }
+.tag { font-size: 31px !important; }
+ul.points li { font-size: 19px !important; padding-left: 27px !important; }
+ul.points li::before { font-size: 15px !important; }
+.chips { gap: 7px !important; }
+.chips span { font-size: 12.5px !important; padding: 8px 11px 8px 10px !important; }
+.phone { left: 680px !important; top: 100px !important; width: 246px !important; padding: 8px !important; border-radius: 36px !important; }
+.phone img { border-radius: 28px !important; }
+.crop16x9 { display: none; position: absolute; left: 67.5px; top: 0; width: 889px; height: 500px; outline: 2px dashed #f0f; }
+body.debug .crop16x9 { display: block; }
+</style>
+</head>
+<body>
+<div class="board">
+<div class="crop16x9"></div>
+<div class="safe" style="left:97px;top:0;width:972px;height:500px"></div><div class="btn" style="left:133px;top:2px;width:120px;height:120px"></div><div class="btn" style="left:910px;top:2px;width:120px;height:120px"></div>
+  <div class="creators creators--top">
+      <div class="icons"><img src="librera-pro.png" alt=""><img src="librera.png" alt=""></div>
+      <div>
+        <div class="t1">From the creators of Librera Reader</div>
+        <div class="t2">10M+ Readers Worldwide</div>
+      </div>
+    </div>
+  <div class="copy">
+
+    <h1>Librera<span>X</span></h1>
+    <p class="tag">is a modern app by Librera</p>
+    <ul class="points">
+      <li>Modern, intuitive library and smooth HTML5 reading engine</li>
+      <li>Supports EPUB, PDF, FB2, CBZ, and all popular formats</li>
+      <li>Discover and download free books from the catalog</li>
+    </ul>
+    <div class="chips"><span>Modern architecture</span><span>Lightning fast</span><span>Cloud sync</span></div>
+  </div>
+  <div class="phone"><img src="shot.png" alt=""></div>
+</div>
+</body>
+</html>
