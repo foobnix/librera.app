@@ -1,8 +1,8 @@
 ---
 layout: app
 app: librera-commander
-title: LibreraCommander
-description: LibreraCommander — a native dual-pane file manager for macOS with Finder-style panels, an info panel, a built-in terminal with four shells, Quick Actions, file and folder comparison, a media player and a Mobile panel for Android devices and iOS simulators.
+title: Librera Commander
+description: Librera Commander — a native dual-pane file manager for macOS with Finder-style panels, an info panel, a built-in terminal with four shells, Quick Actions, file and folder comparison, a media player and a Mobile panel for Android devices and iOS simulators.
 og_image: /assets/img/icons/libreracommander.png
 overview:
   - src: panels-terminal.webp
@@ -32,7 +32,13 @@ Requires macOS 14 Sonoma or later (Apple silicon or Intel).
 With [Homebrew](https://brew.sh):
 
 ```sh
-brew install foobnix/tap/libreracommander
+brew install --cask foobnix/tap/libreracommander
+```
+
+Or:
+
+```sh
+brew install --cask libreracommander
 ```
 
 Update:
@@ -41,7 +47,7 @@ Update:
 brew upgrade libreracommander
 ```
 
-Or download the latest DMG from [Releases](https://github.com/foobnix/LibreraCommander-releases/releases/latest) and drag LibreraCommander to Applications.
+Or download the latest DMG from [Releases](https://github.com/foobnix/LibreraCommander-releases/releases/latest) and drag the LibreraCommander app to Applications.
 
 ## File access
 

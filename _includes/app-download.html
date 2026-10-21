@@ -1,18 +1,18 @@
 {%- comment -%}
   An app page's download row: every store / download button (including the
-  ones marked home: false, which the home page row leaves out) and the first
-  install command with a copy button. Used in the page header and again at
-  the end of the page.
+  ones marked home: false, which the home page row leaves out) and each
+  install command with a copy button, except steps marked header: false (such
+  as Update). Used in the page header and again at the end of the page.
 {%- endcomment -%}
 <div class="app-hero__actions">
   {% include app-actions.html app=include.app page=true %}
-  {%- if include.app.install %}
-  {%- assign install = include.app.install | first %}
+  {%- for install in include.app.install %}
+  {%- if install.header == false %}{% continue %}{% endif %}
   <div class="hero-install">
     <code class="hero-install__code is-copyable" title="Click to copy">{{ install.code }}</code>
     <button class="copy-btn" type="button" data-copy="{{ install.code | escape }}" aria-label="Copy">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
     </button>
   </div>
-  {%- endif %}
+  {%- endfor %}
 </div>

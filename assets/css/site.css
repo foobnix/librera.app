@@ -440,8 +440,10 @@ h1, h2, h3, p { margin: 0; }
   border-radius: var(--radius-sm);
   padding: var(--space-3) var(--space-4);
   color: var(--text-primary);
-  overflow-x: auto;
-  white-space: pre;
+  /* Wrap a command too long for the column at a space rather than scrolling it
+     under the copy icon. The copy button still copies the one-line command. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 .install__code + .install__label { margin-top: var(--space-4); }
 

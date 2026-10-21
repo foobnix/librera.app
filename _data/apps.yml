@@ -93,8 +93,8 @@
 
 - id: librera-commander
   anchor: librera-commander
-  name: LibreraCommander
-  nav: LibreraCommander
+  name: Librera Commander
+  nav: Librera Commander
   icon: /assets/img/icons/libreracommander.png
   category: Utilities
   platforms: [macOS]
@@ -103,14 +103,17 @@
     built-in terminal with four shells, and an info panel for drives, memory and battery, Quick Look
     and text previews, an editor, file and folder comparison and a media player.
   install:
-    - code: brew install foobnix/tap/libreracommander
+    - code: brew install --cask foobnix/tap/libreracommander
+    - label: Or
+      code: brew install --cask libreracommander
     - label: Update
       code: brew upgrade libreracommander
+      header: false
   shots:
     class: ""
     items:
       - src: /assets/img/screenshots/libreracommander_2.webp
-        alt: LibreraCommander with two project folders side by side, a terminal and the system info panel
+        alt: Librera Commander with two project folders side by side, a terminal and the system info panel
   links:
     - label: Direct DMG
       href: https://github.com/foobnix/LibreraCommander-releases/releases/

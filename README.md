@@ -42,7 +42,7 @@ Your to-dos, one click away in the menu bar. Add a reminder with an optional due
 
 - [Direct DMG](https://github.com/foobnix/librera.app/releases/tag/Download)
 
-## LibreraCommander
+## Librera Commander
 
 *Utilities*
 
@@ -51,7 +51,13 @@ A dual-pane file manager for the Mac. Two Finder-style panels with your Finder f
 Install with Homebrew:
 
 ```sh
-brew install foobnix/tap/libreracommander
+brew install --cask foobnix/tap/libreracommander
+```
+
+Or:
+
+```sh
+brew install --cask libreracommander
 ```
 
 Update:
