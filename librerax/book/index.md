@@ -10,7 +10,7 @@ og_image: /librerax/book/img/cover.jpg
 <p class="lede">The complete guide to LibreraX 1.2.64 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
 
 <div class="book-downloads">
-  <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 15 MB</a>
+  <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 16 MB</a>
   <a class="btn btn--secondary btn--lg" href="LibreraX-Book.epub" download>Download EPUB · 8 MB</a>
 </div>
 
@@ -55,7 +55,7 @@ This book describes what LibreraX ([iOS](https://apps.apple.com/us/app/librerax/
 <figure style="width:28.8%"><img src="img/part_0_video.webp" alt="A video playing inside an EPUB 3 book"><figcaption>A video playing inside an EPUB 3 book</figcaption></figure>
 </div>
 
-LibreraX ([iOS](https://apps.apple.com/us/app/librerax/id6815773197), [Android](https://play.google.com/store/apps/details?id=com.librerax)) is an e-book reader for **Android** (phones, tablets, Chromebooks, e-ink readers) and **iOS/iPadOS** (iPhone, iPad, and Macs running the iPad app). Both platforms are built from one Kotlin Multiplatform code base, with the user interface in Compose Multiplatform. It follows the classic **[Librera Reader](https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader)** and can bring a Librera profile across.
+LibreraX ([iOS](https://apps.apple.com/us/app/librerax/id6815773197), [Android](https://play.google.com/store/apps/details?id=com.librerax)) is an e-book reader for **Android** (phones, tablets, Chromebooks, e-ink readers) and **iOS/iPadOS** (iPhone, iPad, and Macs running the iPad app). Both platforms are built from one Kotlin Multiplatform code base, with the user interface in Compose Multiplatform. It follows the classic **[Librera Reader](https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader)**: progress, favourites, bookmarks and tags move over from Librera in one step with "Export to LibreraX" (§1.18).
 
 Design principles visible throughout the code:
 
@@ -522,7 +522,7 @@ A one-page view of everything in this book, grouped by area. Each line points to
 - **A library tool, not just a shelf.** Nine groupings, thirteen sort options, duplicate hiding, the reader's own tags as shelves, a metadata editor that writes back into EPUB, FB2 and PDF, and a fast scrollbar for libraries with thousands of books.
 - **Reading aloud everywhere.** In the app, from the notification, lock screen, headset, home-screen widgets, Wear OS and Apple Watch (CarPlay is wired up in development builds), with replacement rules kept in files.
 - **Speed reading (RSVP)** built into the reader. Mainstream readers rarely have it.
-- **A clean move from Librera.** Positions, bookmarks, tags and favourites come across from an existing Librera profile.
+- **A clean move from Librera.** In Librera, left menu → Backup → "Export to LibreraX" moves positions, bookmarks, tags and favourites across in one step (§1.18).
 
 #### Where others are ahead
 
@@ -1281,8 +1281,25 @@ Chips: "System", "Dark", "White", "Custom".
 
 ## 1.18 Import from Librera (Android only)
 
-- Started from the old **Librera** app's export to LibreraX: Librera hands its profile over, and LibreraX accepts it
-  only from a Librera app. A small overlay "Export progress" with a progress bar is shown, then the library opens.
+<div class="shots">
+<figure style="width:28.8%"><img src="img/part_1.18_1.webp" alt="Librera Reader: left menu → BACKUP → &quot;Export to LibreraX&quot;"><figcaption>Librera Reader: left menu → BACKUP → &quot;Export to LibreraX&quot;</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.18_2.webp" alt="Choose what to move to LibreraX, then tap EXPORT"><figcaption>Choose what to move to LibreraX, then tap EXPORT</figcaption></figure>
+</div>
+
+Moving from **Librera Reader** (or Librera PRO)? Your reading progress, favourites, bookmarks and tags come across in
+one step, so you can carry on in LibreraX where you stopped in Librera.
+
+**How to move your data:**
+1. Install LibreraX on the same phone as Librera.
+2. In **Librera**, open the **left menu** (Preferences) and scroll to the **"BACKUP"** section.
+3. Tap **"Export to LibreraX"**.
+4. In the "EXPORT TO LIBRERAX" dialog, choose what to move: **"Book progress"**, **"Favorites"**, **"Bookmarks"**
+   and **"Tags"** (all are ticked by default). Tap **"EXPORT"**.
+5. LibreraX opens, shows **"Export progress"** with a progress bar, then opens the library with your data in it.
+
+You can export again later; positions are only replaced when Librera's are newer, and nothing is added twice.
+
+- LibreraX accepts the export only from a Librera app.
 - If Librera sends a named profile, that one is used; otherwise the first one.
 - What is imported, matched to books by **file name** (ignoring case):
 
