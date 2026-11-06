@@ -4683,6 +4683,8 @@ On tablets one more column is added; landscape fits more columns of the same cel
 
 <div class="shots">
 <figure style="width:27.2%"><img src="img/part_6.9_1.webp" alt="Cover radius"><figcaption>Cover radius</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_6.9_2.webp" alt="Cover radius &quot;0&quot;: square covers and cards, flat navigation bar across the screen"><figcaption>Cover radius &quot;0&quot;: square covers and cards, flat navigation bar across the screen</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_6.9_3.webp" alt="Cover radius &quot;2&quot; (default): rounded covers, cards and a floating navigation panel"><figcaption>Cover radius &quot;2&quot; (default): rounded covers, cards and a floating navigation panel</figcaption></figure>
 </div>
 
 | Label | Corner scale |
@@ -4692,6 +4694,17 @@ On tablets one more column is added; landscape fits more columns of the same cel
 | **"2"** (default) | 1.0 |
 | "3" | 1.5 |
 | "4" | 2.0 |
+
+Cover radius sets how round the corners are across the app, not only on book covers:
+
+- **Book covers** in every view, the cover strip in the top bar and the "Free books" strip.
+- **Book cards** in Grid and List views.
+- **The navigation bar** at the bottom: with a radius above "0" it is a rounded panel floating over the list,
+  and the selected tab sits in a rounded highlight.
+- **Shelf chips, buttons and popups.**
+
+With **"0"** everything turns square: covers and cards get sharp corners, and the navigation bar becomes a **flat
+band** across the full width of the screen, with a plain highlight on the selected tab and no rounded panel.
 
 ## 6.10 "Font size" (app UI text)
 
