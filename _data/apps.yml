@@ -42,6 +42,11 @@
       href: https://play.google.com/store/apps/details?id=com.librerax
     - label: App Store
       href: https://apps.apple.com/us/app/librerax/id6815773197
+  sections:
+    - title: Overview
+      url: /librerax/
+    - title: Book
+      url: /librerax/book/
 
 - id: librera-reader
   anchor: librera-reader

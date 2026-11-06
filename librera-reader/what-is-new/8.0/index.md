@@ -40,7 +40,7 @@ By using this app you agree to the terms of the [Privacy Policy](/librera-reader
 |-|-|-|
 |![](4.webp){: loading="lazy"}|![](5.webp){: loading="lazy"}|![](6.webp){: loading="lazy"}|
 
-**Dark & Dark OLED Themes**
+**Dark and Dark OLED Themes**
 
 * Choose Dark OLED theme with pitch-black color
 

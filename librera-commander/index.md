@@ -136,7 +136,7 @@ These are the defaults. Every shortcut can be changed in **Settings (<kbd>⌘,</
 | ⌘S | Save the edited file (keeps its encoding and permissions) |
 | Esc | Leave the text viewer / comparison and return to system info |
 | ⌃⌘C | Compare files in the info panel: the two selected files, or the file under the cursor with the same-named file in the other panel |
-| ⇧F2 | Compare folders in the info panel: the two panels' folders (recursive; by size & date or by content) |
+| ⇧F2 | Compare folders in the info panel: the two panels' folders (recursive; by size and date or by content) |
 | ⌥↑ / ⌥↓ | Previous / next change in a file comparison |
 | F5 / F6 | Copy / move selection to the other panel |
 | ⇧F6 | Rename |

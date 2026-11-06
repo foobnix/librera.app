@@ -45,6 +45,10 @@ LibreraX is the future of the Librera Reader app — for Android and iOS, macOS.
 
 {% include gallery.html items=page.screens dir="/assets/img/apps/librerax/" %}
 
+## The LibreraX Book
+
+The complete guide to every screen, option and setting, with screenshots: [read it online](/librerax/book/), or download it as [PDF](/librerax/book/LibreraX-Book.pdf) or [EPUB](/librerax/book/LibreraX-Book.epub).
+
 ## Formats
 
 - EPUB, MOBI, AZW, AZW3, KF8, PRC, FB2, FB2.ZIP, CBZ, PDF, TXT and Markdown.

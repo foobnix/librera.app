@@ -1048,3 +1048,14 @@ h1, h2, h3, p { margin: 0; }
   .footer__columns { grid-template-columns: 1fr; }
   .app-row__actions .btn { flex: 1 1 100%; }
 }
+
+.book-downloads { display: flex; flex-wrap: wrap; gap: var(--space-3, 12px); margin: var(--space-4, 16px) 0 var(--space-6, 32px); }
+.book-cover { float: right; width: 220px; margin: 0 0 var(--space-4, 16px) var(--space-6, 32px); border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.18); }
+.prose > .shots { max-width: none; display: flex; flex-wrap: wrap; gap: 12px 16px; justify-content: center; align-items: flex-start; margin: var(--space-4, 16px) 0; }
+.prose .shots figure { margin: 0; text-align: center; min-width: 160px; }
+.prose .shots img { width: 100%; height: auto; border: 1px solid var(--border, #ddd); border-radius: 8px; }
+.prose .shots figcaption { font-size: 0.85em; color: var(--text-tertiary, #666); margin-top: 6px; }
+@media (max-width: 640px) { .book-cover { float: none; display: block; margin: 0 auto var(--space-4, 16px); } .prose .shots figure { width: 46% !important; } }
+.prose:has(.book-downloads) table { display: block; max-width: 100%; overflow-x: auto; }
+.prose:has(.book-downloads) code { overflow-wrap: anywhere; }
+.prose:has(.book-downloads) pre { max-width: 100%; overflow-x: auto; }

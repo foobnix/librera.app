@@ -36,6 +36,7 @@ exclude:
   - assets/img/screenshots/README.md
   - .idea
   - .claude
+  - librerax/book/book.md
 
 defaults:
   - scope:
@@ -54,6 +55,11 @@ defaults:
       layout: doc
       app: librera-reader
       section: what-is-new
+  - scope:
+      path: "librerax/book"
+    values:
+      layout: doc
+      app: librerax
   - scope:
       path: "librera-reader/privacy-policy"
     values:
