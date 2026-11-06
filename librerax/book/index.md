@@ -7,7 +7,7 @@ og_image: /librerax/book/img/cover.jpg
 
 # The LibreraX Book
 
-<p class="lede">The complete guide to LibreraX 1.2.63 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
+<p class="lede">The complete guide to LibreraX 1.2.64 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
 
 <div class="book-downloads">
   <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 15 MB</a>
@@ -264,6 +264,7 @@ A one-page view of everything in this book, grouped by area. Each line points to
     - [2.16.2 "Replace white in images with page color" (multiply illustrations)](#2162-replace-white-in-images-with-page-color-multiply-illustrations)
   - [2.17 Typography](#217-typography)
     - [Font family](#font-family)
+    - [2.17.1 Fallback fonts](#2171-fallback-fonts)
     - [Size, spacing, margins](#size-spacing-margins)
     - [Alignment](#alignment)
     - [Bold text](#bold-text)
@@ -282,6 +283,7 @@ A one-page view of everything in this book, grouped by area. Each line points to
   - [2.26 Accent reading (accent view)](#226-accent-reading-accent-view)
   - [2.27 Relayout pages (PDF only, for reference)](#227-relayout-pages-pdf-only-for-reference)
   - [2.28 The reader Settings dialog, complete layout](#228-the-reader-settings-dialog-complete-layout)
+    - [2.28.1 Window size: double-tap the title](#2281-window-size-double-tap-the-title)
   - [2.29 Global vs per-book](#229-global-vs-per-book)
   - [2.30 Platform differences (Android vs iOS)](#230-platform-differences-android-vs-ios)
   - [2.31 Power-user notes](#231-power-user-notes)
@@ -1969,8 +1971,8 @@ Tap the font name row to open the "Font" picker. Each name is shown in its own f
 
 Every bundled font comes in Regular, Bold, Italic and Bold Italic.
 
-Picker menu: "Reader fonts  10" and "My fonts  N" (check items to show/hide each group; at least one
-group stays visible). The "+" in the title picks a fonts folder (see 2.18).
+Picker menu (⋮): "Add fallback fonts", "Add fonts folder" (see 2.18), "Reader fonts  10" and "My fonts  N"
+(check items to show/hide each group; at least one group stays visible).
 
 **How a chosen font is applied ("publisher styles")**:
 - "Default": the book keeps its own fonts. Your font size, line spacing, alignment and colours still apply.
@@ -1978,6 +1980,26 @@ group stays visible). The "+" in the title picks a fonts folder (see 2.18).
   to the main text (headings stay larger, small print smaller, a different face used for, e.g., headings
   stays). Very wide margins and indents set by the book (4x the text size or more) are halved for phone
   screens. Drawings and formulas keep their own sizes.
+
+### 2.17.1 Fallback fonts
+
+<div class="shots">
+<figure style="width:28.8%"><img src="img/part_2.17.1_1.webp" alt="The Font picker menu: &quot;Add fallback fonts&quot;, &quot;Add fonts folder&quot;, Reader fonts, My fonts"><figcaption>The Font picker menu: &quot;Add fallback fonts&quot;, &quot;Add fonts folder&quot;, Reader fonts, My fonts</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.17.1_2.webp" alt="Source Serif 4 with two fallback fonts, EB Garamond and Crimson Text; × removes one"><figcaption>Source Serif 4 with two fallback fonts, EB Garamond and Crimson Text; × removes one</figcaption></figure>
+</div>
+
+A font may not have every letter a book needs: Cyrillic, Greek, accented or rarer characters. Fallback fonts fill
+those gaps. LibreraX uses your main font first and, for any character it lacks, the next font in the list, in the
+order you added them.
+
+1. Pick a main font other than "Default" (fallbacks are not offered for "Default", which keeps the book's own fonts).
+2. In the "Font" picker, tap **"+"** in the title, or **⋮ → "Add fallback fonts"**. The title changes to
+   "Add fallback fonts".
+3. Tap a font to add it. Add as many as you like; the main font itself is not offered.
+4. Back in Settings, the fallbacks are listed under the main font, each in its own face, with **×** to remove it.
+
+Choosing one of the fallbacks as the main font removes it from the fallback list. Fallback fonts are global, like the
+main font.
 
 ### Size, spacing, margins
 
@@ -2431,6 +2453,21 @@ volume keys on, TTS page buttons on, Hyphens Default with no extra languages (bo
 "always" on, images on paper on, inline footnotes off, white level 90 %, full status bar at the bottom with
 chapter levels 2 and all items on, reverse wheel off, paper off, keep screen on 5 min.
 (It does not clear user CSS text, replace rules, tap zones or RSVP/Accent settings.)
+
+### 2.28.1 Window size: double-tap the title
+
+<div class="shots">
+<figure style="width:28.8%"><img src="img/part_2.28.1_1.webp" alt="Settings at its normal size"><figcaption>Settings at its normal size</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.28.1_2.webp" alt="After a double-tap on the title: Settings fills the screen. Double-tap again to restore"><figcaption>After a double-tap on the title: Settings fills the screen. Double-tap again to restore</figcaption></figure>
+</div>
+
+Settings, like every LibreraX window (File info, Contents, Bookmarks, the Font picker and others), opens at its
+normal size over the page.
+
+- **Double-tap the title** to make the window fill the screen, so more settings fit without scrolling.
+- **Double-tap the title again** to restore the normal size and place.
+- You can also drag a window by its title and resize it from the bottom corners. LibreraX remembers each window's
+  size and place.
 
 ## 2.29 Global vs per-book
 
