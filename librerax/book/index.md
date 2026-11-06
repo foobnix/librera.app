@@ -1,17 +1,17 @@
 ---
 title: The LibreraX Book
 description: The complete guide to LibreraX for Android and iOS — every screen, option, sort order, field and setting, with screenshots. Read online or download as PDF or EPUB.
-og_image: /librerax/book/img/cover.png
+og_image: /librerax/book/img/cover.jpg
 ---
-<img class="book-cover" src="img/cover.png" alt="The LibreraX Book cover">
+<img class="book-cover" src="img/cover.jpg" alt="The LibreraX Book cover">
 
 # The LibreraX Book
 
 <p class="lede">The complete guide to LibreraX 1.2.63 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
 
 <div class="book-downloads">
-  <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 31 MB</a>
-  <a class="btn btn--secondary btn--lg" href="LibreraX-Book.epub" download>Download EPUB · 27 MB</a>
+  <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 14 MB</a>
+  <a class="btn btn--secondary btn--lg" href="LibreraX-Book.epub" download>Download EPUB · 7 MB</a>
 </div>
 
 {% raw %}
@@ -51,8 +51,8 @@ This book describes what LibreraX ([iOS](https://apps.apple.com/us/app/librerax/
 ## What LibreraX is
 
 <div class="shots">
-<figure style="width:100%"><img src="img/part_0_ios_all.png" alt="LibreraX on iPhone: library, reader, reading page, Cloud and Settings"><figcaption>LibreraX on iPhone: library, reader, reading page, Cloud and Settings</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_0_video.png" alt="A video playing inside an EPUB 3 book"><figcaption>A video playing inside an EPUB 3 book</figcaption></figure>
+<figure style="width:100%"><img src="img/part_0_ios_all.webp" alt="LibreraX on iPhone: library, reader, reading page, Cloud and Settings"><figcaption>LibreraX on iPhone: library, reader, reading page, Cloud and Settings</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_0_video.webp" alt="A video playing inside an EPUB 3 book"><figcaption>A video playing inside an EPUB 3 book</figcaption></figure>
 </div>
 
 LibreraX ([iOS](https://apps.apple.com/us/app/librerax/id6815773197), [Android](https://play.google.com/store/apps/details?id=com.librerax)) is an e-book reader for **Android** (phones, tablets, Chromebooks, e-ink readers) and **iOS/iPadOS** (iPhone, iPad, and Macs running the iPad app). Both platforms are built from one Kotlin Multiplatform code base, with the user interface in Compose Multiplatform. It follows the classic **[Librera Reader](https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader)** and can bring a Librera profile across.
@@ -536,7 +536,7 @@ Everything around the book collection: the home screen and its tabs, shelves, vi
 ## 1.1 Home screen and navigation bar
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.1_1.png" alt="The navigation bar"><figcaption>The navigation bar</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.1_1.webp" alt="The navigation bar"><figcaption>The navigation bar</figcaption></figure>
 </div>
 
 ### 1.1.1 Tabs
@@ -579,8 +579,8 @@ Everything around the book collection: the home screen and its tabs, shelves, vi
 ## 1.2 Library tab — layout overview
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.2_1.png" alt="The Library tab: top bar, shelves, &quot;Free books&quot; and the Grid view"><figcaption>The Library tab: top bar, shelves, &quot;Free books&quot; and the Grid view</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.2_2.png" alt="Tap the LibreraX icon next to the title: the library switches to groups"><figcaption>Tap the LibreraX icon next to the title: the library switches to groups</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.2_1.webp" alt="The Library tab: top bar, shelves, &quot;Free books&quot; and the Grid view"><figcaption>The Library tab: top bar, shelves, &quot;Free books&quot; and the Grid view</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.2_2.webp" alt="Tap the LibreraX icon next to the title: the library switches to groups"><figcaption>Tap the LibreraX icon next to the title: the library switches to groups</figcaption></figure>
 </div>
 
 From top to bottom:
@@ -612,8 +612,8 @@ While books are selected the bar is always shown.
 ## 1.3 Shelves (Library tabs)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.3_1.png" alt="The shelf strip: Library, Reading Now, Recent, Favorites"><figcaption>The shelf strip: Library, Reading Now, Recent, Favorites</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.3_2.png" alt="Scrolled further: Unread, Read and a tag shelf"><figcaption>Scrolled further: Unread, Read and a tag shelf</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.3_1.webp" alt="The shelf strip: Library, Reading Now, Recent, Favorites"><figcaption>The shelf strip: Library, Reading Now, Recent, Favorites</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.3_2.webp" alt="Scrolled further: Unread, Read and a tag shelf"><figcaption>Scrolled further: Unread, Read and a tag shelf</figcaption></figure>
 </div>
 
 ### 1.3.1 Shelf list
@@ -678,9 +678,9 @@ Not available with the iOS native segmented control (System components), which o
 ## 1.4 Display (view) modes
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.4_2.png" alt="List view"><figcaption>List view</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.4_3.png" alt="Two columns view"><figcaption>Two columns view</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.4_4.png" alt="Covers view"><figcaption>Covers view</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.4_2.webp" alt="List view"><figcaption>List view</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.4_3.webp" alt="Two columns view"><figcaption>Two columns view</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.4_4.webp" alt="Covers view"><figcaption>Covers view</figcaption></figure>
 </div>
 
 The top bar **Display** button (icon = current mode) opens a menu with a check on the current mode.
@@ -757,9 +757,9 @@ Missing dates are grouped under "No date"; names beginning with a non-letter go 
 ## 1.5 Groups mode (browse by metadata)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.5_1.png" alt="Groups mode: books grouped by Author"><figcaption>Groups mode: books grouped by Author</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.5_2.png" alt="A group unfolded"><figcaption>A group unfolded</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.5_3.png" alt="Groups by Genre"><figcaption>Groups by Genre</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.5_1.webp" alt="Groups mode: books grouped by Author"><figcaption>Groups mode: books grouped by Author</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.5_2.webp" alt="A group unfolded"><figcaption>A group unfolded</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.5_3.webp" alt="Groups by Genre"><figcaption>Groups by Genre</figcaption></figure>
 </div>
 
 Open: tap the LibreraX icon in the top bar. The strip then shows group-mode chips; swipe left/right to change mode.
@@ -797,8 +797,8 @@ Open: tap the LibreraX icon in the top bar. The strip then shows group-mode chip
 ## 1.6 Sorting
 
 <div class="shots">
-<figure style="width:14.5%"><img src="img/part_1.6_1.png" alt="The Sort menu"><figcaption>The Sort menu</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.6_2.png" alt="Sorted by &quot;Author last name&quot; in List view, with letter headers"><figcaption>Sorted by &quot;Author last name&quot; in List view, with letter headers</figcaption></figure>
+<figure style="width:14.5%"><img src="img/part_1.6_1.webp" alt="The Sort menu"><figcaption>The Sort menu</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.6_2.webp" alt="Sorted by &quot;Author last name&quot; in List view, with letter headers"><figcaption>Sorted by &quot;Author last name&quot; in List view, with letter headers</figcaption></figure>
 </div>
 
 The **Sort** button's icon shows the direction. Its menu: the first row is the current sort with an up/down chevron
@@ -831,8 +831,8 @@ The **Sort** button's icon shows the direction. Its menu: the first row is the c
 ## 1.7 Search
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.7_1.png" alt="Searching for &quot;shakespeare&quot;"><figcaption>Searching for &quot;shakespeare&quot;</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.7_2.png" alt="A field search: &quot;@genre classical&quot;"><figcaption>A field search: &quot;@genre classical&quot;</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.7_1.webp" alt="Searching for &quot;shakespeare&quot;"><figcaption>Searching for &quot;shakespeare&quot;</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.7_2.webp" alt="A field search: &quot;@genre classical&quot;"><figcaption>A field search: &quot;@genre classical&quot;</figcaption></figure>
 </div>
 
 - Tap the magnifier to open the search field ("Find"); tap again to close and clear it. An × in the field clears the text.
@@ -862,9 +862,9 @@ The **Sort** button's icon shows the direction. Its menu: the first row is the c
 ## 1.8 Selection and book actions
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.8_1.png" alt="Two books selected; the first actions sit in the top bar"><figcaption>Two books selected; the first actions sit in the top bar</figcaption></figure>
-<figure style="width:14.5%"><img src="img/part_1.8_2.png" alt="All book actions in the ⋮ menu"><figcaption>All book actions in the ⋮ menu</figcaption></figure>
-<figure style="width:25.0%"><img src="img/part_1.8_3.png" alt="Info with two books selected: tap or swipe the covers at the top to switch books"><figcaption>Info with two books selected: tap or swipe the covers at the top to switch books</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.8_1.webp" alt="Two books selected; the first actions sit in the top bar"><figcaption>Two books selected; the first actions sit in the top bar</figcaption></figure>
+<figure style="width:14.5%"><img src="img/part_1.8_2.webp" alt="All book actions in the ⋮ menu"><figcaption>All book actions in the ⋮ menu</figcaption></figure>
+<figure style="width:25.0%"><img src="img/part_1.8_3.webp" alt="Info with two books selected: tap or swipe the covers at the top to switch books"><figcaption>Info with two books selected: tap or swipe the covers at the top to switch books</figcaption></figure>
 </div>
 
 - **Tap** a book = open it. **Long-press** = select it and enter selection mode; taps then toggle selection.
@@ -915,7 +915,7 @@ The **Sort** button's icon shows the direction. Its menu: the first row is the c
 ## 1.9 File info
 
 <div class="shots">
-<figure style="width:25.0%"><img src="img/part_1.9_1.png" alt="File info"><figcaption>File info</figcaption></figure>
+<figure style="width:25.0%"><img src="img/part_1.9_1.webp" alt="File info"><figcaption>File info</figcaption></figure>
 </div>
 
 Open: selection → "Info"; also from the reader and the Notes/Cloud screens.
@@ -965,9 +965,9 @@ Open: selection → "Info"; also from the reader and the Notes/Cloud screens.
 ## 1.10 Tags, favourites, read marks
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_1.10_1.png" alt="The tags editor with sample tags: Classics, Philosophy, To read"><figcaption>The tags editor with sample tags: Classics, Philosophy, To read</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.10_2.png" alt="Each tag becomes a shelf in the strip, with its count"><figcaption>Each tag becomes a shelf in the strip, with its count</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.10_3.png" alt="The &quot;Classics&quot; tag shelf"><figcaption>The &quot;Classics&quot; tag shelf</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_1.10_1.webp" alt="The tags editor with sample tags: Classics, Philosophy, To read"><figcaption>The tags editor with sample tags: Classics, Philosophy, To read</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.10_2.webp" alt="Each tag becomes a shelf in the strip, with its count"><figcaption>Each tag becomes a shelf in the strip, with its count</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.10_3.webp" alt="The &quot;Classics&quot; tag shelf"><figcaption>The &quot;Classics&quot; tag shelf</figcaption></figure>
 </div>
 
 ### 1.10.1 Tags editor ("My tags")
@@ -998,12 +998,12 @@ Open: selection → "Info"; also from the reader and the Notes/Cloud screens.
 ## 1.11 Adding books and library folders
 
 <div class="shots">
-<figure style="width:15.4%"><img src="img/part_1.11_1.png" alt="&quot;Add folders&quot; on Android: storage sources"><figcaption>&quot;Add folders&quot; on Android: storage sources</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.11_2.png" alt="Settings → &quot;Add folders&quot;: choose where the folder is"><figcaption>Settings → &quot;Add folders&quot;: choose where the folder is</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.11_3.png" alt="The system folder picker opens in Downloads"><figcaption>The system folder picker opens in Downloads</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.11_4.png" alt="Open the folder to add (here EPUB3-Samples) and tap &quot;USE THIS FOLDER&quot;"><figcaption>Open the folder to add (here EPUB3-Samples) and tap &quot;USE THIS FOLDER&quot;</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.11_5.png" alt="Android asks to allow LibreraX to read the folder"><figcaption>Android asks to allow LibreraX to read the folder</figcaption></figure>
-<figure style="width:27.2%"><img src="img/part_1.11_6.png" alt="The folder is listed under &quot;Folders to Scan&quot;; the library count grows as the scan finds books"><figcaption>The folder is listed under &quot;Folders to Scan&quot;; the library count grows as the scan finds books</figcaption></figure>
+<figure style="width:15.4%"><img src="img/part_1.11_1.webp" alt="&quot;Add folders&quot; on Android: storage sources"><figcaption>&quot;Add folders&quot; on Android: storage sources</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.11_2.webp" alt="Settings → &quot;Add folders&quot;: choose where the folder is"><figcaption>Settings → &quot;Add folders&quot;: choose where the folder is</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.11_3.webp" alt="The system folder picker opens in Downloads"><figcaption>The system folder picker opens in Downloads</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.11_4.webp" alt="Open the folder to add (here EPUB3-Samples) and tap &quot;USE THIS FOLDER&quot;"><figcaption>Open the folder to add (here EPUB3-Samples) and tap &quot;USE THIS FOLDER&quot;</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.11_5.webp" alt="Android asks to allow LibreraX to read the folder"><figcaption>Android asks to allow LibreraX to read the folder</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_1.11_6.webp" alt="The folder is listed under &quot;Folders to Scan&quot;; the library count grows as the scan finds books"><figcaption>The folder is listed under &quot;Folders to Scan&quot;; the library count grows as the scan finds books</figcaption></figure>
 </div>
 
 ### 1.11.1 Where the buttons are
@@ -1047,9 +1047,9 @@ Open: selection → "Info"; also from the reader and the Notes/Cloud screens.
 ## 1.12 Folders tab (file browser)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.12_1.png" alt="The Folders tab with the added folder"><figcaption>The Folders tab with the added folder</figcaption></figure>
-<figure style="width:12.3%"><img src="img/part_1.12_2.png" alt="The Folders view menu"><figcaption>The Folders view menu</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.12_3.png" alt="Inside the folder: sub-folders first, then its books"><figcaption>Inside the folder: sub-folders first, then its books</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.12_1.webp" alt="The Folders tab with the added folder"><figcaption>The Folders tab with the added folder</figcaption></figure>
+<figure style="width:12.3%"><img src="img/part_1.12_2.webp" alt="The Folders view menu"><figcaption>The Folders view menu</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.12_3.webp" alt="Inside the folder: sub-folders first, then its books"><figcaption>Inside the folder: sub-folders first, then its books</figcaption></figure>
 </div>
 
 - The root "/" lists the folders you added (Android). Tap a folder to enter it; levels are pages you can
@@ -1086,7 +1086,7 @@ Open: selection → "Info"; also from the reader and the Notes/Cloud screens.
 ## 1.13 Scanning
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_1.13_1.png" alt="The library after the scan"><figcaption>The library after the scan</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.13_1.webp" alt="The library after the scan"><figcaption>The library after the scan</figcaption></figure>
 </div>
 
 ### 1.13.1 When a scan runs
@@ -1162,15 +1162,15 @@ Open: selection → "Info"; also from the reader and the Notes/Cloud screens.
 ## 1.15 Appearance: themes, sizes, covers
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_1.15_1.png" alt="Custom theme settings: style, theme colour, accent colour and panel transparency"><figcaption>Custom theme settings: style, theme colour, accent colour and panel transparency</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.15_5.png" alt="Custom dark theme with transparent panels: the covers show through the navigation bar"><figcaption>Custom dark theme with transparent panels: the covers show through the navigation bar</figcaption></figure>
-<figure style="width:80%"><img src="img/part_1.15_13.png" alt="App themes compared"><figcaption>App themes compared</figcaption></figure>
-<figure style="width:80%"><img src="img/part_1.15_14.png" alt="Cover size compared: C--, C and C++"><figcaption>Cover size compared: C--, C and C++</figcaption></figure>
-<figure style="width:80%"><img src="img/part_1.15_15.png" alt="Cover radius 0, Controls size 2x and Font size A++"><figcaption>Cover radius 0, Controls size 2x and Font size A++</figcaption></figure>
-<figure style="width:80%"><img src="img/part_1.15_16.png" alt="The same library with different accent colours"><figcaption>The same library with different accent colours</figcaption></figure>
-<figure style="width:27.2%"><img src="img/part_1.15_w1.png" alt="Custom theme in the White style"><figcaption>Custom theme in the White style</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.15_w3.png" alt="The custom white theme in the reader"><figcaption>The custom white theme in the reader</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_1.15_r.png" alt="The custom dark theme in the reader: the panels are see-through"><figcaption>The custom dark theme in the reader: the panels are see-through</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_1.15_1.webp" alt="Custom theme settings: style, theme colour, accent colour and panel transparency"><figcaption>Custom theme settings: style, theme colour, accent colour and panel transparency</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.15_5.webp" alt="Custom dark theme with transparent panels: the covers show through the navigation bar"><figcaption>Custom dark theme with transparent panels: the covers show through the navigation bar</figcaption></figure>
+<figure style="width:80%"><img src="img/part_1.15_13.webp" alt="App themes compared"><figcaption>App themes compared</figcaption></figure>
+<figure style="width:80%"><img src="img/part_1.15_14.webp" alt="Cover size compared: C--, C and C++"><figcaption>Cover size compared: C--, C and C++</figcaption></figure>
+<figure style="width:80%"><img src="img/part_1.15_15.webp" alt="Cover radius 0, Controls size 2x and Font size A++"><figcaption>Cover radius 0, Controls size 2x and Font size A++</figcaption></figure>
+<figure style="width:80%"><img src="img/part_1.15_16.webp" alt="The same library with different accent colours"><figcaption>The same library with different accent colours</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_1.15_w1.webp" alt="Custom theme in the White style"><figcaption>Custom theme in the White style</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.15_w3.webp" alt="The custom white theme in the reader"><figcaption>The custom white theme in the reader</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_1.15_r.webp" alt="The custom dark theme in the reader: the panels are see-through"><figcaption>The custom dark theme in the reader: the panels are see-through</figcaption></figure>
 </div>
 
 All under Settings, each in a folding section.
@@ -1231,7 +1231,7 @@ Chips: "System", "Dark", "White", "Custom".
 ## 1.16 Metadata editor ("Edit metadata")
 
 <div class="shots">
-<figure style="width:25.0%"><img src="img/part_1.16_1.png" alt="Edit metadata"><figcaption>Edit metadata</figcaption></figure>
+<figure style="width:25.0%"><img src="img/part_1.16_1.webp" alt="Edit metadata"><figcaption>Edit metadata</figcaption></figure>
 </div>
 
 - Available for **EPUB, FB2, FB2.ZIP, PDF**. Open from File info (pencil or ⋮ → "Edit metadata").
@@ -1368,9 +1368,9 @@ first (the page is read, not run).
 ### 2.1.1 Video, audio, formulas and vector graphics
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.1.1_1.png" alt="Video inside an EPUB 3 book"><figcaption>Video inside an EPUB 3 book</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.1.1_2.png" alt="Math formulas (MathML): notation list"><figcaption>Math formulas (MathML): notation list</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.1.1_3.png" alt="Math formulas (MathML): a system of equations and a matrix"><figcaption>Math formulas (MathML): a system of equations and a matrix</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.1.1_1.webp" alt="Video inside an EPUB 3 book"><figcaption>Video inside an EPUB 3 book</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.1.1_2.webp" alt="Math formulas (MathML): notation list"><figcaption>Math formulas (MathML): notation list</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.1.1_3.webp" alt="Math formulas (MathML): a system of equations and a matrix"><figcaption>Math formulas (MathML): a system of equations and a matrix</figcaption></figure>
 </div>
 
 EPUB 3 books can carry more than text and pictures, and LibreraX shows them inside the page:
@@ -1389,7 +1389,7 @@ around them.
 ## 2.2 Screen layout at a glance
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.2_1.png" alt="The reading screen with panels and the book strip"><figcaption>The reading screen with panels and the book strip</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.2_1.webp" alt="The reading screen with panels and the book strip"><figcaption>The reading screen with panels and the book strip</figcaption></figure>
 </div>
 
 - **Page area**: the book, edge to edge, with the reader's padding and the status bar space kept clear.
@@ -1409,7 +1409,7 @@ use native "glass" components. The functions are the same.
 ## 2.3 Top panel
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.3_1.png" alt="The top panel"><figcaption>The top panel</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.3_1.webp" alt="The top panel"><figcaption>The top panel</figcaption></figure>
 </div>
 
 **Book line** (centre):
@@ -1436,9 +1436,9 @@ use native "glass" components. The functions are the same.
 ## 2.4 Bottom panel (footer)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.4_1.png" alt="The bottom panel with the book strip"><figcaption>The bottom panel with the book strip</figcaption></figure>
-<figure style="width:16.5%"><img src="img/part_2.4_2.png" alt="The layout menu"><figcaption>The layout menu</figcaption></figure>
-<figure style="width:14.3%"><img src="img/part_2.4_3.png" alt="The book menu (⋮)"><figcaption>The book menu (⋮)</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.4_1.webp" alt="The bottom panel with the book strip"><figcaption>The bottom panel with the book strip</figcaption></figure>
+<figure style="width:16.5%"><img src="img/part_2.4_2.webp" alt="The layout menu"><figcaption>The layout menu</figcaption></figure>
+<figure style="width:14.3%"><img src="img/part_2.4_3.webp" alt="The book menu (⋮)"><figcaption>The book menu (⋮)</figcaption></figure>
 </div>
 
 From top to bottom:
@@ -1483,8 +1483,8 @@ From top to bottom:
 ## 2.5 Tap zones
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_2.5_1.png" alt="The Tap zones editor"><figcaption>The Tap zones editor</figcaption></figure>
-<figure style="width:19.6%"><img src="img/part_2.5_2.png" alt="Actions that can be given to a zone"><figcaption>Actions that can be given to a zone</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.5_1.webp" alt="The Tap zones editor"><figcaption>The Tap zones editor</figcaption></figure>
+<figure style="width:19.6%"><img src="img/part_2.5_2.webp" alt="Actions that can be given to a zone"><figcaption>Actions that can be given to a zone</figcaption></figure>
 </div>
 
 The screen is divided into a 3 x 3 grid. Each of the 9 zones runs one action. The grid lines can be moved.
@@ -1621,7 +1621,7 @@ selection is being made; otherwise a key press clears the selection and hides th
 ## 2.8 Paged vs scroll, columns, page-turn animation, RTL
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.8_1.png" alt="A page with the full status bar at the bottom"><figcaption>A page with the full status bar at the bottom</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.8_1.webp" alt="A page with the full status bar at the bottom"><figcaption>A page with the full status bar at the bottom</figcaption></figure>
 </div>
 
 ### Paged and Vertical (scroll) modes
@@ -1667,7 +1667,7 @@ follows the device rotation.
 ## 2.9 Full screen, keep screen on
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.9_1.png" alt="Full screen: no system bars while reading"><figcaption>Full screen: no system bars while reading</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.9_1.webp" alt="Full screen: no system bars while reading"><figcaption>Full screen: no system bars while reading</figcaption></figure>
 </div>
 
 | Setting | Type | Default |
@@ -1703,8 +1703,8 @@ the system timeout apply. While auto scroll or RSVP is playing the screen is alw
 ## 2.11 Status bar and progress display
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.11_1.png" alt="Status bar settings"><figcaption>Status bar settings</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.11_2.png" alt="The full status bar: chapter ticks, pages left, clock, battery, page number"><figcaption>The full status bar: chapter ticks, pages left, clock, battery, page number</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11_1.webp" alt="Status bar settings"><figcaption>Status bar settings</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11_2.webp" alt="The full status bar: chapter ticks, pages left, clock, battery, page number"><figcaption>The full status bar: chapter ticks, pages left, clock, battery, page number</figcaption></figure>
 </div>
 
 Choose the mode in Settings -> "Status bar" section -> "Status bar":
@@ -1773,7 +1773,7 @@ The book is marked as read automatically when you reach 99 % or the last page.
 ## 2.12 Table of contents ("Contents")
 
 <div class="shots">
-<figure style="width:25.0%"><img src="img/part_2.12_1.png" alt="Contents"><figcaption>Contents</figcaption></figure>
+<figure style="width:25.0%"><img src="img/part_2.12_1.webp" alt="Contents"><figcaption>Contents</figcaption></figure>
 </div>
 
 - Opens from the footer list icon or the "Contents" tap action.
@@ -1787,7 +1787,7 @@ The book is marked as read automatically when you reach 99 % or the last page.
 ## 2.13 Go to page and the page previews grid
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_2.13_1.png" alt="Go to page: rendered page previews"><figcaption>Go to page: rendered page previews</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.13_1.webp" alt="Go to page: rendered page previews"><figcaption>Go to page: rendered page previews</figcaption></figure>
 </div>
 
 - Title "Go to page". A grid of page previews, 3 per row, with the page number under each. The current
@@ -1802,8 +1802,8 @@ The book is marked as read automatically when you reach 99 % or the last page.
 ## 2.14 Search in book ("Find")
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_2.14_1.png" alt="Find: results with the match highlighted"><figcaption>Find: results with the match highlighted</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.14_2.png" alt="Matches marked on the page"><figcaption>Matches marked on the page</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.14_1.webp" alt="Find: results with the match highlighted"><figcaption>Find: results with the match highlighted</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.14_2.webp" alt="Matches marked on the page"><figcaption>Matches marked on the page</figcaption></figure>
 </div>
 
 - Type the text and confirm (button or keyboard Done).
@@ -1817,9 +1817,9 @@ The book is marked as read automatically when you reach 99 % or the last page.
 ## 2.15 Reading themes
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.15_1.png" alt="The Themes list"><figcaption>The Themes list</figcaption></figure>
-<figure style="width:24.7%"><img src="img/part_2.15_2.png" alt="Editing a theme, with its contrast ratio in the title"><figcaption>Editing a theme, with its contrast ratio in the title</figcaption></figure>
-<figure style="width:100%"><img src="img/part_2.15_3.png" alt="The six built-in reading themes"><figcaption>The six built-in reading themes</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.15_1.webp" alt="The Themes list"><figcaption>The Themes list</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.15_2.webp" alt="Editing a theme, with its contrast ratio in the title"><figcaption>Editing a theme, with its contrast ratio in the title</figcaption></figure>
+<figure style="width:100%"><img src="img/part_2.15_3.webp" alt="The six built-in reading themes"><figcaption>The six built-in reading themes</figcaption></figure>
 </div>
 
 ### Built-in themes
@@ -1906,11 +1906,11 @@ of the sheet; lower it for books whose scans are greyish. (The Reset button sets
 ## 2.17 Typography
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.17_1.png" alt="Advanced settings: fonts folder, alignment, hyphens, orientation"><figcaption>Advanced settings: fonts folder, alignment, hyphens, orientation</figcaption></figure>
-<figure style="width:24.7%"><img src="img/part_2.17_2.png" alt="The Font picker"><figcaption>The Font picker</figcaption></figure>
-<figure style="width:80%"><img src="img/part_2.17_3.png" alt="The same page in different fonts"><figcaption>The same page in different fonts</figcaption></figure>
-<figure style="width:80%"><img src="img/part_2.17_4.png" alt="Font size smaller and larger"><figcaption>Font size smaller and larger</figcaption></figure>
-<figure style="width:80%"><img src="img/part_2.17_5.png" alt="Bold text: off, then on with amount 2 and amount 5"><figcaption>Bold text: off, then on with amount 2 and amount 5</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.17_1.webp" alt="Advanced settings: fonts folder, alignment, hyphens, orientation"><figcaption>Advanced settings: fonts folder, alignment, hyphens, orientation</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.17_2.webp" alt="The Font picker"><figcaption>The Font picker</figcaption></figure>
+<figure style="width:80%"><img src="img/part_2.17_3.webp" alt="The same page in different fonts"><figcaption>The same page in different fonts</figcaption></figure>
+<figure style="width:80%"><img src="img/part_2.17_4.webp" alt="Font size smaller and larger"><figcaption>Font size smaller and larger</figcaption></figure>
+<figure style="width:80%"><img src="img/part_2.17_5.webp" alt="Bold text: off, then on with amount 2 and amount 5"><figcaption>Bold text: off, then on with amount 2 and amount 5</figcaption></figure>
 </div>
 
 All of these live at the top of Settings (reflowable books only), except alignment, hyphens and CSS,
@@ -2036,7 +2036,7 @@ this list is empty.
 ## 2.19 User CSS
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.19_1.png" alt="User CSS and the other advanced switches"><figcaption>User CSS and the other advanced switches</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.19_1.webp" alt="User CSS and the other advanced switches"><figcaption>User CSS and the other advanced switches</figcaption></figure>
 </div>
 
 Under Advanced settings, row "User CSS":
@@ -2096,7 +2096,7 @@ Under Advanced settings, row "User CSS":
 ## 2.21 Text selection and the selection popup
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_2.21_1.png" alt="The selection popup"><figcaption>The selection popup</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.21_1.webp" alt="The selection popup"><figcaption>The selection popup</figcaption></figure>
 </div>
 
 | Setting | Default |
@@ -2182,10 +2182,10 @@ iOS shows only the web dictionaries and Translate.
 ## 2.22 Highlights, underline, strikethrough, notes, bookmarks
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_2.22_1.png" alt="The Bookmarks dialog: bookmarks, notes, highlights, underline and strikethrough"><figcaption>The Bookmarks dialog: bookmarks, notes, highlights, underline and strikethrough</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.22_2.png" alt="Marks on the page: highlight, underline, strikethrough, bookmark and note flags"><figcaption>Marks on the page: highlight, underline, strikethrough, bookmark and note flags</figcaption></figure>
-<figure style="width:24.7%"><img src="img/part_2.22_3.png" alt="Writing a note on a word"><figcaption>Writing a note on a word</figcaption></figure>
-<figure style="width:24.7%"><img src="img/part_2.22_4.png" alt="Filtering the Bookmarks dialog by colour"><figcaption>Filtering the Bookmarks dialog by colour</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.22_1.webp" alt="The Bookmarks dialog: bookmarks, notes, highlights, underline and strikethrough"><figcaption>The Bookmarks dialog: bookmarks, notes, highlights, underline and strikethrough</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.22_2.webp" alt="Marks on the page: highlight, underline, strikethrough, bookmark and note flags"><figcaption>Marks on the page: highlight, underline, strikethrough, bookmark and note flags</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.22_3.webp" alt="Writing a note on a word"><figcaption>Writing a note on a word</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.22_4.webp" alt="Filtering the Bookmarks dialog by colour"><figcaption>Filtering the Bookmarks dialog by colour</figcaption></figure>
 </div>
 
 - Annotation types in reflowable books: highlight (tint), underline, strikethrough, bookmark and note
@@ -2213,9 +2213,9 @@ iOS shows only the web dictionaries and Translate.
 ## 2.23 Find and replace rules ("Replace")
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_2.23_1.png" alt="Replace: a replace rule, a highlight rule and the preview"><figcaption>Replace: a replace rule, a highlight rule and the preview</figcaption></figure>
-<figure style="width:24.7%"><img src="img/part_2.23_2.png" alt="A highlight rule: &quot;Alice&quot; in bold red, without background"><figcaption>A highlight rule: &quot;Alice&quot; in bold red, without background</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.23_3.png" alt="The rule applied: every &quot;Alice&quot; is bold and red on the page"><figcaption>The rule applied: every &quot;Alice&quot; is bold and red on the page</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.23_1.webp" alt="Replace: a replace rule, a highlight rule and the preview"><figcaption>Replace: a replace rule, a highlight rule and the preview</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_2.23_2.webp" alt="A highlight rule: &quot;Alice&quot; in bold red, without background"><figcaption>A highlight rule: &quot;Alice&quot; in bold red, without background</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.23_3.webp" alt="The rule applied: every &quot;Alice&quot; is bold and red on the page"><figcaption>The rule applied: every &quot;Alice&quot; is bold and red on the page</figcaption></figure>
 </div>
 
 Opened from the pen icon in the top panel, the "Replace" tap action, or "+ Replace"/"+ Highlight" in the
@@ -2271,9 +2271,9 @@ short reward video that unlocks PRO 3H for 3 hours.
 ## 2.25 Speed reading (RSVP)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.25_1.png" alt="Speed reading (RSVP) with its settings card"><figcaption>Speed reading (RSVP) with its settings card</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.25_2.png" alt="RSVP running full screen, day theme"><figcaption>RSVP running full screen, day theme</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.25_3.png" alt="RSVP running full screen, night theme"><figcaption>RSVP running full screen, night theme</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.25_1.webp" alt="Speed reading (RSVP) with its settings card"><figcaption>Speed reading (RSVP) with its settings card</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.25_2.webp" alt="RSVP running full screen, day theme"><figcaption>RSVP running full screen, day theme</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.25_3.webp" alt="RSVP running full screen, night theme"><figcaption>RSVP running full screen, night theme</figcaption></figure>
 </div>
 
 Footer layout icon -> "Speed reading (RSVP)" (in the PRO section of the menu; in the FREE edition the
@@ -2313,10 +2313,10 @@ Focus colours: red, orange, yellow, green, cyan, blue, purple, magenta and blue-
 ## 2.26 Accent reading (accent view)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.26_1.png" alt="Accent reading, day theme, red accent, 50 %"><figcaption>Accent reading, day theme, red accent, 50 %</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.26_2.png" alt="The Accent reading card: accented part and accent colour"><figcaption>The Accent reading card: accented part and accent colour</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.26_3.png" alt="Accent reading, night theme, cyan accent, 60 %"><figcaption>Accent reading, night theme, cyan accent, 60 %</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.26_4.png" alt="The card with cyan chosen and the accented part raised to 60 %"><figcaption>The card with cyan chosen and the accented part raised to 60 %</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.26_1.webp" alt="Accent reading, day theme, red accent, 50 %"><figcaption>Accent reading, day theme, red accent, 50 %</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.26_2.webp" alt="The Accent reading card: accented part and accent colour"><figcaption>The Accent reading card: accented part and accent colour</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.26_3.webp" alt="Accent reading, night theme, cyan accent, 60 %"><figcaption>Accent reading, night theme, cyan accent, 60 %</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.26_4.webp" alt="The card with cyan chosen and the accented part raised to 60 %"><figcaption>The card with cyan chosen and the accented part raised to 60 %</figcaption></figure>
 </div>
 
 Footer layout icon -> "Accent reading" (PRO section). Mode label "Accent".
@@ -2349,8 +2349,8 @@ Paper texture and Bold text also apply to reflowed pages.
 ## 2.28 The reader Settings dialog, complete layout
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_2.28_1.png" alt="Reader Settings: theme row, font, size, spacing, padding"><figcaption>Reader Settings: theme row, font, size, spacing, padding</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_2.28_2.png" alt="Reader Settings: the remaining switches"><figcaption>Reader Settings: the remaining switches</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.28_1.webp" alt="Reader Settings: theme row, font, size, spacing, padding"><figcaption>Reader Settings: theme row, font, size, spacing, padding</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.28_2.webp" alt="Reader Settings: the remaining switches"><figcaption>Reader Settings: the remaining switches</figcaption></figure>
 </div>
 
 Title "Settings". Scrollable. Changing any setting hides the panels so you see the result on the page.
@@ -2675,7 +2675,7 @@ Library settings → "Formats", two columns of switches (all on by default; ZIP 
 ### 3.B.2 Reading modes and the mode button
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_3.B.2_1.png" alt="A PDF in the page reader"><figcaption>A PDF in the page reader</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.2_1.webp" alt="A PDF in the page reader"><figcaption>A PDF in the page reader</figcaption></figure>
 </div>
 
 - The mode button in the bottom panel switches the scroll mode and shows the current mode name: "Paged", "Vertical", "Reflow",
@@ -2690,7 +2690,7 @@ Library settings → "Formats", two columns of switches (all on by default; ZIP 
 ### 3.B.3 Page layout menu (bottom panel layout icon)
 
 <div class="shots">
-<figure style="width:16.4%"><img src="img/part_3.B.3_1.png" alt="The PDF layout menu"><figcaption>The PDF layout menu</figcaption></figure>
+<figure style="width:16.4%"><img src="img/part_3.B.3_1.webp" alt="The PDF layout menu"><figcaption>The PDF layout menu</figcaption></figure>
 </div>
 
 Items (icons change with the current layout):
@@ -2720,7 +2720,7 @@ Items (icons change with the current layout):
 ### 3.B.5 Crop margins
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_3.B.5_1.png" alt="Crop margins, Manual"><figcaption>Crop margins, Manual</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_3.B.5_1.webp" alt="Crop margins, Manual"><figcaption>Crop margins, Manual</figcaption></figure>
 </div>
 
 Opened from: the crop icon in the top panel (highlighted when crop is on), Reader settings → "Advanced settings" → "Crop margins"
@@ -2751,7 +2751,7 @@ Behaviour:
 ### 3.B.7 Colours: themes, night recolouring, Paper, Bold text
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_3.B.7_1.png" alt="The same PDF page in the night theme"><figcaption>The same PDF page in the night theme</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.7_1.webp" alt="The same PDF page in the night theme"><figcaption>The same PDF page in the night theme</figcaption></figure>
 </div>
 
 - Pages follow the background colour of the reader theme.
@@ -2782,9 +2782,9 @@ Behaviour:
 ### 3.B.10 Reflow pages (in-reader text reflow)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_3.B.10_0.png" alt="Before: the PDF page as printed"><figcaption>Before: the PDF page as printed</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.10_1.png" alt="After: the same place in Reflow pages"><figcaption>After: the same place in Reflow pages</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.10_2.png" alt="Text can be selected in Reflow pages"><figcaption>Text can be selected in Reflow pages</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.10_0.webp" alt="Before: the PDF page as printed"><figcaption>Before: the PDF page as printed</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.10_1.webp" alt="After: the same place in Reflow pages"><figcaption>After: the same place in Reflow pages</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.10_2.webp" alt="Text can be selected in Reflow pages"><figcaption>Text can be selected in Reflow pages</figcaption></figure>
 </div>
 
 - Label "Reflow pages"; toggle in Reader settings or the layout menu; mode name "Reflow". Not for comics. PRO badge in FREE.
@@ -2831,15 +2831,15 @@ Kinds of annotations:
 ### 3.B.13 Draw mode and the Draw bar
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_3.B.13_2.png" alt="Shape tool options: star or heart"><figcaption>Shape tool options: star or heart</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_3.png" alt="Rectangle tool options: rectangle, rounded rectangle, ellipse"><figcaption>Rectangle tool options: rectangle, rounded rectangle, ellipse</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_4.png" alt="Line tool options: line, arrow, double arrow"><figcaption>Line tool options: line, arrow, double arrow</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_5.png" alt="Line width"><figcaption>Line width</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_6.png" alt="A page with every figure: freehand line, star, heart, double arrow, ellipse, rectangle, rounded rectangle"><figcaption>A page with every figure: freehand line, star, heart, double arrow, ellipse, rectangle, rounded rectangle</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_7.png" alt="Tap a figure to pick it: a frame with corner handles, the bin and the check appear"><figcaption>Tap a figure to pick it: a frame with corner handles, the bin and the check appear</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_8.png" alt="Tap a colour to recolour the picked figure"><figcaption>Tap a colour to recolour the picked figure</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_9.png" alt="Drag inside the frame to move it"><figcaption>Drag inside the frame to move it</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.B.13_10.png" alt="Drag a corner to resize it"><figcaption>Drag a corner to resize it</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_2.webp" alt="Shape tool options: star or heart"><figcaption>Shape tool options: star or heart</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_3.webp" alt="Rectangle tool options: rectangle, rounded rectangle, ellipse"><figcaption>Rectangle tool options: rectangle, rounded rectangle, ellipse</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_4.webp" alt="Line tool options: line, arrow, double arrow"><figcaption>Line tool options: line, arrow, double arrow</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_5.webp" alt="Line width"><figcaption>Line width</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_6.webp" alt="A page with every figure: freehand line, star, heart, double arrow, ellipse, rectangle, rounded rectangle"><figcaption>A page with every figure: freehand line, star, heart, double arrow, ellipse, rectangle, rounded rectangle</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_7.webp" alt="Tap a figure to pick it: a frame with corner handles, the bin and the check appear"><figcaption>Tap a figure to pick it: a frame with corner handles, the bin and the check appear</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_8.webp" alt="Tap a colour to recolour the picked figure"><figcaption>Tap a colour to recolour the picked figure</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_9.webp" alt="Drag inside the frame to move it"><figcaption>Drag inside the frame to move it</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.B.13_10.webp" alt="Drag a corner to resize it"><figcaption>Drag a corner to resize it</figcaption></figure>
 </div>
 
 Opened with the pen icon in the bottom panel (page reader, only when Reflow/RSVP/Accent are off). The Draw bar sits above the
@@ -2990,9 +2990,9 @@ bookmark is tied to the exact selected text and is drawn as a flag next to it.
 ### 3.C.6 Bookmarks (Notes) screen — main app tab
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_3.C.6_1.png" alt="The Notes tab: bookmarks and marks of a book"><figcaption>The Notes tab: bookmarks and marks of a book</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.C.6_2.png" alt="Long-press to select marks; the bin deletes them"><figcaption>Long-press to select marks; the bin deletes them</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_3.C.6_3.png" alt="After deleting the selected marks"><figcaption>After deleting the selected marks</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.C.6_1.webp" alt="The Notes tab: bookmarks and marks of a book"><figcaption>The Notes tab: bookmarks and marks of a book</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.C.6_2.webp" alt="Long-press to select marks; the bin deletes them"><figcaption>Long-press to select marks; the bin deletes them</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_3.C.6_3.webp" alt="After deleting the selected marks"><figcaption>After deleting the selected marks</figcaption></figure>
 </div>
 
 Layout:
@@ -3064,7 +3064,7 @@ Text to speech and everything that controls it from outside the app: the notific
 ## 4.2 Where Read Aloud lives in the app
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_4.2_1.png" alt="Read-aloud controls in the bottom panel"><figcaption>Read-aloud controls in the bottom panel</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_4.2_1.webp" alt="Read-aloud controls in the bottom panel"><figcaption>Read-aloud controls in the bottom panel</figcaption></figure>
 </div>
 
 Ways to start or control reading aloud:
@@ -3106,7 +3106,7 @@ change the volume during read-aloud.
 ## 4.3 The "TTS" dialog
 
 <div class="shots">
-<figure style="width:24.7%"><img src="img/part_4.3_1.png" alt="The TTS dialog"><figcaption>The TTS dialog</figcaption></figure>
+<figure style="width:24.7%"><img src="img/part_4.3_1.webp" alt="The TTS dialog"><figcaption>The TTS dialog</figcaption></figure>
 </div>
 
 Title: **"TTS"**. On Android 13 and later, the first time you open it, it asks for permission to show
@@ -3300,7 +3300,7 @@ hidden:
 ## 4.4 How reading works (engine behaviour)
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_4.4_1.png" alt="Reading aloud: the spoken paragraph is marked"><figcaption>Reading aloud: the spoken paragraph is marked</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_4.4_1.webp" alt="Reading aloud: the spoken paragraph is marked"><figcaption>Reading aloud: the spoken paragraph is marked</figcaption></figure>
 </div>
 
 ### 4.4.1 What is read
@@ -3349,7 +3349,7 @@ restarts from the top of the current page.
 ## 4.5 Android media session, notification and headset
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_4.5_1.png" alt="The media player in the notification shade"><figcaption>The media player in the notification shade</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_4.5_1.webp" alt="The media player in the notification shade"><figcaption>The media player in the notification shade</figcaption></figure>
 </div>
 
 ### 4.5.1 Notification
@@ -3434,11 +3434,11 @@ the Recent shelf).
 ## 4.7 Android home-screen widgets
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_4.7_1.png" alt="The three LibreraX widgets in the Android widget picker"><figcaption>The three LibreraX widgets in the Android widget picker</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_4.7_2.png" alt="Configuring the shelf widget: source, tag, display, cover size, number of books, background and transparency"><figcaption>Configuring the shelf widget: source, tag, display, cover size, number of books, background and transparency</figcaption></figure>
-<figure style="width:28.8%"><img src="img/part_4.7_3.png" alt="The shelf widget and the one-book widget on the home screen"><figcaption>The shelf widget and the one-book widget on the home screen</figcaption></figure>
-<figure style="width:6.4%"><img src="img/part_4.7_4.png" alt="The one-book widget: tap to continue reading"><figcaption>The one-book widget: tap to continue reading</figcaption></figure>
-<figure style="width:26.1%"><img src="img/part_4.7_5.png" alt="The read-aloud widget: cover, title, page and play controls"><figcaption>The read-aloud widget: cover, title, page and play controls</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_4.7_1.webp" alt="The three LibreraX widgets in the Android widget picker"><figcaption>The three LibreraX widgets in the Android widget picker</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_4.7_2.webp" alt="Configuring the shelf widget: source, tag, display, cover size, number of books, background and transparency"><figcaption>Configuring the shelf widget: source, tag, display, cover size, number of books, background and transparency</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_4.7_3.webp" alt="The shelf widget and the one-book widget on the home screen"><figcaption>The shelf widget and the one-book widget on the home screen</figcaption></figure>
+<figure style="width:6.4%"><img src="img/part_4.7_4.webp" alt="The one-book widget: tap to continue reading"><figcaption>The one-book widget: tap to continue reading</figcaption></figure>
+<figure style="width:26.1%"><img src="img/part_4.7_5.webp" alt="The read-aloud widget: cover, title, page and play controls"><figcaption>The read-aloud widget: cover, title, page and play controls</figcaption></figure>
 </div>
 
 All three widgets go on the home screen only and can be resized in both directions. They refresh every
@@ -4134,8 +4134,8 @@ Title **"Cloud"**:
 ### 5.B.9 Cloud screen layout
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_5.B.9_1.png" alt="The Cloud tab"><figcaption>The Cloud tab</figcaption></figure>
-<figure style="width:19.8%"><img src="img/part_5.B.9_2.png" alt="The Cloud menu"><figcaption>The Cloud menu</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_5.B.9_1.webp" alt="The Cloud tab"><figcaption>The Cloud tab</figcaption></figure>
+<figure style="width:19.8%"><img src="img/part_5.B.9_2.webp" alt="The Cloud menu"><figcaption>The Cloud menu</figcaption></figure>
 </div>
 
 **Top bar** (cloud icon title → back to Library):
@@ -4412,7 +4412,7 @@ content. All folding sections start **closed** every time you open Settings.
 ## 6.0 Order of the screen at a glance
 
 <div class="shots">
-<figure style="width:28.8%"><img src="img/part_6.0_1.png" alt="The top of Settings"><figcaption>The top of Settings</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_6.0_1.webp" alt="The top of Settings"><figcaption>The top of Settings</figcaption></figure>
 </div>
 
 | # | Block | Kind | Shown when |
@@ -4453,7 +4453,7 @@ another device of the account), and the only status with **automatic** cloud syn
 ## 6.2 "Folders to Scan"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.2_1.png" alt="Folders to Scan"><figcaption>Folders to Scan</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.2_1.webp" alt="Folders to Scan"><figcaption>Folders to Scan</figcaption></figure>
 </div>
 
 | Item | Label | Control | Behaviour |
@@ -4472,7 +4472,7 @@ top bar puts the selected folders back into the library (see 6.1).
 ## 6.4 "Library  N" and format switches
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.4_1.png" alt="Library count and format switches"><figcaption>Library count and format switches</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.4_1.webp" alt="Library count and format switches"><figcaption>Library count and format switches</figcaption></figure>
 </div>
 
 Header shows "Library" followed by the number of books currently shown in the library. While scanning, a progress bar
@@ -4503,7 +4503,7 @@ The same format switches (plus "Hide duplicates") also appear in the Library scr
 ## 6.5 "Google account" (cloud sync)
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.5_1.png" alt="Google account"><figcaption>Google account</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.5_1.webp" alt="Google account"><figcaption>Google account</figcaption></figure>
 </div>
 
 Signed out:
@@ -4530,7 +4530,7 @@ Signed in:
 ## 6.6 "Theme"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.6_1.png" alt="Theme"><figcaption>Theme</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.6_1.webp" alt="Theme"><figcaption>Theme</figcaption></figure>
 </div>
 
 | Item | Control | Values | Default |
@@ -4566,7 +4566,7 @@ Signed in:
 ## 6.7 "Controls size"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.7_1.png" alt="Controls size"><figcaption>Controls size</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.7_1.webp" alt="Controls size"><figcaption>Controls size</figcaption></figure>
 </div>
 
 | Control | Values | Default |
@@ -4578,7 +4578,7 @@ Scales buttons, tabs and bars.
 ## 6.8 "Cover size"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.8_1.png" alt="Cover size"><figcaption>Cover size</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.8_1.webp" alt="Cover size"><figcaption>Cover size</figcaption></figure>
 </div>
 
 | Label | Grid columns (portrait phone) | List scale |
@@ -4594,7 +4594,7 @@ On tablets one more column is added; landscape fits more columns of the same cel
 ## 6.9 "Cover radius"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.9_1.png" alt="Cover radius"><figcaption>Cover radius</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.9_1.webp" alt="Cover radius"><figcaption>Cover radius</figcaption></figure>
 </div>
 
 | Label | Corner scale |
@@ -4608,7 +4608,7 @@ On tablets one more column is added; landscape fits more columns of the same cel
 ## 6.10 "Font size" (app UI text)
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.10_1.png" alt="Font size"><figcaption>Font size</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.10_1.webp" alt="Font size"><figcaption>Font size</figcaption></figure>
 </div>
 
 | Label | Scale |
@@ -4624,7 +4624,7 @@ On tablets one more column is added; landscape fits more columns of the same cel
 ## 6.11 "Navigation bar" (home tabs)
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.11_1.png" alt="Navigation bar"><figcaption>Navigation bar</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.11_1.webp" alt="Navigation bar"><figcaption>Navigation bar</figcaption></figure>
 </div>
 
 A reorderable list: each row has a drag handle (≡), icon, label and a switch. Drag to reorder.
@@ -4643,7 +4643,7 @@ Default order is the order above. The order and the hidden tabs are remembered.
 ## 6.12 "Library tabs" (shelves)
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.12_1.png" alt="Library tabs"><figcaption>Library tabs</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.12_1.webp" alt="Library tabs"><figcaption>Library tabs</figcaption></figure>
 </div>
 
 Two plain switches first, then a reorderable list of shelves with switches and a rename (edit) action:
@@ -4672,7 +4672,7 @@ Two plain switches first, then a reorderable list of shelves with switches and a
 ## 6.13 "Book actions"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.13_1.png" alt="Book actions"><figcaption>Book actions</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.13_1.webp" alt="Book actions"><figcaption>Book actions</figcaption></figure>
 </div>
 
 Reorderable list with switches. The first **4** visible actions (that apply to the current selection) are shown as
@@ -4698,7 +4698,7 @@ The order and the hidden actions are remembered.
 ## 6.14 "Other settings"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.14_1.png" alt="Other settings"><figcaption>Other settings</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.14_1.webp" alt="Other settings"><figcaption>Other settings</figcaption></figure>
 </div>
 
 Items in order:
@@ -4718,7 +4718,7 @@ Items in order:
 ## 6.15 "Backup"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.15_1.png" alt="Backup"><figcaption>Backup</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.15_1.webp" alt="Backup"><figcaption>Backup</figcaption></figure>
 </div>
 
 | Button | Label | Behaviour |
@@ -4752,7 +4752,7 @@ made again, sync restarts and the app restarts.
 ## 6.16 "Language"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.16_1.png" alt="Language"><figcaption>Language</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.16_1.webp" alt="Language"><figcaption>Language</figcaption></figure>
 </div>
 
 | Item | Label | Control | Values | Default |
@@ -4786,7 +4786,7 @@ made again, sync restarts and the app restarts.
 ## 6.17 "About"
 
 <div class="shots">
-<figure style="width:27.2%"><img src="img/part_6.17_1.png" alt="About"><figcaption>About</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_6.17_1.webp" alt="About"><figcaption>About</figcaption></figure>
 </div>
 
 | Item (order) | Label / content | Control | Behaviour |
