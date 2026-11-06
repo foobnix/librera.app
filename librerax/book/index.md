@@ -10,8 +10,8 @@ og_image: /librerax/book/img/cover.jpg
 <p class="lede">The complete guide to LibreraX 1.2.63 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
 
 <div class="book-downloads">
-  <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 14 MB</a>
-  <a class="btn btn--secondary btn--lg" href="LibreraX-Book.epub" download>Download EPUB · 7 MB</a>
+  <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 15 MB</a>
+  <a class="btn btn--secondary btn--lg" href="LibreraX-Book.epub" download>Download EPUB · 8 MB</a>
 </div>
 
 {% raw %}
@@ -248,6 +248,7 @@ A one-page view of everything in this book, grouped by area. Each line points to
   - [2.11 Status bar and progress display](#211-status-bar-and-progress-display)
     - [Full bar](#full-bar)
     - [Percent mode](#percent-mode)
+    - [2.11.1 Configuring the status bar, step by step](#2111-configuring-the-status-bar-step-by-step)
     - [What "pages" mean in reflowable books](#what-pages-mean-in-reflowable-books)
   - [2.12 Table of contents ("Contents")](#212-table-of-contents-contents)
   - [2.13 Go to page and the page previews grid](#213-go-to-page-and-the-page-previews-grid)
@@ -259,8 +260,8 @@ A one-page view of everything in this book, grouped by area. Each line points to
     - [Theme editor ("New theme" / "Edit theme")](#theme-editor-new-theme--edit-theme)
     - [How themes look in the book](#how-themes-look-in-the-book)
   - [2.16 Paper texture and illustrations](#216-paper-texture-and-illustrations)
-    - ["Paper"](#paper)
-    - ["Replace white in images with page color" (multiply illustrations)](#replace-white-in-images-with-page-color-multiply-illustrations)
+    - [2.16.1 "Paper"](#2161-paper)
+    - [2.16.2 "Replace white in images with page color" (multiply illustrations)](#2162-replace-white-in-images-with-page-color-multiply-illustrations)
   - [2.17 Typography](#217-typography)
     - [Font family](#font-family)
     - [Size, spacing, margins](#size-spacing-margins)
@@ -1761,6 +1762,29 @@ Long-press the label to pick it up (haptic feedback, accent border), drag it any
 is kept as a share of the screen, so it stays in about the same place after rotation. Double-tap to send
 it back to the corner.
 
+### 2.11.1 Configuring the status bar, step by step
+
+<div class="shots">
+<figure style="width:27.2%"><img src="img/part_2.11.1_1.webp" alt="The &quot;Status bar&quot; modes: Full · Top, Full · Bottom, Percent, None"><figcaption>The &quot;Status bar&quot; modes: Full · Top, Full · Bottom, Percent, None</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11.1_2.webp" alt="Full · Top: the bar above the text"><figcaption>Full · Top: the bar above the text</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11.1_3.webp" alt="Full · Bottom with &quot;Chapters bar&quot; off: only the facts line"><figcaption>Full · Bottom with &quot;Chapters bar&quot; off: only the facts line</figcaption></figure>
+<figure style="width:27.2%"><img src="img/part_2.11.1_4.webp" alt="Percent mode settings: label font size and background transparency"><figcaption>Percent mode settings: label font size and background transparency</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11.1_5.webp" alt="Percent: the label in the bottom-right corner (font size 200 %)"><figcaption>Percent: the label in the bottom-right corner (font size 200 %)</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11.1_6.webp" alt="Long-press the label and drag it: a blue outline shows while it moves"><figcaption>Long-press the label and drag it: a blue outline shows while it moves</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11.1_7.webp" alt="The label dropped at the top centre of the page"><figcaption>The label dropped at the top centre of the page</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.11.1_8.webp" alt="None together with full screen: only the text, edge to edge"><figcaption>None together with full screen: only the text, edge to edge</figcaption></figure>
+</div>
+
+1. Open the reader's **Settings** (cogwheel in the top panel) and unfold **"Status bar"**.
+2. Tap **"Status bar"** and pick a mode: **"Full · Top"**, **"Full · Bottom"** (default), **"Percent"** or **"None"**.
+3. With a full bar, turn off what you don't need: **"Chapters bar"**, **"Pages left in chapter"**, **"Time"**,
+   **"Battery"**, **"Page number"**. With the chapters bar off, the facts line stays and the text gets the space back.
+4. With **"Percent"**, the settings change to **"Font size"** and **"Background transparency"** of the label.
+5. **Move the percent label anywhere:** close the settings, long-press the "NN%" label until it shows a blue outline,
+   drag it, and let go. It stays there, also after rotating the screen. **Double-tap** the label to send it back to the
+   bottom-right corner.
+6. With **"None"**, the page shows only the text: no bar, no percent.
+
 ### What "pages" mean in reflowable books
 
 The page numbers in the seek bar, status bar, Go to page and bookmarks are fixed slices of the book's text
@@ -1880,7 +1904,12 @@ A theme counts as dark when its page colour is dark.
 
 ## 2.16 Paper texture and illustrations
 
-### "Paper"
+### 2.16.1 "Paper"
+
+<div class="shots">
+<figure style="width:28.8%"><img src="img/part_2.16.1_1.webp" alt="&quot;Paper&quot; on, day theme, full screen without status bar"><figcaption>&quot;Paper&quot; on, day theme, full screen without status bar</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.16.1_2.webp" alt="&quot;Paper&quot; on, Dark theme: the grain shows on a dark page too"><figcaption>&quot;Paper&quot; on, Dark theme: the grain shows on a dark page too</figcaption></figure>
+</div>
 
 | Setting | Default |
 |---|---|
@@ -1891,7 +1920,12 @@ uneven tone, a warm age tint and fine fibre. Page turns stay fast. On dark theme
 out and only the grain shows. The margins are aligned with the page so the whole screen reads as one
 sheet. Also applies to PDF "Reflow pages".
 
-### "Replace white in images with page color" (multiply illustrations)
+### 2.16.2 "Replace white in images with page color" (multiply illustrations)
+
+<div class="shots">
+<figure style="width:28.8%"><img src="img/part_2.16.2_1.webp" alt="&quot;Replace white in images with page color&quot; off: the drawing sits on a white card"><figcaption>&quot;Replace white in images with page color&quot; off: the drawing sits on a white card</figcaption></figure>
+<figure style="width:28.8%"><img src="img/part_2.16.2_2.webp" alt="&quot;Replace white in images with page color&quot; on: the drawing is printed on the page"><figcaption>&quot;Replace white in images with page color&quot; on: the drawing is printed on the page</figcaption></figure>
+</div>
 
 | Setting | Type | Range | Default |
 |---|---|---|---|
