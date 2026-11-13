@@ -215,8 +215,7 @@ def with_delete_section(body, app):
         "**Deleting Your Data**\n{: #delete-account}\n\n"
         f"{app} has no account to delete. We run no server for it. Its Google sign-in only lets "
         "the app reach your own Google Drive. The books and progress stored in your Google Drive: "
-        "they are in your own storage. See [Delete your data](/delete-data.html) for how to remove "
-        "them and the data on your device.\n\n"
+        "they are in your own storage.\n\n"
     )
     marker = "**Contact Us**"
     if marker in body:

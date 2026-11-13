@@ -65,7 +65,7 @@ We may update our Privacy Policy from time to time. Thus, you are advised to rev
 **Deleting Your Data**
 {: #delete-account}
 
-PDF Reader has no account to delete. We run no server for it. Its Google sign-in only lets the app reach your own Google Drive. The books and progress stored in your Google Drive: they are in your own storage. See [Delete your data](/delete-data.html) for how to remove them and the data on your device.
+PDF Reader has no account to delete. We run no server for it. Its Google sign-in only lets the app reach your own Google Drive. The books and progress stored in your Google Drive: they are in your own storage.
 
 **Contact Us**
 
