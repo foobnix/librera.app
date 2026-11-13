@@ -1,17 +1,17 @@
 ---
-title: "Privacy Policy — Book Reader"
+title: "Privacy Policy — eBook Reader"
 parent_url: "/librera-reader/privacy-policy/"
 parent_title: "Privacy"
 ---
 # Privacy Policy
 
-Librera built the Book Reader app as a Free app. This SERVICE is provided by Librera at no cost and is intended for use as is.
+Librera built the eBook Reader app as a Free app. This SERVICE is provided by Librera at no cost and is intended for use as is.
 
 This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
 
 If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
 
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Book Reader unless otherwise defined in this Privacy Policy.
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at eBook Reader unless otherwise defined in this Privacy Policy.
 
 **Information Collection and Use**
 
@@ -61,6 +61,11 @@ These Services do not address anyone under the age of 13\. We do not knowingly c
 **Changes to This Privacy Policy**
 
 We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+
+**Deleting Your Data**
+{: #delete-account}
+
+eBook Reader has no account to delete. We run no server for it. Its Google sign-in only lets the app reach your own Google Drive. The books and progress stored in your Google Drive: they are in your own storage. See [Delete your data](/delete-data.html) for how to remove them and the data on your device.
 
 **Contact Us**
 

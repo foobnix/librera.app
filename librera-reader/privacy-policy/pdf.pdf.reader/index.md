@@ -62,6 +62,11 @@ These Services do not address anyone under the age of 13\. We do not knowingly c
 
 We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
 
+**Deleting Your Data**
+{: #delete-account}
+
+PDF Reader has no account to delete. We run no server for it. Its Google sign-in only lets the app reach your own Google Drive. The books and progress stored in your Google Drive: they are in your own storage. See [Delete your data](/delete-data.html) for how to remove them and the data on your device.
+
 **Contact Us**
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.

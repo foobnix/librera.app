@@ -784,6 +784,8 @@ h1, h2, h3, p { margin: 0; }
   margin: var(--space-10) 0 var(--space-3);
   scroll-margin-top: calc(var(--navbar-h) + 64px);
 }
+/* Any anchor target in page text (e.g. #delete-account) lands below the sticky navbar and tabs. */
+.prose [id] { scroll-margin-top: calc(var(--navbar-h) + 72px); }
 .prose h4 { font: var(--type-label); color: var(--text-primary); margin: var(--space-6) 0 var(--space-2); }
 .prose p { margin: var(--space-4) 0 0; text-wrap: pretty; }
 .prose .lede { font: var(--type-body-lg); color: var(--text-secondary); }

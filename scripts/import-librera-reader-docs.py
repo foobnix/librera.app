@@ -43,6 +43,11 @@ SRC = os.path.abspath(sys.argv[1] if len(sys.argv) > 1
 CWEBP = shutil.which("cwebp")
 RASTER = re.compile(r"\.(png|jpe?g)$", re.I)
 
+# Apps whose name on this site differs from the LibreraReader docs: slug -> name.
+APP_RENAMES = {
+    "droid.reader.book.epub.mobi.pdf.djvu.fb2.txt.azw.azw3": "eBook Reader",
+}
+
 # Old librera.mobi paths whose content now lives somewhere else.
 MANUAL = {
     "/manual/Rapid-Serial-Visual-Presentation/": "/librera-reader/faq/rsvp-speed-reading-rapid-serial-visual-presentation/",
@@ -202,6 +207,23 @@ def clean(path, keep=()):
         shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
 
 
+def with_delete_section(body, app):
+    """Add the "Deleting Your Data" section (anchor #delete-account) to an app's privacy policy, before Contact Us."""
+    if "**Deleting Your Data**" in body:
+        return body
+    section = (
+        "**Deleting Your Data**\n{: #delete-account}\n\n"
+        f"{app} has no account to delete. We run no server for it. Its Google sign-in only lets "
+        "the app reach your own Google Drive. The books and progress stored in your Google Drive: "
+        "they are in your own storage. See [Delete your data](/delete-data.html) for how to remove "
+        "them and the data on your device.\n\n"
+    )
+    marker = "**Contact Us**"
+    if marker in body:
+        return body.replace(marker, section + marker, 1)
+    return body.rstrip() + "\n\n" + section
+
+
 def main():
     if not os.path.isfile(os.path.join(SRC, "faq", "index.md")):
         sys.exit(f"Not a LibreraReader docs folder: {SRC}")
@@ -249,17 +271,29 @@ def main():
     # The index names each app: * [Librera PRO](/PrivacyPolicy/com.foobnix.pro.pdf.reader)
     names = dict((slug, label) for label, slug in re.findall(
         r"\[([^\]]+)\]\(/PrivacyPolicy/([^)/]+)\)", read_md(os.path.join(pp_src, "index.md"))))
+    docs_names = dict(names)  # names as the docs spell them, before APP_RENAMES
     for name in sorted(os.listdir(pp_src)):
         if not name.endswith(".md"):
             continue
         body = convert(read_md(os.path.join(pp_src, name)))
         slug = name[:-3]
+        for rslug, new in APP_RENAMES.items():
+            old = docs_names.get(rslug)
+            if not old or old == new:
+                continue
+            if slug == "index":
+                body = body.replace(f"[{old}](", f"[{new}](")
+            elif slug == rslug:
+                body = re.sub(r"(?<![A-Za-z])" + re.escape(old), new, body)
+        if slug in APP_RENAMES:
+            names[slug] = APP_RENAMES[slug]
         out = os.path.join(pp_dst, "index.md") if slug == "index" else os.path.join(pp_dst, slug, "index.md")
         front = {"title": first_heading(body, "Privacy Policy")}
         if slug != "index":
             front["parent_url"] = "/librera-reader/privacy-policy/"
             front["parent_title"] = "Privacy"
             front["title"] = f"{front['title']} — {names.get(slug, slug)}"
+            body = with_delete_section(body, names.get(slug, slug))
         write_page(out, front, body)
     print("privacy-policy: done")
 
