@@ -47,6 +47,8 @@
       url: /librerax/
     - title: Book
       url: /librerax/book/
+    - title: Changelog
+      url: /librerax/changelog/
 
 - id: librera-reader
   anchor: librera-reader
@@ -91,6 +93,8 @@
       url: /librera-reader/faq/
     - title: What's new
       url: /librera-reader/what-is-new/
+    - title: Changelog
+      url: /librera-reader/changelog/
     - title: Download
       url: /librera-reader/download/
     - title: Privacy

@@ -14,6 +14,7 @@ What it does
   what-is-new/ (+ 8.x/)   -> librera-reader/what-is-new/
   PrivacyPolicy/*.md      -> librera-reader/privacy-policy/<app>/
   contributors.md         -> librera-reader/contributors/
+  ../CHANGELOG.md         -> librera-reader/changelog/
 
   * Front matter is replaced: the page title is taken from its first heading,
     and the layout/section come from _config.yml defaults.
@@ -24,7 +25,7 @@ What it does
     marked loading="lazy".
 
 The FAQ index is not copied: librera-reader/faq/index.html lists the topics
-from the imported pages themselves. Everything under the four target folders
+from the imported pages themselves. Everything under the target folders
 except that index is generated — edit the source, not the copy.
 """
 
@@ -263,6 +264,19 @@ def main():
     with open(index, "a", encoding="utf-8") as f:
         f.write(f"\n## Older releases\n\n{older}\n")
     print(f"what-is-new: index + {len(versions)} releases")
+
+    # Changelog: the repository's CHANGELOG.md, one "### [version] title" entry
+    # per release, as on the LibreraX changelog. The lines above the first entry
+    # (release links for GitHub readers) are left out.
+    body = convert(read_md(os.path.join(SRC, "..", "CHANGELOG.md")))
+    first = body.find("\n### [")
+    body = "# Changelog\n" + (body[first:] if first != -1 else body)
+    write_page(os.path.join(DEST, "changelog", "index.md"), {
+        "layout": "doc", "app": "librera-reader",
+        "title": "Changelog",
+        "description": "What changed in each Librera Reader release.",
+    }, body)
+    print("changelog: done")
 
     # Privacy policies ----------------------------------------------------
     pp_src, pp_dst = os.path.join(SRC, "PrivacyPolicy"), os.path.join(DEST, "privacy-policy")

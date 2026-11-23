@@ -56,7 +56,17 @@ defaults:
       app: librera-reader
       section: what-is-new
   - scope:
+      path: "librera-reader/changelog"
+    values:
+      layout: doc
+      app: librera-reader
+  - scope:
       path: "librerax/book"
+    values:
+      layout: doc
+      app: librerax
+  - scope:
+      path: "librerax/changelog"
     values:
       layout: doc
       app: librerax

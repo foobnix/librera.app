@@ -7,7 +7,7 @@ og_image: /librerax/book/img/cover.jpg
 
 # The LibreraX Book
 
-<p class="lede">The complete guide to LibreraX 1.2.64 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
+<p class="lede">The complete guide to LibreraX 1.2.97 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
 
 <div class="book-downloads">
   <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 16 MB</a>
