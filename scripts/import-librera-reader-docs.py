@@ -265,16 +265,16 @@ def main():
         f.write(f"\n## Older releases\n\n{older}\n")
     print(f"what-is-new: index + {len(versions)} releases")
 
-    # Changelog: the repository's CHANGELOG.md, one "### [version] title" entry
-    # per release, as on the LibreraX changelog. The lines above the first entry
-    # (release links for GitHub readers) are left out.
+    # Changelog: the repository's CHANGELOG.md, one list of changes, the newest
+    # first and without app versions. The lines above the list (release links
+    # for GitHub readers) are left out.
     body = convert(read_md(os.path.join(SRC, "..", "CHANGELOG.md")))
-    first = body.find("\n### [")
+    first = body.find("\n* ")
     body = "# Changelog\n" + (body[first:] if first != -1 else body)
     write_page(os.path.join(DEST, "changelog", "index.md"), {
         "layout": "doc", "app": "librera-reader",
         "title": "Changelog",
-        "description": "What changed in each Librera Reader release.",
+        "description": "What changed in Librera Reader, the newest first.",
     }, body)
     print("changelog: done")
 

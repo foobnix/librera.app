@@ -1,35 +1,26 @@
 ---
 title: "Changelog"
-description: "What changed in each LibreraX release for Android and iOS."
+description: "What changed in LibreraX for Android and iOS."
 section: changelog
 ---
 # Changelog
 
-### [1.3.18] Open on the first page, PDF zoom, landscape panels
-
-**Opening books**
-
-* New option in Settings › Advanced: always open a book on its first page instead of where you left off
-
-**PDF, DjVu, CBZ and CBR**
-
-* Zoom out to a quarter of the page width and in to twice the page width, in paged and vertical mode
-* Double tap in the centre of the screen fits the page
-* A pinch that starts at the left edge now zooms instead of changing brightness
-
-**Landscape**
-
-* The audio buttons and the panel buttons share one line
-* The book title, the library button and the panel buttons share one line
-* The page slider and its buttons share one line
-* Combined panels are split at the centre of the screen
-
-**Drawing**
-
-* With the panels hidden, the drawing toolbar floats with rounded corners
-* The floating drawing toolbar can be dragged, with its own position in portrait and in landscape
-* The drawing toolbar fits on one line in landscape on phones
-
-**Fixes**
-
-* The pause button on the auto-scroll panel works after the panel is moved up
+* Library: any action from the top bar ends the book selection
+* Book info: fields with several values are split at semicolons as well as commas
+* Book info: a Calibre .opf named after the book is read and its fields win over the book's own
+* Book info: when a book has a Calibre .opf, save into the file or into the .opf, from the buttons or from the menu of the save icon
+* Book info: edit the title, authors, series, genres and cover of MOBI, AZW and AZW3 books
+* Radio: add a playlist of stations by the address of an M3U file
+* Long press on the Library tab: Rescan library is the first item
+* Settings › Advanced: always open a book on the first page
+* Fixed the pause button on the auto-scroll panel after the panel is moved up
+* Drawing toolbar fits on one line in landscape on phones
+* Drawing toolbar can be dragged when the panels are hidden, with separate positions for portrait and landscape
+* Drawing toolbar floats with rounded corners when the panels are hidden
+* Landscape: panels are split at the centre of the screen
+* Landscape: page slider and its buttons on one line
+* Landscape: book title, library button and panel buttons on one line
+* Landscape: audio buttons and panel buttons on one line
+* Pinch that starts at the left edge zooms instead of changing brightness
+* PDF, DjVu, CBZ, CBR: double tap in the centre fits the page
+* PDF, DjVu, CBZ, CBR: zoom from 25% to 200% of the page width, in paged and vertical mode
