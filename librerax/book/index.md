@@ -7,7 +7,7 @@ og_image: /librerax/book/img/cover.jpg
 
 # The LibreraX Book
 
-<p class="lede">The complete guide to LibreraX 1.2.97 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
+<p class="lede">The complete guide to LibreraX 1.3.21 for Android and iOS: every screen, option, sort order, field and setting, with screenshots. Read it here, or download it.</p>
 
 <div class="book-downloads">
   <a class="btn btn--primary btn--lg" href="LibreraX-Book.pdf" download>Download PDF · 16 MB</a>
@@ -3835,14 +3835,11 @@ Section A covers online catalogs, section B the account, sync and Google Drive b
 | # | Name | Web address | Subtitle shown | Language |
 |---|---|---|---|---|
 | 1 | Project Gutenberg | `https://www.gutenberg.org/ebooks.opds/` | Free eBooks since 1971 | (any) |
-| 2 | Open Library | `https://openlibrary.org/opds/?mode=open_access` | Open access books | (any) |
-| 3 | Unglue.it | `https://unglue.it/api/opds/` | Free Creative Commons eBooks | en |
-| 4 | Gallica | `https://gallica.bnf.fr/opds` | Bibliothèque nationale de France | fr |
-| 5 | Ebooks libres et gratuits | `https://www.ebooksgratuits.com/opds/` | Livres numériques gratuits | fr |
-| 6 | Bibliothèque numérique romande | `https://ebooks-bnr.com/opds/` | Ebooks gratuits | fr |
-| 7 | Wolne Lektury | `https://wolnelektury.pl/opds/` | Darmowe e-booki | pl |
-| 8 | textos.info | `https://www.textos.info/catalogo.atom` | Biblioteca virtual abierta y gratuita | es |
-| 9 | ImWerden | `https://imwerden.de/opds/` | Электронная библиотека | ru |
+| 2 | Unglue.it | `https://unglue.it/api/opds/` | Free Creative Commons eBooks | en |
+| 3 | Gallica | `https://gallica.bnf.fr/opds` | Bibliothèque nationale de France | fr |
+| 4 | Ebooks libres et gratuits | `https://www.ebooksgratuits.com/opds/` | Livres numériques gratuits | fr |
+| 5 | Bibliothèque numérique romande | `https://ebooks-bnr.com/opds/` | Ebooks gratuits | fr |
+| 6 | textos.info | `https://www.textos.info/catalogo.atom` | Biblioteca virtual abierta y gratuita | es |
 
 **Default order:** catalogs for any language, or in the device's system language, come first (in table order);
 the other-language catalogs follow. Your own catalogs come after the built-in ones. Once you reorder the list,
