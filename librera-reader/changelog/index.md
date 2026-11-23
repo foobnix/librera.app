@@ -6,6 +6,11 @@ description: "What changed in Librera Reader, the newest first."
 ---
 # Changelog
 
+* Smoother vertical scrolling: two-finger zoom and scroll follow the fingers frame by frame and zoom around the point between them; DjVu pages no longer freeze the screen while they render, and high zoom stays smooth with smaller page tiles
+* Radio: the station playing, or the one chosen for the book, stays above the station list; tap it to pause or play
+* The music file and the radio station are remembered separately for each book; MP3 opens in the folder of the book's music file
+* Play and pause of the radio work when tapped quickly one after the other
+* Removed the "Pause on incoming calls" option: reading always pauses for a call, unless it mixes with other apps' sound
 * Changelog link at the bottom of the preferences, opens this page in the browser
 * New option in Preferences › Advanced Settings: open books on page 1 instead of where you left off (also in Preferences › General, and for books opened in LibreraX)
 * PDF search highlights the found word itself: with the PDFium engine the box was one word off on pages with math symbols

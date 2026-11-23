@@ -5,6 +5,7 @@ section: changelog
 ---
 # Changelog
 
+* Tap zones: new action First page, jumps to the start of the book
 * Library: any action from the top bar ends the book selection
 * Book info: fields with several values are split at semicolons as well as commas
 * Book info: a Calibre .opf named after the book is read and its fields win over the book's own
