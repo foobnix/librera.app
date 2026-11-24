@@ -5,6 +5,10 @@ section: changelog
 ---
 # Changelog
 
+* Fonts: a font from your fonts folder no longer switches back to the system font when the app starts
+* Fonts: the book waits for the fonts folder to load before it opens
+* Settings › Other settings: Book card click - read the book or show its info, in Library, Folders, Cloud and Notes
+* Book info: Read button
 * OPDS: book descriptions from Calibre-Web are shown formatted, without HTML tags
 * Tap zones: new action First page, jumps to the start of the book
 * Library: any action from the top bar ends the book selection
