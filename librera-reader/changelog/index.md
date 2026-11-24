@@ -6,6 +6,12 @@ description: "What changed in Librera Reader, the newest first."
 ---
 # Changelog
 
+* New Sync tab: your synced books, sync status and a Sync button
+* Synced books are sorted by the latest read on any device
+* Switch profile from the Sync tab
+* The Sync tab icon spins while syncing
+* Reading position syncs more exactly between devices
+* Contents open the right page for every section
 * New catalog: optional user name and password, kept for that server and asked with at once
 * Search in catalogs that describe it in an OpenSearch file (Ebooks libres et gratuits, textos.info...); searches with several words work on Calibre-Web
 * A tapped catalog cover opens the picture itself instead of a blank book; download buttons are round
