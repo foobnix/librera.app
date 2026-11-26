@@ -6,6 +6,7 @@ description: "What changed in Librera Reader, the newest first."
 ---
 # Changelog
 
+* Faster library processing: books are read in several threads at once and the progress is shown in percent; if the app is closed during processing it continues where it stopped instead of starting again; reading a book while processing runs stays safe
 * New Sync tab: your synced books, sync status and a Sync button
 * Synced books are sorted by the latest read on any device
 * Switch profile from the Sync tab
