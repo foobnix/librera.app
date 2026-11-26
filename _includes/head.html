@@ -7,7 +7,7 @@
 {%- if page.og_image -%}
   {%- assign og_image = page.og_image | absolute_url -%}
 {%- else -%}
-  {%- assign og_image = "/assets/img/librera-mark.png" | absolute_url -%}
+  {%- assign og_image = "/assets/img/icon-512.png" | absolute_url -%}
 {%- endif -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,12 @@
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 
+<!-- Site icon: the Librera book on a solid tile. favicon.ico (16/32/48) at the root is what
+     Google and older browsers ask for first; the PNGs are multiples of 48 as Google recommends. -->
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
 <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
-<link rel="icon" href="{{ '/assets/img/librera-mark.png' | relative_url }}" type="image/png" sizes="512x512">
+<link rel="icon" href="{{ '/assets/img/icon-192.png' | relative_url }}" type="image/png" sizes="192x192">
+<link rel="icon" href="{{ '/assets/img/icon-512.png' | relative_url }}" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 
 <!-- Design system tokens, verbatim from librera-design-system-c87c098d -->
